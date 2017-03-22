@@ -30,7 +30,7 @@ App.controller.define('CMain', {
 	},
 	filter_onclick: function()
 	{
-		App.get('FilterBox#FilterPanel').store=App.get('grid#GridAgents').getStore();
+		//App.get('FilterBox#FilterPanel').store=App.get('grid#GridAgents').getStore();
 		if (App.get('FilterBox#FilterPanel').isVisible())
 		App.get('FilterBox#FilterPanel').hide();
 		else
