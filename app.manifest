@@ -53,7 +53,9 @@
     "controllers": [
         "CMain"
     ],
-    "modules": [],
+    "modules": [
+        "Ext.ux.FilterBox"
+    ],
     "plugins": [],
     "api": [
         "MyService"
