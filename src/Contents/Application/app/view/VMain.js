@@ -19,6 +19,12 @@ App.view.define('VMain', {
 			]		
 		},
 		{
+			xtype: "FilterBox",
+			itemId: "FilterPanel",
+			fields: [
+			]
+		},
+		{
 			region: "center",
 			layout: "vbox",
 			split:true,
