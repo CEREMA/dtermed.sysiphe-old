@@ -50,7 +50,7 @@ App.view.define('VAffectation',{
 				labelAlign: "top",
 				editable: false,
 				store: App.store.create('bpclight://unites',{autoLoad:false}),
-				displayField: "LibUni",
+				displayField: "LibUniC",
 				valueField: "Kuni"				
 			},			
 			{
@@ -62,7 +62,7 @@ App.view.define('VAffectation',{
 				labelAlign: "top",
 				editable: false,
 				store: App.store.create('bpclight://subdis',{autoLoad:false}),
-				displayField: "LibSub",
+				displayField: "LibSubC",
 				valueField: "Ksub"				
 			}
 			]
