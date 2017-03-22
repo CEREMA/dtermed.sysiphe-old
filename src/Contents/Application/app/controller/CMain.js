@@ -42,7 +42,10 @@ App.controller.define('CMain', {
 		store.load();
 	},
 	dpt_select: function(me) {
-
+		App.get('mainform combo#cboSrv').setValue('');
+		var store=App.store.create('bpclight://subdis?ksub='+me.getValue());
+		App.get('mainform combo#cboSrv').bindStore(store);
+		store.load();
 	},
 	srv_select: function(me) {
 
