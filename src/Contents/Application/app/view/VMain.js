@@ -19,7 +19,8 @@ App.view.define('VMain', {
 			]		
 		},
 		{
-			xtype: "FilterBox",
+			region: "north", 
+			xtype: "FilterBox", 
 			itemId: "FilterPanel",
 			fields: [
 			]
