@@ -35,9 +35,32 @@ App.view.define('VAffectation',{
 				padding: 5,
 				fieldLabel: "Etablissement",
 				labelAlign: "top",
+				editable: false,
 				store: App.store.create('bpclight://etablissements',{autoLoad:true}),
 				displayField: "LibEts",
 				valueField: "Kets"
+			},
+			{
+				xtype: "combo",
+				width: "100%",
+				padding: 5,
+				fieldLabel: "Département",
+				labelAlign: "top",
+				editable: false,
+				store: App.store.create('bpclight://unites',{autoLoad:false}),
+				displayField: "LibUni",
+				valueField: "Kuni"				
+			},			
+			{
+				xtype: "combo",
+				width: "100%",
+				padding: 5,
+				fieldLabel: "Service",
+				labelAlign: "top",
+				editable: false,
+				store: App.store.create('bpclight://subdis',{autoLoad:false}),
+				displayField: "LibSub",
+				valueField: "Ksub"				
 			}
 			]
 		},
