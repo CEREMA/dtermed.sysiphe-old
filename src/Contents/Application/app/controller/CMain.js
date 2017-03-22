@@ -20,13 +20,13 @@ App.controller.define('CMain', {
 			"mainform grid": {
 				itemdblclick: "grid_select"
 			},
-			"mainform combo#cboEts": {
+			"VAffectation combo#cboEts": {
 				select: "ets_select"
 			},
-			"mainform combo#cboDpt": {
+			"VAffectation combo#cboDpt": {
 				select: "dpt_select"
 			},
-			"mainform combo#cboSrv": {
+			"VAffectation combo#cboSrv": {
 				select: "srv_select"
 			}	
 		});
