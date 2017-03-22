@@ -24,12 +24,14 @@ App.view.define('VAffectation',{
 		this.items=[
 		{
 			region: "east",
+			split: true,
 			items: [
 				
 			]
 		},
 		{
 			region: "center",
+			split: true,
 			items: [
 				
 			]
