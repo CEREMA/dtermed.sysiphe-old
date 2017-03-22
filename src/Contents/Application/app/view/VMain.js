@@ -35,11 +35,13 @@ App.view.define('VMain', {
 					'->',
 					{
 						text: "Filtrer",
-						iconCls: "ico-filtre"
+						iconCls: "ico-filtre",
+						itemId: "filter"
 					},
 					{
 						text: "Exporter",
-						iconCls: "ico-export"
+						iconCls: "ico-export",
+						itemId: "export"
 					}
 					],
 					flex: 1,
