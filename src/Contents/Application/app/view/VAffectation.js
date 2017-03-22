@@ -33,6 +33,7 @@ App.view.define('VAffectation',{
 				xtype: "combo",
 				width: "100%",
 				padding: 5,
+				fieldLabel: "Etablissement",
 				store: App.store.create('bpclight://etablissements',{autoLoad:true}),
 				displayField: "LibEts",
 				valueField: "Kets"
