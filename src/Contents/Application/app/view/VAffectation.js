@@ -25,6 +25,7 @@ App.view.define('VAffectation',{
 		{
 			region: "east",
 			split: true,
+			width: 250,
 			items: [
 				
 			]
@@ -32,6 +33,7 @@ App.view.define('VAffectation',{
 		{
 			region: "center",
 			split: true,
+			flex: 1,
 			items: [
 				
 			]
