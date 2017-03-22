@@ -19,12 +19,26 @@ App.view.define('VMain', {
 			]		
 		},
 		{
-			region: "center",			
+			region: "center",
+			layout: "vbox",
 			split:true,
 			items: [
 				{
-					xtype: "button",
-					itemId: "clickme",
+					xtype: "grid",
+					tbar: [
+					'->',
+					{
+						text: "Filtrer",
+						iconCls: "ico-filtre"
+					},
+					{
+						text: "Exporter",
+						iconCls: "ico-export"
+					}
+					],
+					flex: 1,
+					width: "100%",
+					itemId: "materiels",
 					text: "Click me",
 					margin: 20
 				}
