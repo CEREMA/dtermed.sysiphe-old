@@ -54,7 +54,8 @@
         "CMain"
     ],
     "modules": [
-        "Ext.ux.FilterBox"
+        "Ext.ux.FilterBox",
+        "Ext.ux.Upload"
     ],
     "plugins": [],
     "api": [
