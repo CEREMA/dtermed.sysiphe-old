@@ -26,6 +26,7 @@ App.view.define('VAffectation',{
 			region: "west",
 			split: true,
 			width: 350,
+			title: "Agents",
 			items: [
 				
 			]
@@ -33,6 +34,7 @@ App.view.define('VAffectation',{
 		{
 			region: "center",
 			split: true,
+			title: "Fiche matériel",
 			flex: 1,
 			items: [
 				
