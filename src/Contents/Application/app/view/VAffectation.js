@@ -42,6 +42,7 @@ App.view.define('VAffectation',{
 			},
 			{
 				xtype: "combo",
+				itemId: "cboDpt",
 				width: "100%",
 				padding: 5,
 				fieldLabel: "Département",
@@ -54,6 +55,7 @@ App.view.define('VAffectation',{
 			{
 				xtype: "combo",
 				width: "100%",
+				itemId: "cboSrv",
 				padding: 5,
 				fieldLabel: "Service",
 				labelAlign: "top",
