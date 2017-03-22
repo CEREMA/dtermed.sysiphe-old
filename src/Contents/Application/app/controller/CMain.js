@@ -41,6 +41,12 @@ App.controller.define('CMain', {
 		App.get('mainform combo#cboDpt').bindStore(store);
 		store.load();
 	},
+	dpt_select: function(me) {
+
+	},
+	srv_select: function(me) {
+
+	},	
 	Menu_onClick: function(p)
 	{
 		if (p.itemId) {
