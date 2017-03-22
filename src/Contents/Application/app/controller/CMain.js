@@ -37,16 +37,16 @@ App.controller.define('CMain', {
 	},
 	ets_select: function(me) {
 		alert('x');
-		App.get('mainform combo#cboDpt').setValue('');	
-		App.get('mainform combo#cboSrv').setValue('');
+		App.get('VAffectation combo#cboDpt').setValue('');	
+		App.get('VAffectation combo#cboSrv').setValue('');
 		var store=App.store.create('bpclight://unites?kets='+me.getValue());
-		App.get('mainform combo#cboDpt').bindStore(store);
+		App.get('VAffectation combo#cboDpt').bindStore(store);
 		store.load();
 	},
 	dpt_select: function(me) {
-		App.get('mainform combo#cboSrv').setValue('');
+		App.get('VAffectation combo#cboSrv').setValue('');
 		var store=App.store.create('bpclight://subdis?ksub='+me.getValue());
-		App.get('mainform combo#cboSrv').bindStore(store);
+		App.get('VAffectation combo#cboSrv').bindStore(store);
 		store.load();
 	},
 	srv_select: function(me) {
