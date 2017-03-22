@@ -19,11 +19,27 @@ App.controller.define('CMain', {
 			},
 			"mainform grid": {
 				itemdblclick: "grid_select"
-			}
+			},
+			"mainform combo#cboEts": {
+				select: "ets_select"
+			},
+			"mainform combo#cboDpt": {
+				select: "dpt_select"
+			},
+			"mainform combo#cboSrv": {
+				select: "srv_select"
+			}	
 		});
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	ets_select: function(me) {
+		App.get('mainform combo#cboDpt').setValue('');	
+		App.get('mainform combo#cboSrv').setValue('');
+		var store=App.store.create('bpclight://unites?kets='+me.getValue());
+		App.get('mainform combo#cboDpt').bindStore(store);
+		store.load();
 	},
 	Menu_onClick: function(p)
 	{
