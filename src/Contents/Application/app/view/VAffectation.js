@@ -6,7 +6,7 @@ App.view.define('VAffectation',{
         this.height = 660;
 
         this.layout = {
-            type: 'fit'
+            type: 'border'
         };
 		
 		this.title="Affectation";
@@ -22,7 +22,18 @@ App.view.define('VAffectation',{
         ];
 		
 		this.items=[
-			
+		{
+			region: "east",
+			items: [
+				
+			]
+		},
+		{
+			region: "center",
+			items: [
+				
+			]
+		}
 		];
 		
 		this.callParent();
