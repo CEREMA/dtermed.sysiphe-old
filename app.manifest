@@ -55,7 +55,7 @@
     ],
     "modules": [
         "Ext.ux.FilterBox",
-        "Ext.ux.Upload"
+        "Ext.ux.upload"
     ],
     "plugins": [],
     "api": [
