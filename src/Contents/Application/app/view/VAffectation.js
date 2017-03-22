@@ -32,6 +32,7 @@ App.view.define('VAffectation',{
 			{
 				xtype: "combo",
 				width: "100%",
+				itemId: "cboEts",
 				padding: 5,
 				fieldLabel: "Etablissement",
 				labelAlign: "top",
