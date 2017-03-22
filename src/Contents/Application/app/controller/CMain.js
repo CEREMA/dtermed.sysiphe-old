@@ -14,7 +14,7 @@ App.controller.define('CMain', {
 			"menu>menuitem": {
 				click: "Menu_onClick"
 			},
-			"mainform button#filtre": {
+			"mainform button#filter": {
 				click: "filter_onclick"
 			}
 		});
