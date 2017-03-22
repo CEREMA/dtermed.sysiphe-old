@@ -28,3 +28,12 @@
 	background-image:url(webapp/Preferences.png);
 }
 
+.ico-export
+{
+	background-image:url(webapp/export.png);
+}
+
+.ico-filtre
+{
+	background-image:url(webapp/filter.png);
+}
