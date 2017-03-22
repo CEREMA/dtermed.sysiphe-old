@@ -36,6 +36,7 @@ App.controller.define('CMain', {
 		
 	},
 	ets_select: function(me) {
+		alert('x');
 		App.get('mainform combo#cboDpt').setValue('');	
 		App.get('mainform combo#cboSrv').setValue('');
 		var store=App.store.create('bpclight://unites?kets='+me.getValue());
