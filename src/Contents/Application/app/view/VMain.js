@@ -46,7 +46,9 @@ App.view.define('VMain', {
 					width: "100%",
 					itemId: "materiels",
 					text: "Click me",
-					columns: [],
+					columns: [{
+						
+					}],
 					store: App.store.create('sysiphedb://materiels',{autoLoad: true})
 				}
 			]
