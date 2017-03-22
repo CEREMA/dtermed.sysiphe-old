@@ -8,11 +8,16 @@ App.view.define('VAffectation',{
         this.layout = {
             type: 'fit'
         };
+		
+		this.title="Affectation";
         
 		this.bbar = [
             '->', {
-                text: 'Quitter',
-				itemId: "Exit"
+                text: '<b>Quitter</b>',
+				itemId: "Exit",
+				handler: function(me) {
+					me.up('window').close();
+				}
             }
         ];
 		
