@@ -49,7 +49,7 @@ App.view.define('VAffectation',{
 				fieldLabel: "Département",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('bpclight://unites',{autoLoad:false}),
+				store: App.store.create('bpclight://unites'),
 				displayField: "LibUnic",
 				valueField: "Kuni"				
 			},			
@@ -61,7 +61,8 @@ App.view.define('VAffectation',{
 				fieldLabel: "Service",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('bpclight://subdis',{autoLoad:false}),
+				store: App.store.create('bpclight://subdis'),
+				store: App.store.create('bpclight://subdis'),
 				displayField: "LibSubC",
 				valueField: "Ksub"				
 			}
