@@ -14,8 +14,8 @@ App.controller.define('CMain', {
 			"menu>menuitem": {
 				click: "Menu_onClick"
 			},
-			"button#clickme": {
-				click: "clickme_onclick"
+			"mainform button#filter": {
+				click: "filter_onclick"
 			}
 		});
 		
@@ -28,9 +28,13 @@ App.controller.define('CMain', {
 			Ext.Msg.alert('Status', 'Click event on '+p.itemId);
 		};			
 	},
-	clickme_onclick: function()
+	filter_onclick: function()
 	{
-		Ext.Msg.alert('Omneedia','hello world!');
+		App.get('FilterBox#FilterPanel').store=App.get('grid#GridAgents').getStore();
+		if (App.get('FilterBox#FilterPanel').isVisible())
+		App.get('FilterBox#FilterPanel').hide();
+		else
+		App.get('FilterBox#FilterPanel').show();
 	},
 	onLoad: function()
 	{
