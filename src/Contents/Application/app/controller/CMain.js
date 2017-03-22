@@ -16,6 +16,9 @@ App.controller.define('CMain', {
 			},
 			"mainform button#filter": {
 				click: "filter_onclick"
+			},
+			"mainform grid": {
+				itemdblclick: "grid_select"
 			}
 		});
 		
@@ -27,6 +30,9 @@ App.controller.define('CMain', {
 		if (p.itemId) {
 			Ext.Msg.alert('Status', 'Click event on '+p.itemId);
 		};			
+	},
+	grid_select: function() {
+		App.view.create('VAffectation',{modal:true}).show().center();	
 	},
 	filter_onclick: function()
 	{
