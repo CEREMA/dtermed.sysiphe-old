@@ -58,7 +58,10 @@
     "api": [
         "MyService"
     ],
-    "db": [],
+    "db": [
+        "sysiphedb",
+        "bpclight"
+    ],
     "packages": [],
     "icon": {
         "background": "#FFFFFF",
