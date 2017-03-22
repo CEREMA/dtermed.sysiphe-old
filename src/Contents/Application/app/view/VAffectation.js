@@ -62,7 +62,7 @@ App.view.define('VAffectation',{
 				labelAlign: "top",
 				editable: false,
 				store: App.store.create('bpclight://subdis',{autoLoad:false}),
-				displayField: "LibSubc",
+				displayField: "LibSubC",
 				valueField: "Ksub"				
 			}
 			]
