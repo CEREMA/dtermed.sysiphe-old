@@ -23,9 +23,9 @@ App.view.define('VAffectation',{
 		
 		this.items=[
 		{
-			region: "east",
+			region: "west",
 			split: true,
-			width: 250,
+			width: 350,
 			items: [
 				
 			]
