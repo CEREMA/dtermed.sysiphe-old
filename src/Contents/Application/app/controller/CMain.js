@@ -39,7 +39,7 @@ App.controller.define('CMain', {
 		
 	},
 	radio_change: function(me,value) {
-		console.log(me);
+		me.items.items[0].boxLabelEl.update("1");
 		if (value.rb==1) {
 			
 		};
