@@ -21,7 +21,7 @@ App.controller.define('CMain', {
 			"mainform grid": {
 				itemdblclick: "grid_select"
 			},
-			"VAffectation combo#cboEts": {
+			"VAffectation combo": {
 				select: "ets_select"
 			},
 			"VAffectation combo#cboDpt": {
