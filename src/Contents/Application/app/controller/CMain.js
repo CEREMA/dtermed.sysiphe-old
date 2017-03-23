@@ -38,14 +38,13 @@ App.controller.define('CMain', {
 	ets_select: function(me) {
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
-		alert(me.getValue());
 		var store=App.store.create('bpclight://unites?kets='+me.getValue()+'&archive=0');
 		App.get('VAffectation combo#cboDpt').bindStore(store);
 		store.load();
 	},
 	dpt_select: function(me) {
 		App.get('VAffectation combo#cboSrv').setValue('');
-		var store=App.store.create('bpclight://subdis?ksub='+me.getValue());
+		var store=App.store.create('bpclight://subdis?archive=0&kuni='+me.getValue());
 		App.get('VAffectation combo#cboSrv').bindStore(store);
 		store.load();
 	},
