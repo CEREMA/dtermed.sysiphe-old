@@ -87,7 +87,7 @@ App.view.define('VAffectation',{
 			{
 				xtype: "combo",
 				width: "100%",
-				itemId: "cboEts",
+				itemId: "cboAgent",
 				padding: 5,
 				fieldLabel: "Agent",
 				labelAlign: "top",
