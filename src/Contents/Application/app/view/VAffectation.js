@@ -42,28 +42,35 @@ App.view.define('VAffectation',{
 				valueField: "Kets"
 			},
 			{
-				xtype: "combo",
-				itemId: "cboDpt",
+				layout: "hbox",
 				width: "100%",
-				padding: 5,
-				fieldLabel: "Département",
-				labelAlign: "top",
-				editable: false,
-				store: App.store.create('bpclight://unites'),
-				displayField: "LibUnic",
-				valueField: "Kuni"				
-			},			
-			{
-				xtype: "combo",
-				width: "100%",
-				itemId: "cboSrv",
-				padding: 5,
-				fieldLabel: "Service",
-				labelAlign: "top",
-				editable: false,
-				store: App.store.create('bpclight://subdis'),
-				displayField: "LibSubC",
-				valueField: "Ksub"				
+				items: [
+				{
+					xtype: "combo",
+					itemId: "cboDpt",
+					width: "100%",
+					padding: 5,
+					fieldLabel: "Département",
+					labelAlign: "top",
+					editable: false,
+					store: App.store.create('bpclight://unites'),
+					displayField: "LibUnic",
+					valueField: "Kuni"				
+				},			
+				{
+					xtype: "combo",
+					width: "100%",
+					itemId: "cboSrv",
+					padding: 5,
+					fieldLabel: "Service",
+					labelAlign: "top",
+					editable: false,
+					store: App.store.create('bpclight://subdis'),
+					displayField: "LibSubC",
+					valueField: "Ksub"				
+				}					
+				],
+				border: false
 			}
 			]
 		},
