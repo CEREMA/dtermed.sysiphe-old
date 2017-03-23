@@ -45,13 +45,15 @@ App.controller.define('CMain', {
 			App.get('VAffectation combo#cboEts').show();
 			App.get('VAffectation combo#cboDpt').show();
 			App.get('VAffectation combo#cboSrv').show();
+			App.get('VAffectation combo#cboAgent').show();
 		};
 		if (value.rb==2) {
 			me.items.items[0].boxLabelEl.update("BPCLight");
 			me.items.items[1].boxLabelEl.update("<b>Sysiphe</b>");		
 			App.get('VAffectation combo#cboEts').hide();
 			App.get('VAffectation combo#cboDpt').hide();
-			App.get('VAffectation combo#cboSrv').hide();			
+			App.get('VAffectation combo#cboSrv').hide();
+			App.get('VAffectation combo#cboAgent').hide();
 		};
 	},
 	ets_select: function(me) {
