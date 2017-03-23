@@ -32,6 +32,12 @@ App.view.define('VMain', {
 			items: [
 				{
 					xtype: "grid",
+        			features: [{
+						ftype: 'groupingsummary',
+						groupHeaderTpl: '{name}',
+						hideGroupedHeader: true,
+						enableGroupingMenu: false
+        			}],					
 					tbar: [
 					'->',
 					{
