@@ -62,7 +62,7 @@ App.view.define('VMain', {
 						header: "Série",
 						dataIndex: "SN"
 					}],
-					store: App.store.create('sysiphe://materiels',{autoLoad: true,groupField: 'IDUNITE'})
+					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'IDUNITE'})
 				}
 			]
 		}
