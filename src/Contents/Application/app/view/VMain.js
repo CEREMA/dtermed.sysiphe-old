@@ -54,7 +54,6 @@ App.view.define('VMain', {
 					flex: 1,
 					width: "100%",
 					itemId: "materiels",
-					text: "Click me",
 					columns: [{
 						header: "Inventaire",
 						dataIndex: "NOINVT"
@@ -62,7 +61,7 @@ App.view.define('VMain', {
 						header: "Série",
 						dataIndex: "SN"
 					}],
-					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'IDUNITE'})
+					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'LibUnic'})
 				}
 			]
 		}
