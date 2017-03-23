@@ -39,12 +39,13 @@ App.controller.define('CMain', {
 		
 	},
 	radio_change: function(me,value) {
-		me.items.items[0].boxLabelEl.update("1");
 		if (value.rb==1) {
-			
+			me.items.items[0].boxLabelEl.update("<b>BPCLight</b>");
+			me.items.items[1].boxLabelEl.update("Sysiphe");
 		};
 		if (value.rb==2) {
-			
+			me.items.items[0].boxLabelEl.update("BPCLight");
+			me.items.items[1].boxLabelEl.update("<b>Sysiphe</b>");			
 		};
 	},
 	ets_select: function(me) {
