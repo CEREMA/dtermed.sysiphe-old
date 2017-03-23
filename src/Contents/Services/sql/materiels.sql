@@ -1,5 +1,5 @@
 SELECT DISTINCT
-	LibEts,LibUnic,LibSubC,NOINVT,SN,DATELIVRAISON
+	*
 FROM 
 	affectations 
     right join materiels on materiels.IDMATERIEL=affectations.IDMATERIEL
