@@ -80,21 +80,21 @@ App.view.define('VAffectation',{
 					store: App.store.create('bpclight://subdis'),
 					displayField: "LibSubC",
 					valueField: "Ksub"				
-				},
-				{
-					xtype: "combo",
-					width: "100%",
-					itemId: "cboEts",
-					padding: 5,
-					fieldLabel: "Agent",
-					labelAlign: "top",
-					editable: false,
-					store: App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}?active=1',{autoLoad:false}),
-					displayField: "LibEts",
-					valueField: "Kets"
 				}					
 				],
 				border: false
+			},
+			{
+				xtype: "combo",
+				width: "100%",
+				itemId: "cboEts",
+				padding: 5,
+				fieldLabel: "Agent",
+				labelAlign: "top",
+				editable: false,
+				store: App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}?active=1',{autoLoad:false}),
+				displayField: "LibEts",
+				valueField: "Kets"
 			}
 			]
 		},
