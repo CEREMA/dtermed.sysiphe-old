@@ -95,7 +95,19 @@ App.view.define('VAffectation',{
 				store: App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}?actif=1',{autoLoad:false}),
 				displayField: "NomPrenom",
 				valueField: "Kage"
-			}
+			},
+			{
+				xtype: "combo",
+				width: "100%",
+				itemId: "cboAgent",
+				padding: 5,
+				fieldLabel: "Agent",
+				labelAlign: "top",
+				editable: false,
+				store: App.store.create('sysiphedb://utilisateurs{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
+				displayField: "UNITE",
+				valueField: "IDUNITE"
+			}				
 			]
 		},
 		{
