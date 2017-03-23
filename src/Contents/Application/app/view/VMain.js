@@ -32,12 +32,18 @@ App.view.define('VMain', {
 			items: [
 				{
 					xtype: "grid",
-        			features: [{
-						ftype: 'groupingsummary',
-						groupHeaderTpl: '{name}',
-						hideGroupedHeader: false,
-						enableGroupingMenu: true
-        			}],					
+					plugins: [
+						Ext.create('Ext.ux.grid.plugin.GroupingPanel')	
+					],
+        			features: [Ext.create('Ext.ux.grid.feature.MultiGroupingSummary', {
+            id:                     'group',
+            hideGroupedHeader:      true,
+            enableGroupingMenu:     true,
+            startCollapsed:         false
+        }), {
+            ftype:  'summary',
+            dock:   'bottom'
+        }],					
 					tbar: [
 					'->',
 					{
