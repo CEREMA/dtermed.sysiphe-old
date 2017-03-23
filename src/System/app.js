@@ -1,7 +1,7 @@
 App = {
 	init: function(app,server) {
 		app.use('/tmp',server.static(__dirname + require('path').sep+'tmp'));
-		app.post('/agents',function(req,res) {
+		app.post('/materiels',function(req,res) {
 			res.header("Content-Type", "application/json; charset=utf-8");
 			if (req.body.quest) {
 				var o=JSON.parse(req.body.quest);
