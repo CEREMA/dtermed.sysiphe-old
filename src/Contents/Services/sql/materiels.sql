@@ -1,5 +1,6 @@
 SELECT 
-	COALESCE(bpclight_unites.LibUnic,unites.UNITE) AS _UNITE
+	COALESCE(bpclight_unites.LibUnic,unites.UNITE) AS _UNITE,
+	LibEts,LibUnic,LibSubC,NOINVT,SN,DATELIVRAISON
 FROM 
 	affectations 
     right join materiels on materiels.IDMATERIEL=affectations.IDMATERIEL
