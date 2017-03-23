@@ -65,7 +65,7 @@ App.view.define('VMain', {
 					},{
 						header: "Service",
 						dataIndex: "LibSubC"
-					}{
+					},{
 						header: "Inventaire",
 						dataIndex: "NOINVT"
 					},{
