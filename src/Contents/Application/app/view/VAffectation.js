@@ -33,20 +33,11 @@ App.view.define('VAffectation',{
 				layout: "hbox",
 				width: "100%",
 				border: false,
-				xtype: "fieldcontainer",
+				xtype: "radiogroup",
 				defaultType: 'radiofield',
 				items: [
-                {
-                    boxLabel  : 'BPCLight',
-                    name      : 'bpclight',
-                    inputValue: '',
-                    id        : 'rdio_bpclight'
-                }, {
-                    boxLabel  : 'Sysiphe',
-                    name      : 'sysiphe',
-                    inputValue: '',
-                    id        : 'rdio_sysiphe'
-                }
+        		{boxLabel: 'BPCLight', name: 'rb', inputValue: '1', checked: true},
+        		{boxLabel: 'Sysiphe', name: 'rb', inputValue: '2'}
 				]
 			},
 			{
