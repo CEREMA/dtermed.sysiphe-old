@@ -37,8 +37,8 @@ App.view.define('VAffectation',{
 				xtype: "radiogroup",
 				defaultType: 'radiofield',
 				items: [
-        		{boxLabel: 'BPCLight', name: 'rb', inputValue: '1', checked: true},
-        		{boxLabel: 'Sysiphe', name: 'rb', inputValue: '2',margin:{left: 10}}
+        		{boxLabel: '<b>BPCLight</b>', name: 'rb', inputValue: '1', checked: true},
+        		{boxLabel: '<b>Sysiphe</b>', name: 'rb', inputValue: '2',margin:{left: 10}}
 				]
 			},
 			{
