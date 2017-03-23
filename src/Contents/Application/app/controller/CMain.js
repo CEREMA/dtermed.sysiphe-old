@@ -29,11 +29,17 @@ App.controller.define('CMain', {
 			},
 			"VAffectation combo#cboSrv": {
 				select: "srv_select"
-			}	
+			},
+			"VAffectation radiogroup": {
+				change: "radio_change"
+			}
 		});
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	radio_change: function(me,value) {
+		alert(value);	
 	},
 	ets_select: function(me) {
 		App.get('VAffectation combo#cboDpt').setValue('');	
