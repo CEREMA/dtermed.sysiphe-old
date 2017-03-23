@@ -43,6 +43,12 @@ App.controller.define('CMain', {
 	},
 	VAffectation_show: function(me) {
 		App.get(me,'combo#cboEts').setValue(1);
+		App.get('VAffectation combo#cboDpt').setValue('');	
+		App.get('VAffectation combo#cboSrv').setValue('');
+		App.get('VAffectation combo#cboAgent').setValue('');
+		var store=App.store.create('bpclight://unites{Kuni,LibUnic+}?kets='+me.getValue()+'&archive=0');
+		App.get('VAffectation combo#cboDpt').bindStore(store);
+		store.load();		
 	},
 	radio_change: function(me,value) {
 		if (value.rb==1) {
