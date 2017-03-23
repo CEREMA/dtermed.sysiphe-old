@@ -30,6 +30,19 @@ App.view.define('VAffectation',{
 			layout: "vbox",
 			items: [
 			{
+				layout: "hbox",
+				width: "100%",
+				border: false,
+				items: [
+				{
+					xtype: "radiofield"
+				},
+				{
+					xtype: "radiofield"
+				}
+				]
+			},
+			{
 				xtype: "combo",
 				width: "100%",
 				itemId: "cboEts",
