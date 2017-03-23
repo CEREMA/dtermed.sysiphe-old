@@ -30,7 +30,7 @@ App.view.define('VAffectation',{
 			layout: "vbox",
 			items: [
 			{
-				layout: "fit",
+				layout: "hbox",
 				width: "100%",
 				border: false,
 				xtype: "fieldcontainer",
