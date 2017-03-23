@@ -1,5 +1,6 @@
 SELECT 
-	*
+	*,
+	COALESCE(bpclight_unites.LibUnic,unites.UNITE) AS _UNITE
 FROM 
 	affectations 
     right join materiels on materiels.IDMATERIEL=affectations.IDMATERIEL
@@ -7,7 +8,7 @@ FROM
     right join modeles on materiels.IDMODELE=modeles.IDMODELE
     right join marques on marques.IDMARQUE=modeles.IDMARQUE
     right join familles on familles.IDFAMILLE=modeles.IDFAMILLE
-	right join bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
+	left join bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
     left join utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDUTILISATEUR
 	left join bpclight_unites on bpclight_agents.kuni=bpclight_unites.kuni
     left join unites on unites.IDUNITE=utilisateurs.IDUNITE

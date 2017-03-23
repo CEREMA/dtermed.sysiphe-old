@@ -64,7 +64,7 @@ App.view.define('VMain', {
 						hidden: true
 					},{
 						header: "Unité",
-						dataIndex: "UNITE"
+						dataIndex: "_UNITE"
 					},{
 						header: "Service",
 						dataIndex: "LibSubC"
