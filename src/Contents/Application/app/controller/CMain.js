@@ -112,7 +112,7 @@ App.controller.define('CMain', {
 	onLoad: function()
 	{
 		// form loaded	
-		var store = grid.getStore();
+		var store = App.get('mainform grid').getStore();
 		store.on('load', function (data) {
 			var model = data.model.getFields();
 			console.log(model);
