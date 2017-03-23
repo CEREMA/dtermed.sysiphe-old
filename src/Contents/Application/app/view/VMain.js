@@ -72,8 +72,9 @@ App.view.define('VMain', {
 						header: "Série",
 						dataIndex: "SN"
 					},{
-						header: "Notes",
-						dataIndex: "NOTESMATERIEL",
+						header: "Date Livraison",
+						dataIndex: "DATELIVRAISON",
+						renderer: Ext.util.Format.dateRenderer('m/d/Y'),
 						flex: 1
 					},{
 						header: "Notes",
