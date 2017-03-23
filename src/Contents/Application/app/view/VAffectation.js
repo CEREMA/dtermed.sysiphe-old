@@ -99,9 +99,9 @@ App.view.define('VAffectation',{
 			{
 				xtype: "combo",
 				width: "100%",
-				itemId: "cboUnite",
+				itemId: "cboAgentS",
 				padding: 5,
-				fieldLabel: "Unité",
+				fieldLabel: "Affectation",
 				labelAlign: "top",
 				editable: false,
 				store: App.store.create('sysiphe://utilisateurs{IDUTILISATEUR,NOMUTILISATEUR+}?archive=1',{autoLoad:true}),
