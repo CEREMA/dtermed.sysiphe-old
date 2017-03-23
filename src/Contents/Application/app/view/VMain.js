@@ -56,7 +56,7 @@ App.view.define('VMain', {
 						header: "Série",
 						dataIndex: "SN"
 					}],
-					store: App.store.create('sysiphedb://materiels',{autoLoad: true})
+					store: App.store.create('sysiphe://materiels',{autoLoad: true})
 				}
 			]
 		}
