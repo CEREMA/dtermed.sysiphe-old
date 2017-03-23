@@ -11,6 +11,7 @@ App = {
 				/*objs.push("batiments.LibBatC");
 				objs.push("batiments.GPS");
 				objs.push("agents.*");*/
+				objs.push("*");
 				for (var i=0;i<o.length;i++)
 				{
 					var str="";
