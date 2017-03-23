@@ -40,10 +40,7 @@ App.view.define('VMain', {
             hideGroupedHeader:      true,
             enableGroupingMenu:     true,
             startCollapsed:         false
-        }), {
-            ftype:  'summary',
-            dock:   'bottom'
-        }],					
+        })],					
 					tbar: [
 					'->',
 					{
