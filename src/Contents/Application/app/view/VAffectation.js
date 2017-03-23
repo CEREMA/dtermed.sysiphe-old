@@ -104,9 +104,9 @@ App.view.define('VAffectation',{
 				fieldLabel: "Unité",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('sysiphe://utilisateurs{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
-				displayField: "UNITE",
-				valueField: "IDUNITE"
+				store: App.store.create('sysiphe://utilisateurs{IDUTILISATEUR,NOMUTILISATEUR+}?archive=1',{autoLoad:true}),
+				displayField: "NOMUTILISATEUR",
+				valueField: "IDUTILISATEUR"
 			}				
 			]
 		},
