@@ -60,6 +60,10 @@ App.view.define('VMain', {
 					},{
 						header: "Série",
 						dataIndex: "SN"
+					},{
+						header: "Notes",
+						dataIndex: "NOTESMATERIEL",
+						flex: 1
 					}],
 					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'LibUnic'})
 				}
