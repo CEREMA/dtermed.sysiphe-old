@@ -11,5 +11,5 @@ FROM
     right join utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDUTILISATEUR
 	right join bpclight_unites on bpclight_agents.kuni=bpclight_unites.kuni
     right join unites on unites.IDUNITE=utilisateurs.IDUNITE
-/*	right join bpclight_subdis on bpclight_agents.ksub=bpclight_subdis.ksub
-	right join bpclight_etablissements on bpclight_etablissements.kets=bpclight_unites.kets*/
+	right join bpclight_subdis on bpclight_agents.ksub=bpclight_subdis.ksub
+	right join bpclight_etablissements on bpclight_etablissements.kets=bpclight_unites.kets
