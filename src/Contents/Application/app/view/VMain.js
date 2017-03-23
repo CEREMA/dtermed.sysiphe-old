@@ -51,10 +51,10 @@ App.view.define('VMain', {
 					text: "Click me",
 					columns: [{
 						header: "Inventaire",
-						dataIndex: "Num_Inventaire"
+						dataIndex: "NOINVT"
 					},{
 						header: "Série",
-						dataIndex: "Num_Serie"
+						dataIndex: "SN"
 					}],
 					store: App.store.create('sysiphedb://materiels',{autoLoad: true})
 				}
