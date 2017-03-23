@@ -99,6 +99,18 @@ App.view.define('VAffectation',{
 			{
 				xtype: "combo",
 				width: "100%",
+				itemId: "cboUnite",
+				padding: 5,
+				fieldLabel: "Unité",
+				labelAlign: "top",
+				editable: false,
+				store: App.store.create('sysiphe://unites{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
+				displayField: "UNITE",
+				valueField: "IDUNITE"
+			},				
+			{
+				xtype: "combo",
+				width: "100%",
 				itemId: "cboAgentS",
 				padding: 5,
 				fieldLabel: "Affectation",
