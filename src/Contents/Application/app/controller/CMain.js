@@ -21,7 +21,7 @@ App.controller.define('CMain', {
 			"mainform grid": {
 				itemdblclick: "grid_select"
 			},
-			"VAffectation combo": {
+			"VAffectation combo#cboEts": {
 				select: "ets_select"
 			},
 			"VAffectation combo#cboDpt": {
@@ -36,7 +36,6 @@ App.controller.define('CMain', {
 		
 	},
 	ets_select: function(me) {
-		alert('x');
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
 		var store=App.store.create('bpclight://unites?kets='+me.getValue());
