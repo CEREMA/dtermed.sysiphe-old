@@ -38,18 +38,22 @@ App.controller.define('CMain', {
 	ets_select: function(me) {
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
+		App.get('VAffectation combo#cboAgent').setValue('');
 		var store=App.store.create('bpclight://unites{Kuni,LibUnic+}?kets='+me.getValue()+'&archive=0');
 		App.get('VAffectation combo#cboDpt').bindStore(store);
 		store.load();
 	},
 	dpt_select: function(me) {
 		App.get('VAffectation combo#cboSrv').setValue('');
+		App.get('VAffectation combo#cboAgent').setValue('');
 		var store=App.store.create('bpclight://subdis{Ksub,LibSubC+}?archive=0&kuni='+me.getValue());
 		App.get('VAffectation combo#cboSrv').bindStore(store);
 		store.load();
 	},
 	srv_select: function(me) {
-
+		var store=App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}?actif=1&ksub='+me.getValue());
+		App.get('VAffectation combo#cboAgent').bindStore(store);
+		store.load();
 	},	
 	Menu_onClick: function(p)
 	{
