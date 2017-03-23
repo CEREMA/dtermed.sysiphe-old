@@ -1,6 +1,6 @@
 App.view.define('VAffectation',{
     extend: "Ext.window.Window",
-    alias: 'widget.VShowFormation',
+    alias: 'widget.VAffectation',
     initComponent: function() {
         this.width = 1024;
         this.height = 660;
@@ -48,7 +48,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					itemId: "cboDpt",
-					width: "100%",
+					flex: 1,
 					padding: 5,
 					fieldLabel: "Département",
 					labelAlign: "top",
@@ -59,7 +59,7 @@ App.view.define('VAffectation',{
 				},			
 				{
 					xtype: "combo",
-					width: "100%",
+					flex: 1,
 					itemId: "cboSrv",
 					padding: 5,
 					fieldLabel: "Service",
