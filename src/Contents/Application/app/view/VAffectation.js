@@ -104,7 +104,7 @@ App.view.define('VAffectation',{
 				fieldLabel: "Unité",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('sysiphedb://utilisateurs{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
+				store: App.store.create('sysiphe://utilisateurs{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
 				displayField: "UNITE",
 				valueField: "IDUNITE"
 			}				
