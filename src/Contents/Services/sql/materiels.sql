@@ -1,4 +1,4 @@
-SELECT 
+SELECT DISTINCT
 	COALESCE(bpclight_unites.LibUnic,unites.UNITE) AS _UNITE,
 	LibEts,LibUnic,LibSubC,NOINVT,SN,DATELIVRAISON
 FROM 
