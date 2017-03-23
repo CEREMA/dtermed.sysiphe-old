@@ -7,7 +7,7 @@ FROM
     right join modeles on materiels.IDMODELE=modeles.IDMODELE
     right join marques on marques.IDMARQUE=modeles.IDMARQUE
     right join familles on familles.IDFAMILLE=modeles.IDFAMILLE
-/*	right join bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR*/
+	right join bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
     right join utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDUTILISATEUR
 /*	right join bpclight_unites on bpclight_agents.kuni=bpclight_unites.kuni*/
     right join unites on unites.IDUNITE=utilisateurs.IDUNITE
