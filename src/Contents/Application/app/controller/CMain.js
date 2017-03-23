@@ -58,6 +58,7 @@ App.controller.define('CMain', {
 			App.get('VAffectation combo#cboDpt').show();
 			App.get('VAffectation combo#cboSrv').show();
 			App.get('VAffectation combo#cboAgent').show();
+			App.get('VAffectation combo#cboUnite').hide();
 		};
 		if (value.rb==2) {
 			me.items.items[0].boxLabelEl.update("BPCLight");
@@ -66,6 +67,7 @@ App.controller.define('CMain', {
 			App.get('VAffectation combo#cboDpt').hide();
 			App.get('VAffectation combo#cboSrv').hide();
 			App.get('VAffectation combo#cboAgent').hide();
+			App.get('VAffectation combo#cboUnite').show();
 		};
 	},
 	ets_select: function(me) {
