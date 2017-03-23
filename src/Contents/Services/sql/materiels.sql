@@ -1,5 +1,4 @@
 SELECT 
-	*,
 	COALESCE(bpclight_unites.LibUnic,unites.UNITE) AS _UNITE
 FROM 
 	affectations 
