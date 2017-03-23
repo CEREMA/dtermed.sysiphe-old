@@ -59,7 +59,8 @@
     ],
     "plugins": [],
     "api": [
-        "MyService"
+        "MyService",
+        "Materiels"
     ],
     "db": [
         "sysiphedb",
