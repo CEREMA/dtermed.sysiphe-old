@@ -21,6 +21,9 @@ App.controller.define('CMain', {
 			"mainform grid": {
 				itemdblclick: "grid_select"
 			},
+			"VAffectation": {
+				show: "VAffectation_show"	
+			},
 			"VAffectation combo#cboEts": {
 				select: "ets_select"
 			},
@@ -37,6 +40,9 @@ App.controller.define('CMain', {
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	VAffectation_show: function(me) {
+		App.get(me,'combo#cboEts').setValue(1);
 	},
 	radio_change: function(me,value) {
 		if (value.rb==1) {
