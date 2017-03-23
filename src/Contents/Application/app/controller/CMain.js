@@ -38,6 +38,7 @@ App.controller.define('CMain', {
 	ets_select: function(me) {
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
+		alert(me.getValue());
 		var store=App.store.create('bpclight://unites?kets='+me.getValue());
 		App.get('VAffectation combo#cboDpt').bindStore(store);
 		store.load();
