@@ -92,7 +92,7 @@ App.view.define('VAffectation',{
 				fieldLabel: "Agent",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}?active=1',{autoLoad:false}),
+				store: App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}?actif=1',{autoLoad:false}),
 				displayField: "LibEts",
 				valueField: "Kets"
 			}
