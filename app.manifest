@@ -59,7 +59,6 @@
     ],
     "plugins": [],
     "api": [
-        "MyService",
         "Materiels"
     ],
     "db": [
