@@ -32,15 +32,12 @@ App.view.define('VMain', {
 			items: [
 				{
 					xtype: "grid",
-					plugins: [
-						Ext.create('Ext.ux.grid.plugin.GroupingPanel')	
-					],
-        			features: [Ext.create('Ext.ux.grid.feature.MultiGroupingSummary', {
-            id:                     'group',
-            hideGroupedHeader:      true,
-            enableGroupingMenu:     true,
-            startCollapsed:         false
-        })],					
+        			features: [{
+						ftype: 'groupingsummary',
+						groupHeaderTpl: '{name}',
+						hideGroupedHeader: false,
+						enableGroupingMenu: true
+        			}],					
 					tbar: [
 					'->',
 					{
@@ -58,17 +55,8 @@ App.view.define('VMain', {
 					width: "100%",
 					itemId: "materiels",
 					columns: [{
-						header: "LibUnic",
-						dataIndex: "LibUnic",
-						
-					},{
-						header: "LibSubC",
-						dataIndex: "LibSubC",
-						
-					},{
 						header: "Inventaire",
-						dataIndex: "NOINVT",
-						
+						dataIndex: "NOINVT"
 					},{
 						header: "Série",
 						dataIndex: "SN"

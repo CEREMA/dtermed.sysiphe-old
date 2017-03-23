@@ -55,8 +55,7 @@
     ],
     "modules": [
         "Ext.ux.FilterBox",
-        "Ext.ux.upload",
-        "Ext.ux.grid.plugin.GroupingPanel"
+        "Ext.ux.upload"
     ],
     "plugins": [],
     "api": [
