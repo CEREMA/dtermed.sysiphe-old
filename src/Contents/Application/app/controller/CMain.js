@@ -39,7 +39,13 @@ App.controller.define('CMain', {
 		
 	},
 	radio_change: function(me,value) {
-		console.log(value);	
+		console.log(me);
+		if (value.rb==1) {
+			
+		};
+		if (value.rb==2) {
+			
+		};
 	},
 	ets_select: function(me) {
 		App.get('VAffectation combo#cboDpt').setValue('');	
