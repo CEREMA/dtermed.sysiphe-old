@@ -60,10 +60,14 @@ App.view.define('VMain', {
 					columns: [{
 						header: "LibUnic",
 						dataIndex: "LibUnic",
+						sortable:       true,
+            groupable:      true,
 						groupHeaderTpl: 'Project: {name}'
 					},{
 						header: "LibSubC",
 						dataIndex: "LibSubC",
+						sortable:       true,
+            groupable:      true,
 						groupHeaderTpl: 'Project: {name}'
 					},{
 						header: "Inventaire",
