@@ -55,11 +55,30 @@ App.view.define('VMain', {
 					width: "100%",
 					itemId: "materiels",
 					columns: [{
+						header: "Etablissement",
+						dataIndex: "LibEts",
+						hidden: true
+					},{
+						header: "Département",
+						dataIndex: "LibUnic",
+						hidden: true
+					},{
+						header: "Service",
+						dataIndex: "LibSubC"
+					}{
 						header: "Inventaire",
 						dataIndex: "NOINVT"
 					},{
 						header: "Série",
 						dataIndex: "SN"
+					},{
+						header: "Notes",
+						dataIndex: "NOTESMATERIEL",
+						flex: 1
+					},{
+						header: "Notes",
+						dataIndex: "NOTESMATERIEL",
+						flex: 1
 					},{
 						header: "Notes",
 						dataIndex: "NOTESMATERIEL",
