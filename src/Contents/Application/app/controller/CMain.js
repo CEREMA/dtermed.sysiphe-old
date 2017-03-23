@@ -112,9 +112,6 @@ App.controller.define('CMain', {
 	onLoad: function()
 	{
 		// form loaded	
-		App.store.createColumns(App.get("mainform grid"),function(cb) {
-			
-		});
 		var store = grid.getStore();
 		store.on('load', function (data) {
 			var model = data.model.getFields();
