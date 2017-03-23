@@ -37,7 +37,7 @@ App.view.define('VAffectation',{
 				fieldLabel: "Etablissement",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('bpclight://etablissements',{autoLoad:true}),
+				store: App.store.create('bpclight://etablissements{Kets,LibEts}?archive=0',{autoLoad:true}),
 				displayField: "LibEts",
 				valueField: "Kets"
 			},
