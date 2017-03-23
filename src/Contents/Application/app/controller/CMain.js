@@ -112,7 +112,7 @@ App.controller.define('CMain', {
 	onLoad: function()
 	{
 		// form loaded	
-		App.createColumns(App.get("mainform grid"),function(cb) {
+		App.store.createColumns(App.get("mainform grid"),function(cb) {
 			
 		});
 	}
