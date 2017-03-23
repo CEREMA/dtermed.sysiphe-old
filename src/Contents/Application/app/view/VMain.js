@@ -35,7 +35,7 @@ App.view.define('VMain', {
         			features: [{
 						ftype: 'groupingsummary',
 						groupHeaderTpl: '{name}',
-						hideGroupedHeader: true,
+						hideGroupedHeader: false,
 						enableGroupingMenu: true
         			}],					
 					tbar: [
