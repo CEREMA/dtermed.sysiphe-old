@@ -58,8 +58,17 @@ App.view.define('VMain', {
 					width: "100%",
 					itemId: "materiels",
 					columns: [{
+						header: "LibUnic",
+						dataIndex: "LibUnic",
+						groupHeaderTpl: 'Project: {name}'
+					},{
+						header: "LibSubC",
+						dataIndex: "LibSubC",
+						groupHeaderTpl: 'Project: {name}'
+					},{
 						header: "Inventaire",
-						dataIndex: "NOINVT"
+						dataIndex: "NOINVT",
+						
 					},{
 						header: "Série",
 						dataIndex: "SN"
