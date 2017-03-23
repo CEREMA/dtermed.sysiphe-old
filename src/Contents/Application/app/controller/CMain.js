@@ -39,7 +39,7 @@ App.controller.define('CMain', {
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
 		alert(me.getValue());
-		var store=App.store.create('bpclight://unites?kets='+me.getValue());
+		var store=App.store.create('bpclight://unites?kets='+me.getValue()+'&archive=0');
 		App.get('VAffectation combo#cboDpt').bindStore(store);
 		store.load();
 	},
