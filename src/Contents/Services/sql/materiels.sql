@@ -8,6 +8,8 @@ SELECT DISTINCT
 	CARACT3,
 	CARACT4,
 	modeles.modele,
+	familles.FAMILLE,
+	modeles.MODELE,
 	fournisseurs.FOURNISSEUR,
 	affectations.IDSYSIPHE,
 	affectations.IDUTILISATEUR,
@@ -20,6 +22,8 @@ FROM
     LEFT JOIN affectations on affectations.IDMATERIEL=materiels.IDMATERIEL
     LEFT JOIN fournisseurs on fournisseurs.IDFOURNISSEUR=materiels.IDFOURNISSEUR
     LEFT JOIN modeles on modeles.IDMODELE=materiels.IDMODELE
+	LEFT JOIN marques on marques.IDMARQUE=modeles.IDMARQUE    
+	LEFT JOIN familles on familles.IDFAMILLE=modeles.IDFAMILLE    
     LEFT JOIN bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
     LEFT JOIN utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDSYSIPHE
 	LEFT JOIN bpclight_unites on bpclight_unites.kuni=bpclight_agents.kuni
