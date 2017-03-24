@@ -43,13 +43,31 @@ App.controller.define('CMain', {
 	},
 	VAffectation_show: function(me) {
 		console.log(me._data);
-		App.get(me,'combo#cboEts').setValue(1);
-		App.get('VAffectation combo#cboDpt').setValue('');	
-		App.get('VAffectation combo#cboSrv').setValue('');
-		App.get('VAffectation combo#cboAgent').setValue('');
-		var store=App.store.create('bpclight://unites{Kuni,LibUnic+}?kets=1&archive=0');
-		App.get('VAffectation combo#cboDpt').bindStore(store);
-		store.load();		
+		if (me._data) {
+			if (me._data.IDUTILISATEUR==0) {
+				App.get('VAffectation combo#cboEts').hide();
+				App.get('VAffectation combo#cboDpt').hide();
+				App.get('VAffectation combo#cboSrv').hide();
+				App.get('VAffectation combo#cboAgent').hide();
+				App.get('VAffectation combo#cboUnite').show();
+				App.get('VAffectation combo#cboAgentS').show();				
+			} else {
+				App.get('VAffectation combo#cboEts').show();
+				App.get('VAffectation combo#cboDpt').show();
+				App.get('VAffectation combo#cboSrv').show();
+				App.get('VAffectation combo#cboAgent').show();
+				App.get('VAffectation combo#cboUnite').hide();
+				App.get('VAffectation combo#cboAgentS').hide();				
+			}
+		} else {
+			App.get(me,'combo#cboEts').setValue(1);
+			App.get('VAffectation combo#cboDpt').setValue('');	
+			App.get('VAffectation combo#cboSrv').setValue('');
+			App.get('VAffectation combo#cboAgent').setValue('');
+			var store=App.store.create('bpclight://unites{Kuni,LibUnic+}?kets=1&archive=0');
+			App.get('VAffectation combo#cboDpt').bindStore(store);
+			store.load();
+		}
 	},
 	radio_change: function(me,value) {
 		if (value.rb==1) {
