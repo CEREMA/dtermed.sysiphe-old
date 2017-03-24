@@ -101,7 +101,7 @@ App.controller.define('CMain', {
 	},
 	grid_select: function(me,dta) {
 		//console.log(dta);
-		App.view.create('VAffectation',{modal:true,_data:dta}).show().center();	
+		App.view.create('VAffectation',{modal:true,_data:dta.data}).show().center();	
 	},
 	filter_onclick: function()
 	{
