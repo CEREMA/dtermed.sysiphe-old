@@ -185,7 +185,9 @@ App.controller.define('CMain', {
 	},
 	onLoad: function()
 	{
-
+		App.get('mainform grid').getStore().on('load',function(r) {
+			console.log(r);
+		})
 		
 	}
 	
