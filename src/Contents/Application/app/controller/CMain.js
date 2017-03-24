@@ -59,15 +59,12 @@ App.controller.define('CMain', {
 				var store=App.store.create('sysiphe://utilisateurs');
 				App.get(me,'combo#cboAgentS').bindStore(store);
 				store.load();
-				if (me._data.Affectation!="A ATTRIBUER") App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
-				store.on('load',function(d) {
-					
-					//var _store=App.store.create('sysiphe://unites?')
+				if (me._data.Affectation!="A ATTRIBUER") {
 					App.DB.get('sysiphe://utilisateurs{idunite,idservice}?idutilisateur='+me._data.IDSYSIPHE,function(r) {
 						console.log(r);
-					})
-				});
-				
+					});
+					App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
+				};				
 				
 				
 			} else {
