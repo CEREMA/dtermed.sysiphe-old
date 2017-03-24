@@ -98,6 +98,9 @@ App.view.define('VAffectation',{
 				valueField: "Kage"
 			},
 			{
+				layout:"hbox",
+				border: false,
+				
 				items: [
 				{
 					xtype: "combo",
