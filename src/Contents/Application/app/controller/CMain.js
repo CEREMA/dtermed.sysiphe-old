@@ -47,7 +47,7 @@ App.controller.define('CMain', {
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");	
-				App.get(me,'radiogroup#r0').items.items[1].setChecked(true);
+				App.get(me,'radiogroup#r0').items.items[1].setValue(true);
 				App.get(me,'combo#cboEts').hide();
 				App.get(me,'combo#cboDpt').hide();
 				App.get(me,'combo#cboSrv').hide();
@@ -70,7 +70,7 @@ App.controller.define('CMain', {
 			} else {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("<b>BPCLight</b>");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("Sysiphe");
-				App.get(me,'radiogroup#r0').items.items[0].setChecked(true);
+				App.get(me,'radiogroup#r0').items.items[0].setValue(true);
 				App.get(me,'combo#cboEts').show();
 				App.get(me,'combo#cboDpt').show();
 				App.get(me,'combo#cboSrv').show();
