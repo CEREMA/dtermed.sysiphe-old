@@ -60,12 +60,13 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboAgentS').bindStore(store);
 				store.load();
 				store.on('load',function(d) {
+					App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
 					//var _store=App.store.create('sysiphe://unites?')
 					App.DB.get('sysiphe://utilisateurs{idunite,idservice}?idutilisateur='+me._data.IDSYSIPHE,function(r) {
 						console.log(r);
 					})
 				});
-				App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
+				
 				
 				
 			} else {
