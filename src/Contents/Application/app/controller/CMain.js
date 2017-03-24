@@ -58,7 +58,7 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboAgentS').bindStore(store);
 				store.load();
 				store.on('load',function(d) {
-					console.log(d);
+					//var _store=App.store.create('sysiphe://unites?')
 				});
 				App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
 				
