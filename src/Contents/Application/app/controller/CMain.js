@@ -53,7 +53,8 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboSrv').hide();
 				App.get(me,'combo#cboAgent').hide();
 				App.get(me,'combo#cboUnite').show();
-				App.get(me,'combo#cboAgentS').show();		
+				App.get(me,'combo#cboAgentS').show();	
+				App.get(me,'combo#cboSERV').show();
 				App.get(me,'combo#cboAgentS').getStore().load();
 				var store=App.store.create('sysiphe://utilisateurs');
 				App.get(me,'combo#cboAgentS').bindStore(store);
@@ -75,6 +76,7 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboDpt').show();
 				App.get(me,'combo#cboSrv').show();
 				App.get(me,'combo#cboAgent').show();
+				App.get(me,'combo#cboSERV').hide();
 				App.get(me,'combo#cboUnite').hide();
 				App.get(me,'combo#cboAgentS').hide();
 				
@@ -98,6 +100,7 @@ App.controller.define('CMain', {
 			App.get('VAffectation combo#cboSrv').show();
 			App.get('VAffectation combo#cboAgent').show();
 			App.get('VAffectation combo#cboUnite').hide();
+			App.get('VAffectation combo#cboSERV').hide();
 			App.get('VAffectation combo#cboAgentS').hide();
 		};
 		if (value.rb==2) {
@@ -108,6 +111,7 @@ App.controller.define('CMain', {
 			App.get('VAffectation combo#cboSrv').hide();
 			App.get('VAffectation combo#cboAgent').hide();
 			App.get('VAffectation combo#cboUnite').show();
+			App.get('VAffectation combo#cboSERV').show();
 			App.get('VAffectation combo#cboAgentS').show();
 		};
 	},
