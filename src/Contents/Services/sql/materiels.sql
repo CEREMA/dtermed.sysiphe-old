@@ -1,4 +1,4 @@
-SELECT DISTINCT	materiels.NOINVT,SN,NOTESMATERIEL,DATELIVRAISON,CARACT1,CARACT2,CARACT3,CARACT4,modeles.modele,fournisseurs.FOURNISSEUR,affectations.IDSYSIPHE,affectations.IDUTILISATEUR,COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR) Affectation
+SELECT DISTINCT	materiels.NOINVT,SN,NOTESMATERIEL,DATELIVRAISON,CARACT1,CARACT2,CARACT3,CARACT4,modeles.modele,fournisseurs.FOURNISSEUR,affectations.IDSYSIPHE,affectations.IDUTILISATEUR,IFNULL(COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),"Non affecté") Affectation
 FROM 
 	materiels
     LEFT JOIN affectations on affectations.IDMATERIEL=materiels.IDMATERIEL
