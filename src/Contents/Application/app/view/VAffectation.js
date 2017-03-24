@@ -98,31 +98,35 @@ App.view.define('VAffectation',{
 				valueField: "Kage"
 			},
 			{
-				xtype: "combo",
-				width: "100%",
-				itemId: "cboUnite",
-				padding: 5,
-				fieldLabel: "Unité",
-				labelAlign: "top",
-				editable: false,
-				store: App.store.create('sysiphe://unites{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
-				displayField: "UNITE",
-				valueField: "IDUNITE",
-				hidden: true
+				items: [
+				{
+					xtype: "combo",
+					width: "100%",
+					itemId: "cboUnite",
+					padding: 5,
+					fieldLabel: "Unité",
+					labelAlign: "top",
+					editable: false,
+					store: App.store.create('sysiphe://unites{IDUNITE,UNITE+}?archive=0',{autoLoad:true}),
+					displayField: "UNITE",
+					valueField: "IDUNITE",
+					hidden: true
+				},					
+				{
+					xtype: "combo",
+					width: "100%",
+					itemId: "cboSERV",
+					padding: 5,
+					fieldLabel: "Service",
+					labelAlign: "top",
+					editable: false,
+					store: App.store.create('sysiphe://services{IDSERVICE,SERVICE+}?archive=0',{autoLoad:true}),
+					displayField: "SERVICE",
+					valueField: "IDSERVICE",
+					hidden: true
+				}				
+				]	
 			},
-			{
-				xtype: "combo",
-				width: "100%",
-				itemId: "cboSERV",
-				padding: 5,
-				fieldLabel: "Service",
-				labelAlign: "top",
-				editable: false,
-				store: App.store.create('sysiphe://services{IDSERVICE,SERVICE+}?archive=0',{autoLoad:true}),
-				displayField: "SERVICE",
-				valueField: "IDSERVICE",
-				hidden: true
-			},				
 			{
 				xtype: "combo",
 				width: "100%",
