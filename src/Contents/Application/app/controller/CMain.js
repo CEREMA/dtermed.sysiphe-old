@@ -1,77 +1,3 @@
-Ext.define('Ext.grid.AutoGenerateColumn', 
-{
-    extend: 'Ext.grid.Panel',
-    autoGenerateColumn : function () {
-        var me = this,
-        noModel = Ext.isDefined(me.model) === false,
-        noAutoGenerate = Ext.isDefined(me.autoGenerateColumns) === false;
-
-
-        if (noModel && noAutoGenerate) {
-            return;
-        }
-
-
-        if (me.autoGenerateColumns === true) {
-            if (Ext.isString(me.model)) {
-                me.model = Ext.ModelManager.getModel(me.model);
-            }
-
-
-            var modelFields = me.model.prototype.fields;
-            me.columns = new Array();
-
-
-            // Adding columns to grid
-            for (var i = 0; i < modelFields.length; i++) {
-                var modelField = modelFields.items[i];
-                var isVisible = (Ext.isDefined(modelField.visible) && (modelField.visible === true));
-
-
-                // Skips hidden columns
-                if (!isVisible) {
-                    continue;
-                }
-                
-                var column = Ext.create('Ext.grid.column.Column',
-                {
-                    header : modelField.name,
-                    dataIndex : modelField.name,
-                });
-
-
-                // Custom renderer for numbers
-                if (modelField.type.type === 'floatOrString') {
-                    column.renderer = Ext.util.Format.numberOrString;
-                }
-                
-                // Appends all the fields of the model to the column
-                for(var property in modelField) {
-                    // These fields are not ported
-                    if (property[0] == '$') continue;
-                    if (typeof(modelField[property]) == 'string' ||
-                        typeof(modelField[property]) == 'boolean' ||
-                        typeof(modelField[property]) == 'number') 
-                    {
-                        column[property] = modelField[property];
-                        console.log('Overridden: ' + property);
-                    }
-                }
-
-
-                me.columns.push(column);
-                
-                
-            }
-        }
-
-
-        if (me.columns.length == 0) {
-            Ext.Error.raise('No fields declared in ' + me.model.$className + ' with property visible. Columns will not be created!');
-        }
-    }
-});
-
 App.controller.define('CMain', {
 
 	views: [
@@ -172,7 +98,8 @@ App.controller.define('CMain', {
 			Ext.Msg.alert('Status', 'Click event on '+p.itemId);
 		};			
 	},
-	grid_select: function() {
+	grid_select: function(me,dta) {
+		console.log(dta);
 		App.view.create('VAffectation',{modal:true}).show().center();	
 	},
 	filter_onclick: function()
