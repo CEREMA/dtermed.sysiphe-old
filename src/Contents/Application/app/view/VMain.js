@@ -88,7 +88,7 @@ App.view.define('VMain', {
 						dataIndex: "NOTESMATERIEL",
 						flex: 1
 					}],
-					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'LibUnic'})
+					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'Affectation'})
 				}
 			]
 		}
