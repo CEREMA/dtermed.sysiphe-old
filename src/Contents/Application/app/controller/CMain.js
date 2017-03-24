@@ -76,6 +76,9 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboSERV').hide();
 				App.get(me,'combo#cboUnite').hide();
 				App.get(me,'combo#cboAgentS').hide();
+				var store=App.store.create('bpclight://agents');
+				App.get(me,'combo#cboAgent').bindStore(store);
+				store.load();
 				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
 			}
 		} else {
