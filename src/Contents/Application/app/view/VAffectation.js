@@ -66,7 +66,7 @@ App.view.define('VAffectation',{
 					fieldLabel: "Département",
 					labelAlign: "top",
 					editable: false,
-					store: App.store.create('bpclight://unites'),
+					store: App.store.create('bpclight://unites?archive=0'),
 					displayField: "LibUnic",
 					valueField: "Kuni"				
 				},			
@@ -78,7 +78,7 @@ App.view.define('VAffectation',{
 					fieldLabel: "Service",
 					labelAlign: "top",
 					editable: false,
-					store: App.store.create('bpclight://subdis'),
+					store: App.store.create('bpclight://subdis?archive=0'),
 					displayField: "LibSubC",
 					valueField: "Ksub"				
 				}					
