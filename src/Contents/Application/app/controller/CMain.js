@@ -57,9 +57,10 @@ App.controller.define('CMain', {
 				var store=App.store.create('sysiphe://utilisateurs');
 				App.get(me,'combo#cboAgentS').bindStore(store);
 				store.load();
-				App.get(me,'combo#cboAgentS').getStore().on('load',function() {
-					App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);	
+				store.on('load',function(d) {
+					console.log(d);
 				});
+				App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
 				
 				
 			} else {
