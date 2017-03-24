@@ -23,7 +23,7 @@ FROM
     LEFT JOIN bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
     LEFT JOIN utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDSYSIPHE
 	LEFT JOIN bpclight_unites on bpclight_unites.kuni=bpclight_agents.kuni
-	LEFT JOIN bpclight_subdis on bpclight_subdis.ksub=bpclight_agents.kuni
+	LEFT JOIN bpclight_subdis on bpclight_subdis.ksub=bpclight_agents.ksub
 	LEFT JOIN bpclight_etablissements on bpclight_etablissements.kets=bpclight_unites.kets
 	LEFT JOIN unites on unites.IDUNITE=utilisateurs.IDUNITE
 WHERE
