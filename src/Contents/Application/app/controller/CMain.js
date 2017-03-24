@@ -61,7 +61,8 @@ App.controller.define('CMain', {
 				store.load();
 				if (me._data.Affectation!="A ATTRIBUER") {
 					App.DB.get('sysiphe://utilisateurs{idunite,idservice}?idutilisateur='+me._data.IDSYSIPHE,function(r) {
-						console.log(r);
+						App.get(me,'combo#cboSERV').setValue(r.data[0].idservice);
+						App.get(me,'combo#cboUnite').setValue(r.data[0].idunite);
 					});
 					App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
 				};				
