@@ -42,6 +42,7 @@ App.controller.define('CMain', {
 		
 	},
 	VAffectation_show: function(me) {
+		console.log(me.data);
 		App.get(me,'combo#cboEts').setValue(1);
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
