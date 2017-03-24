@@ -57,7 +57,7 @@ App.view.define('VMain', {
 					columns: [{
 						header: "Affectation",
 						dataIndex: "Affectation",
-						hidden: false
+						hidden: true
 					},{
 						header: "Etablissement",
 						dataIndex: "LibEts",
