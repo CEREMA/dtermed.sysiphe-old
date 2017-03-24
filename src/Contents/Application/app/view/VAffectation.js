@@ -138,7 +138,7 @@ App.view.define('VAffectation',{
 				fieldLabel: "Affectation",
 				labelAlign: "top",
 				editable: false,
-				store: App.store.create('sysiphe://utilisateurs{IDUTILISATEUR,NOMUTILISATEUR+}?archive=0',{autoLoad:true}),
+				store: App.store.create('sysiphe://utilisateurs{IDUTILISATEUR,NOMUTILISATEUR+}',{autoLoad:true}),
 				displayField: "NOMUTILISATEUR",
 				valueField: "IDUTILISATEUR",
 				hidden: true
