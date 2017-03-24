@@ -61,12 +61,12 @@ App.view.define('VMain', {
 						hidden: false
 					},{
 						header: "Etablissement",
-						dataIndex: "LibEts",
+						dataIndex: "Etablissement",
 						hidden: true
 					},{
-						header: "Département",
-						dataIndex: "LibUnic",
-						hidden: true
+						header: "Service",
+						dataIndex: "Service",
+						hidden: false
 					},{
 						header: "Unité",
 						dataIndex: "_UNITE"
