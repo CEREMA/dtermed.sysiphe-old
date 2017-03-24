@@ -76,7 +76,7 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboSERV').hide();
 				App.get(me,'combo#cboUnite').hide();
 				App.get(me,'combo#cboAgentS').hide();
-				
+				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
 			}
 		} else {
 			App.get(me,'combo#cboEts').setValue(1);
