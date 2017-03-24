@@ -47,29 +47,31 @@ App.controller.define('CMain', {
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");					
-				App.get('VAffectation combo#cboEts').hide();
-				App.get('VAffectation combo#cboDpt').hide();
-				App.get('VAffectation combo#cboSrv').hide();
-				App.get('VAffectation combo#cboAgent').hide();
-				App.get('VAffectation combo#cboUnite').show();
-				App.get('VAffectation combo#cboAgentS').show();				
+				App.get(me,'combo#cboEts').hide();
+				App.get(me,'combo#cboDpt').hide();
+				App.get(me,'combo#cboSrv').hide();
+				App.get(me,'combo#cboAgent').hide();
+				App.get(me,'combo#cboUnite').show();
+				App.get(me,'combo#cboAgentS').show();		
+				App.get(me,'VAffectation')
+				
 			} else {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("<b>BPCLight</b>");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("Sysiphe");
-				App.get('VAffectation combo#cboEts').show();
-				App.get('VAffectation combo#cboDpt').show();
-				App.get('VAffectation combo#cboSrv').show();
-				App.get('VAffectation combo#cboAgent').show();
-				App.get('VAffectation combo#cboUnite').hide();
-				App.get('VAffectation combo#cboAgentS').hide();				
+				App.get(me,'combo#cboEts').show();
+				App.get(me,'combo#cboDpt').show();
+				App.get(me,'combo#cboSrv').show();
+				App.get(me,'combo#cboAgent').show();
+				App.get(me,'combo#cboUnite').hide();
+				App.get(me,'combo#cboAgentS').hide();				
 			}
 		} else {
 			App.get(me,'combo#cboEts').setValue(1);
-			App.get('VAffectation combo#cboDpt').setValue('');	
-			App.get('VAffectation combo#cboSrv').setValue('');
-			App.get('VAffectation combo#cboAgent').setValue('');
+			App.get(me,'combo#cboDpt').setValue('');	
+			App.get(me,'combo#cboSrv').setValue('');
+			App.get(me,'combo#cboAgent').setValue('');
 			var store=App.store.create('bpclight://unites{Kuni,LibUnic+}?kets=1&archive=0');
-			App.get('VAffectation combo#cboDpt').bindStore(store);
+			App.get(me,'combo#cboDpt').bindStore(store);
 			store.load();
 		}
 	},
