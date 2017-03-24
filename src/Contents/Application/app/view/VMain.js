@@ -44,7 +44,7 @@ App.view.define('VMain', {
 						handler: function(me) {
 							me.up('grid').normalView.features[0].collapseAll();
 						}
-					}
+					},
 					'->',
 					{
 						text: "Filtrer",
