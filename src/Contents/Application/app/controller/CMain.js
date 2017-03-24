@@ -42,7 +42,7 @@ App.controller.define('CMain', {
 		
 	},
 	VAffectation_show: function(me) {
-		console.log(me.data);
+		console.log(me._data);
 		App.get(me,'combo#cboEts').setValue(1);
 		App.get('VAffectation combo#cboDpt').setValue('');	
 		App.get('VAffectation combo#cboSrv').setValue('');
@@ -101,7 +101,7 @@ App.controller.define('CMain', {
 	},
 	grid_select: function(me,dta) {
 		//console.log(dta);
-		App.view.create('VAffectation',{modal:true,data:dta}).show().center();	
+		App.view.create('VAffectation',{modal:true,_data:dta}).show().center();	
 	},
 	filter_onclick: function()
 	{
