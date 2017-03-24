@@ -28,4 +28,4 @@ FROM
 	LEFT JOIN unites on unites.IDUNITE=utilisateurs.IDUNITE
 WHERE
 	affectations.IDSTATUT=1
-ORDER BY Affectation
+ORDER BY Etablissement,Unite,Service,Affectation
