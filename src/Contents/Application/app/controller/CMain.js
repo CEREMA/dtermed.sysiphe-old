@@ -54,7 +54,7 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboUnite').show();
 				App.get(me,'combo#cboAgentS').show();		
 				App.get(me,'combo#cboAgentS').getStore().load();
-				var store=App.store.create('sysiphe://unites');
+				var store=App.store.create('sysiphe://utilisateurs');
 				App.get(me,'combo#cboAgentS').bindStore(store);
 				store.load();
 				App.get(me,'combo#cboAgentS').getStore().on('load',function() {
