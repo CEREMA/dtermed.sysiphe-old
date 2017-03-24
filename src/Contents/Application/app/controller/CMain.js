@@ -80,7 +80,9 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboAgent').bindStore(store);
 				store.load();
 				store.on('load',function(s) {
+					App.DB.get('bpclight://agents{Kuni,Ksub}?kage='+me._data.IDUTILISATEUR,function(r) {
 						
+					});
 					//App.get(me,'combo#cboUnite').setValue(me._data.IDUTILISATEUR);					
 				});
 				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
