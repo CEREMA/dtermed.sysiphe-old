@@ -57,6 +57,7 @@ App.view.define('VMain', {
 					columns: [{
 						header: "Affectation",
 						dataIndex: "Affectation",
+						width: 200,
 						hidden: false
 					},{
 						header: "Etablissement",
