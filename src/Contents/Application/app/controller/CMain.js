@@ -33,7 +33,7 @@ App.controller.define('CMain', {
 			"VAffectation combo#cboSrv": {
 				select: "srv_select"
 			},
-			"VAffectation radiogroup": {
+			"VAffectation radiogroup#r0": {
 				change: "radio_change"
 			}
 		});
@@ -45,6 +45,8 @@ App.controller.define('CMain', {
 		console.log(me._data);
 		if (me._data) {
 			if (me._data.IDUTILISATEUR==0) {
+				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
+				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");					
 				App.get('VAffectation combo#cboEts').hide();
 				App.get('VAffectation combo#cboDpt').hide();
 				App.get('VAffectation combo#cboSrv').hide();
@@ -52,6 +54,8 @@ App.controller.define('CMain', {
 				App.get('VAffectation combo#cboUnite').show();
 				App.get('VAffectation combo#cboAgentS').show();				
 			} else {
+				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("<b>BPCLight</b>");
+				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("Sysiphe");
 				App.get('VAffectation combo#cboEts').show();
 				App.get('VAffectation combo#cboDpt').show();
 				App.get('VAffectation combo#cboSrv').show();
