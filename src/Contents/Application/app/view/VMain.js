@@ -42,7 +42,7 @@ App.view.define('VMain', {
 					{
 						text: "Replier",
 						handler: function(me) {
-							me.up('grid').normalView.features[0].collapseAll();
+							me.up('grid').features[0].collapseAll();
 						}
 					},
 					'->',
