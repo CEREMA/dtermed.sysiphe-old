@@ -39,6 +39,12 @@ App.view.define('VMain', {
 						enableGroupingMenu: true
         			}],					
 					tbar: [
+					{
+						text: "Replier",
+						handler: function(me) {
+							me.up('grid').normalView.features[0].collapseAll();
+						}
+					}
 					'->',
 					{
 						text: "Filtrer",
