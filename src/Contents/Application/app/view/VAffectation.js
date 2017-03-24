@@ -109,6 +109,19 @@ App.view.define('VAffectation',{
 				displayField: "UNITE",
 				valueField: "IDUNITE",
 				hidden: true
+			},
+			{
+				xtype: "combo",
+				width: "100%",
+				itemId: "cboSERV",
+				padding: 5,
+				fieldLabel: "Service",
+				labelAlign: "top",
+				editable: false,
+				store: App.store.create('sysiphe://services{IDSERVICE,SERVICE+}?archive=0',{autoLoad:true}),
+				displayField: "SERVICE",
+				valueField: "IDSERVICE",
+				hidden: true
 			},				
 			{
 				xtype: "combo",
