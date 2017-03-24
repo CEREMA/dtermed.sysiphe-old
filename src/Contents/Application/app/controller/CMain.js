@@ -80,10 +80,10 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboAgent').bindStore(store);
 				store.load();
 				store.on('load',function(s) {
-					console.log(s);
-					//App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
-					//App.get(me,'combo#cboEts').setValue(me._data.IDUTILISATEUR);					
+						
+					//App.get(me,'combo#cboUnite').setValue(me._data.IDUTILISATEUR);					
 				});
+				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
 			}
 		} else {
 			App.get(me,'combo#cboEts').setValue(1);
