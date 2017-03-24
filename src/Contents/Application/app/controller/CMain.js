@@ -79,11 +79,10 @@ App.controller.define('CMain', {
 				var store=App.store.create('bpclight://agents{Kage,Kets,Kuni,Ksub,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}',{autoLoad:true});
 				App.get(me,'combo#cboAgent').bindStore(store);
 				store.load();
-				store.on('load',function() {
-					App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
-					App.DB.get('sysiphe://subdis?archive=0'+me._data.IDSYSIPHE,function(r) {
-					
-					}					
+				store.on('load',function(s) {
+					console.log(s);
+					//App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
+					//App.get(me,'combo#cboEts').setValue(me._data.IDUTILISATEUR);					
 				});
 			}
 		} else {
