@@ -76,7 +76,7 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboSERV').hide();
 				App.get(me,'combo#cboUnite').hide();
 				App.get(me,'combo#cboAgentS').hide();
-				var store=App.store.create('bpclight://agents{Kage,Kets,Kuni,Ksub,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}',{autoLoad:true});
+				var store=App.store.create('bpclight://agents{Kage,Kuni,Ksub,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}',{autoLoad:true});
 				App.get(me,'combo#cboAgent').bindStore(store);
 				store.load();
 				store.on('load',function(s) {
