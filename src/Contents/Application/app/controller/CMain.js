@@ -76,10 +76,15 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboSERV').hide();
 				App.get(me,'combo#cboUnite').hide();
 				App.get(me,'combo#cboAgentS').hide();
-				var store=App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}',{autoLoad:true});
+				var store=App.store.create('bpclight://agents{Kage,Kets,Kuni,Ksub,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}',{autoLoad:true});
 				App.get(me,'combo#cboAgent').bindStore(store);
 				store.load();
-				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
+				store.on('load',function() {
+					App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
+					App.DB.get('sysiphe://subdis?archive=0'+me._data.IDSYSIPHE,function(r) {
+					
+					}					
+				});
 			}
 		} else {
 			App.get(me,'combo#cboEts').setValue(1);
