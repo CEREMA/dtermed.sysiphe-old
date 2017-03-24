@@ -55,6 +55,7 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboAgentS').show();		
 				App.get(me,'combo#cboAgentS').getStore().load();
 				App.get(me,'combo#cboAgentS').getStore().on('load',function() {
+					alert('x');
 					App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);	
 				});
 				
