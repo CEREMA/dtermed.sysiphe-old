@@ -59,7 +59,7 @@ App.controller.define('CMain', {
 				var store=App.store.create('sysiphe://utilisateurs');
 				App.get(me,'combo#cboAgentS').bindStore(store);
 				store.load();
-				if (me._data.Affectation!="A Attribuer") App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
+				if (me._data.Affectation!="A ATTRIBUER") App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
 				store.on('load',function(d) {
 					
 					//var _store=App.store.create('sysiphe://unites?')
