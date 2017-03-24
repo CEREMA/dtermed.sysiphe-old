@@ -55,19 +55,16 @@ App.controller.define('CMain', {
 				App.get(me,'combo#cboUnite').show();
 				App.get(me,'combo#cboAgentS').show();	
 				App.get(me,'combo#cboSERV').show();
-				App.get(me,'combo#cboAgentS').getStore().load();
-				var store=App.store.create('sysiphe://utilisateurs');
-				App.get(me,'combo#cboAgentS').bindStore(store);
-				store.load();
 				if (me._data.Affectation!="A ATTRIBUER") {
+					var store=App.store.create('sysiphe://utilisateurs');
+					App.get(me,'combo#cboAgentS').bindStore(store);
+					store.load();					
 					App.DB.get('sysiphe://utilisateurs{idunite,idservice}?idutilisateur='+me._data.IDSYSIPHE,function(r) {
 						App.get(me,'combo#cboSERV').setValue(r.data[0].idservice);
 						App.get(me,'combo#cboUnite').setValue(r.data[0].idunite);
 					});
 					App.get(me,'combo#cboAgentS').setValue(me._data.IDSYSIPHE);
-				};				
-				
-				
+				};
 			} else {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("<b>BPCLight</b>");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("Sysiphe");
