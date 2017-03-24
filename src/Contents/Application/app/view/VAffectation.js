@@ -100,11 +100,11 @@ App.view.define('VAffectation',{
 			{
 				layout:"hbox",
 				border: false,
-				
+				width: "100%",
 				items: [
 				{
 					xtype: "combo",
-					width: "100%",
+					flex:1,
 					itemId: "cboUnite",
 					padding: 5,
 					fieldLabel: "Unité",
@@ -117,7 +117,7 @@ App.view.define('VAffectation',{
 				},					
 				{
 					xtype: "combo",
-					width: "100%",
+					flex:1,
 					itemId: "cboSERV",
 					padding: 5,
 					fieldLabel: "Service",
