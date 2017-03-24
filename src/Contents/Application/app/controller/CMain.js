@@ -79,7 +79,7 @@ App.controller.define('CMain', {
 				var store=App.store.create('bpclight://agents{Kage,Nom,Prenom,Nom+" "+Prenom=NomPrenom+}',{autoLoad:true});
 				App.get(me,'combo#cboAgent').bindStore(store);
 				store.load();
-				App.get(me,'combo#cboAgent').setValue(12);
+				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
 			}
 		} else {
 			App.get(me,'combo#cboEts').setValue(1);
