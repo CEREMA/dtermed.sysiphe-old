@@ -80,6 +80,14 @@ App.view.define('VMain', {
 						header: "Série",
 						dataIndex: "SN"
 					},{
+						header: "Famille",
+						dataIndex: "FAMILLE",
+						width: 200
+					},{
+						header: "Modèle",
+						dataIndex: "modele",
+						width: 200
+					},{
 						header: "Date Livraison",
 						dataIndex: "DATELIVRAISON",
 						renderer: Ext.util.Format.dateRenderer('m/d/Y'),
