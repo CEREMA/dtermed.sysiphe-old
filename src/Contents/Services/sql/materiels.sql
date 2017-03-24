@@ -1,4 +1,20 @@
-SELECT DISTINCT	materiels.NOINVT,SN,NOTESMATERIEL,DATELIVRAISON,CARACT1,CARACT2,CARACT3,CARACT4,modeles.modele,fournisseurs.FOURNISSEUR,affectations.IDSYSIPHE,affectations.IDUTILISATEUR,IFNULL(COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),"A ATTRIBUER") Affectation,IFNULL(COALESCE(bpclight_unites.libunic,unites.UNITE),"A ATTRIBUER") Unite
+SELECT DISTINCT	
+	materiels.NOINVT,
+	SN,
+	NOTESMATERIEL,
+	DATELIVRAISON,
+	CARACT1,
+	CARACT2,
+	CARACT3,
+	CARACT4,
+	modeles.modele,
+	fournisseurs.FOURNISSEUR,
+	affectations.IDSYSIPHE,
+	affectations.IDUTILISATEUR,
+	IFNULL(COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),"A ATTRIBUER") Affectation,
+	IFNULL(COALESCE(bpclight_unites.libunic,unites.UNITE),"A ATTRIBUER") Unite,
+	IFNULL(bpclight_subdis.libsubc,"-") Service,
+	bpclight_etablissements.libets Etablissement
 FROM 
 	materiels
     LEFT JOIN affectations on affectations.IDMATERIEL=materiels.IDMATERIEL
@@ -8,7 +24,8 @@ FROM
     LEFT JOIN utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDSYSIPHE
 	LEFT JOIN bpclight_unites on bpclight_unites.kuni=bpclight_agents.kuni
 	LEFT JOIN bpclight_subdis on bpclight_subdis.ksub=bpclight_agents.kuni
+	LEFT JOIN bpclight_etablissements on bpclight_etablissements.kets=bpclight_unites.kets
 	LEFT JOIN unites on unites.IDUNITE=utilisateurs.IDUNITE
 WHERE
 	affectations.IDSTATUT=1
-ORDER BY NOINVT
+ORDER BY Affectation
