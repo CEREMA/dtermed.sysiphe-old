@@ -35,6 +35,7 @@ App.view.define('VAffectation',{
 				padding: 5,
 				border: false,
 				xtype: "radiogroup",
+				itemId: "r0",
 				defaultType: 'radiofield',
 				items: [
         		{boxLabel: '<b>BPCLight</b>', name: 'rb', inputValue: '1', checked: true},
