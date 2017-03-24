@@ -55,6 +55,10 @@ App.view.define('VMain', {
 					width: "100%",
 					itemId: "materiels",
 					columns: [{
+						header: "Affectation",
+						dataIndex: "Affectation",
+						hidden: false
+					},{
 						header: "Etablissement",
 						dataIndex: "LibEts",
 						hidden: true
