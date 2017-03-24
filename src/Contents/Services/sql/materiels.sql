@@ -2,11 +2,11 @@ SELECT DISTINCT
 	*
 FROM 
 	affectations 
-    right join materiels on materiels.IDMATERIEL=affectations.IDMATERIEL
-    right join fournisseurs on materiels.IDFOURNISSEUR=fournisseurs.IDFOURNISSEUR
-    right join modeles on materiels.IDMODELE=modeles.IDMODELE
-    right join marques on marques.IDMARQUE=modeles.IDMARQUE
-    right join familles on familles.IDFAMILLE=modeles.IDFAMILLE
+    left join materiels on materiels.IDMATERIEL=affectations.IDMATERIEL
+    left join fournisseurs on materiels.IDFOURNISSEUR=fournisseurs.IDFOURNISSEUR
+    left join modeles on materiels.IDMODELE=modeles.IDMODELE
+    left join marques on marques.IDMARQUE=modeles.IDMARQUE
+    left join familles on familles.IDFAMILLE=modeles.IDFAMILLE
 	left join bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
     left join utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDUTILISATEUR
 	left join bpclight_unites on bpclight_agents.kuni=bpclight_unites.kuni
