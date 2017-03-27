@@ -153,8 +153,10 @@ App.view.define('VAffectation',{
 			flex: 1,
 			items: [
 			{
-				fieldLabel: "Commentaires",
+				fieldLabel: "&nbsp,Commentaires",
 				labelAlign: "top",	
+				border:false,
+				padding: 2
 				xtype: "htmleditor",
 				flex: 1,
 				width: "100%"
