@@ -178,6 +178,23 @@ App.view.define('VAffectation',{
 			flex: 1,
 			items: [
 			{
+				layout: "hbox",
+				width: "100%",
+				border: false,
+				padding: 2,
+				items: [
+				{
+					xtype: "textfield",
+					flex: 1
+				},
+				{
+					xtype: "textfield",
+					margin:{left: 2},
+					flex: 1
+				}					
+				]
+			},
+			{
 				layout:"hbox",
 				width: "100%",
 				border: false,
