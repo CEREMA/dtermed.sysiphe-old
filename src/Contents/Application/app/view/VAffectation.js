@@ -197,15 +197,15 @@ App.view.define('VAffectation',{
 					flex: 1
 				},
 				{
-					xtype: "textfield",
+					xtype: "combo",
 					fieldLabel: "Bon de commande",
 					labelAlign: "top",	
 					margin:{left: 2},
 					flex: 1
 				},
 				{
-					xtype: "textfield",
-					fieldLabel: "N° Facture",
+					xtype: "combo",
+					fieldLabel: "Garantie",
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
