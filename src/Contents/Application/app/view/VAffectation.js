@@ -147,6 +147,7 @@ App.view.define('VAffectation',{
 				layout: "hbox",
 				width: "100%",
 				border: false,
+				padding: 5,
 				items: [
 				{
 					xtype: "datefield",
