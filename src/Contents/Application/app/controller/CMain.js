@@ -35,11 +35,19 @@ App.controller.define('CMain', {
 			},
 			"VAffectation radiogroup#r0": {
 				change: "radio_change"
+			},
+			"VAffectation combo#cboFamille": {
+				select: "cboFamille_select"	
 			}
 		});
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	cboFamille_select: function(me) {
+		var store=App.store.create('sysiphe://marques?idfamille='+me.getValue());
+		App.get(me.up('window'),'combo#cboMarques').bindStore(store);
+		store.load();
 	},
 	VAffectation_show: function(me) {
 		console.log(me._data);
