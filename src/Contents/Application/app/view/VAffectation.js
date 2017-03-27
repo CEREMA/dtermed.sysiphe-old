@@ -185,10 +185,14 @@ App.view.define('VAffectation',{
 				items: [
 				{
 					xtype: "textfield",
+					fieldLabel: "N° Inventaire",
+					labelAlign: "top",					
 					flex: 1
 				},
 				{
 					xtype: "textfield",
+					fieldLabel: "N° Série",
+					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
 				}					
