@@ -64,7 +64,9 @@ App.controller.define('CMain', {
 			App.get(me,'combo#cboModele').getStore().load();
 			App.get(me,'combo#cboModele').setValue(me._data.IDMODELE);	
 			App.get(me,'combo#cboFournisseur').getStore().load();
-			App.get(me,'combo#cboFournisseur').setValue(me._data.IDFOURNISSEUR);			
+			App.get(me,'combo#cboFournisseur').setValue(me._data.IDFOURNISSEUR);	
+			App.get(me,'combo#cboGarantie').getStore().load();
+			App.get(me,'combo#cboGarantie').setValue(me._data.IDGARANTIE);
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");	
