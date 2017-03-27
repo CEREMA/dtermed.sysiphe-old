@@ -165,7 +165,23 @@ App.view.define('VAffectation',{
 					valueField: "IDFAMILLE",				
 					fieldLabel: "Famille",
 					labelAlign: "top"
-				}
+				},
+				{
+					xtype: "combo",
+					store: App.store.create('sysiphe://marques'),
+					displayField: "MARQUE",
+					valueField: "IDMARQUE",				
+					fieldLabel: "Marque",
+					labelAlign: "top"
+				},
+				{
+					xtype: "combo",
+					store: App.store.create('sysiphe://modeles'),
+					displayField: "MODELE",
+					valueField: "IDMODELE",				
+					fieldLabel: "Modèle",
+					labelAlign: "top"
+				}					
 				]
 			},
 			{
