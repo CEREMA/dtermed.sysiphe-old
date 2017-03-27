@@ -186,12 +186,14 @@ App.view.define('VAffectation',{
 				{
 					xtype: "textfield",
 					fieldLabel: "N° Inventaire",
+					itemId: "NOINVT",
 					labelAlign: "top",					
 					flex: 1
 				},
 				{
 					xtype: "textfield",
 					fieldLabel: "N° Série",
+					itemId: "NOSERIE",
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
@@ -199,6 +201,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "textfield",
 					fieldLabel: "Facture",
+					itemId: "NOFACTURE",
 					labelAlign: "top",	
 					margin:{left: 2},
 					flex: 1
@@ -206,6 +209,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "datefield",
 					fieldLabel: "Date facture",
+					itemId: "DATEFACTURE",
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
