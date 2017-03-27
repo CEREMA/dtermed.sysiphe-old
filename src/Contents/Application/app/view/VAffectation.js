@@ -156,7 +156,7 @@ App.view.define('VAffectation',{
 				fieldLabel: "&nbsp,Commentaires",
 				labelAlign: "top",	
 				border:false,
-				padding: 2
+				padding: 2,
 				xtype: "htmleditor",
 				flex: 1,
 				width: "100%"
