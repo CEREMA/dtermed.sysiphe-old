@@ -57,6 +57,7 @@ App.controller.define('CMain', {
 		if (me._data) {
 			App.get(me,'datefield#cboIN').setValue(me._data.DATEENTREE);
 			App.get(me,'datefield#cboOUT').setValue(me._data.DATESORTIE);
+			App.get(me,'combo#cboFamille').getStore().load();
 			App.get(me,'combo#cboFamille').setValue(me._data.IDFAMILLE);
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
