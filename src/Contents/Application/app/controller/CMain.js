@@ -49,6 +49,7 @@ App.controller.define('CMain', {
 	},
 	cboFamille_select: function(me) {
 		var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?idfamille='+App.get(me.up('window'),'combo#cboFamille').getValue()+'&idmarque='+App.get(me.up('window'),'combo#cboMarque').getValue());
+		App.get(me.up('window'),'combo#cboModele').setValue('');
 		App.get(me.up('window'),'combo#cboModele').bindStore(store);
 		store.load();
 	},
