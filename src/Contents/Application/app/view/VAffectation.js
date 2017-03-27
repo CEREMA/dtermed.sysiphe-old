@@ -157,7 +157,7 @@ App.view.define('VAffectation',{
 				labelAlign: "top",	
 				xtype: "htmleditor",
 				flex: 1,
-				width: 100%
+				width: "100%"
 			},
 			{
 				fieldLabel: "Pièce(s) jointe(s)",
