@@ -38,6 +38,9 @@ App.controller.define('CMain', {
 			},
 			"VAffectation combo#cboFamille": {
 				select: "cboFamille_select"	
+			},
+			"VAffectation combo#cboMarques": {
+				select: "cboFamille_select"	
 			}
 		});
 		
@@ -45,8 +48,8 @@ App.controller.define('CMain', {
 		
 	},
 	cboFamille_select: function(me) {
-		var store=App.store.create('sysiphe://marques?idfamille='+me.getValue());
-		App.get(me.up('window'),'combo#cboMarques').bindStore(store);
+		var store=App.store.create('sysiphe://modeles?idfamille='+App.get(me.up('window'),'combo#cboFamille').getValue()+'&idmarque='+App.get(me.up('window'),'combo#cboMarque').getValue());
+		App.get(me.up('window'),'combo#cboModele').bindStore(store);
 		store.load();
 	},
 	VAffectation_show: function(me) {
