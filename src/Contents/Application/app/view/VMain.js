@@ -96,10 +96,6 @@ App.view.define('VMain', {
 						header: "Notes",
 						dataIndex: "NOTESMATERIEL",
 						flex: 1
-					},{
-						header: "Notes",
-						dataIndex: "NOTESMATERIEL",
-						flex: 1
 					}],
 					store: App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'Unite'})
 				}
