@@ -255,6 +255,34 @@ App.view.define('VAffectation',{
 				]
 			},
 			{
+				layout: "hbox",
+				width: "100%",
+				border: false,
+				padding: 2,
+				items: [
+				{
+					xtype: "combo",
+					fieldLabel: "Fournisseur",
+					labelAlign: "top",					
+					flex: 1
+				},
+				{
+					xtype: "combo",
+					fieldLabel: "Bon de commande",
+					labelAlign: "top",	
+					margin:{left: 2},
+					flex: 1
+				},
+				{
+					xtype: "combo",
+					fieldLabel: "Garantie",
+					labelAlign: "top",					
+					margin:{left: 2},
+					flex: 1
+				}					
+				]
+			},				
+			{
 				fieldLabel: "Commentaires / Observations",
 				labelAlign: "top",	
 				border:false,
