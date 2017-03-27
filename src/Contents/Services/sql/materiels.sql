@@ -7,6 +7,7 @@ SELECT DISTINCT
 	CARACT2,
 	CARACT3,
 	CARACT4,
+	IDGARANTIE,
 	modeles.modele,
 	familles.FAMILLE,
 	familles.IDFAMILLE,

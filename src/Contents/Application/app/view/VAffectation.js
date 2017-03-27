@@ -284,6 +284,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					fieldLabel: "Garantie",
+					itemId: "cboGarantie",
 					store:App.store.create('sysiphe://garanties{IDGARANTIE,GARANTIE+}',{autoLoad:true}),
 					displayField: "GARANTIE",
 					valueField: "IDGARANTIE",					
