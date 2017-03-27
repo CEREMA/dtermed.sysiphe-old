@@ -152,12 +152,17 @@ App.view.define('VAffectation',{
 				{
 					xtype: "datefield",
 					fieldLabel: "Du",
-					labelAlign: "top"				
+					labelAlign: "top",
+					flex: 1
 				},
 				{
 					xtype: "datefield",
 					fieldLabel: "Au",
-					labelAlign: "top"					
+					labelAlign: "top",
+					flex: 1,
+					margin: {
+						left: 10
+					}
 				}
 				]
 			}
