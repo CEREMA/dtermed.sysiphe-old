@@ -78,7 +78,7 @@ App.view.define('VMain', {
 						dataIndex: "NOINVT"
 					},{
 						header: "Série",
-						dataIndex: "SN"
+						dataIndex: "NOSERIE"
 					},{
 						header: "Famille",
 						dataIndex: "FAMILLE",
