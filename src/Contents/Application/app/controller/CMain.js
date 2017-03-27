@@ -81,7 +81,7 @@ App.controller.define('CMain', {
 				store.load();
 				store.on('load',function(s) {
 					App.DB.get('bpclight://agents{Kuni,Ksub}?kage='+me._data.IDUTILISATEUR,function(r) {
-						alert(r.data[0].Kuni);
+						App.get(me,'combo#cboDpt').getStore().load();
 						App.get(me,'combo#cboDpt').setValue(r.data[0].Kuni);
 						App.get(me,'combo#cboSrv').setValue(r.data[0].Ksub);
 					});
