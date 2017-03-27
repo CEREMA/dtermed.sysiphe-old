@@ -263,6 +263,9 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					fieldLabel: "Fournisseur",
+					store:App.store.create('sysiphe://fournisseurs{IDFOURNISSEUR,FOURNISSEUR+}',{autoLoad:true}),
+					displayField: "FOURNISSEUR",
+					valueField: "IDFOURNISSEUR",
 					labelAlign: "top",					
 					flex: 1
 				},
