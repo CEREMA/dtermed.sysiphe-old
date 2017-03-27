@@ -59,6 +59,10 @@ App.controller.define('CMain', {
 			App.get(me,'datefield#cboOUT').setValue(me._data.DATESORTIE);
 			App.get(me,'combo#cboFamille').getStore().load();
 			App.get(me,'combo#cboFamille').setValue(me._data.IDFAMILLE);
+			App.get(me,'combo#cboMarque').getStore().load();
+			App.get(me,'combo#cboMarque').setValue(me._data.IDMARQUE);
+			App.get(me,'combo#cboModele').getStore().load();
+			App.get(me,'combo#cboModele').setValue(me._data.IDMODELE);		
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");	
