@@ -271,13 +271,10 @@ App.view.define('VAffectation',{
 					flex: 1
 				},
 				{
-					xtype: "combo",
+					xtype: "textfield",
 					fieldLabel: "Bon de commande",
 					itemId: "cboCommande",
 					labelAlign: "top",	
-					displayField: "COMMANDE",
-					valueField: "COMMANDE",
-					store:App.store.create('sysiphe://commandes{COMMANDE,COMMANDE+}',{autoLoad:false}),
 					margin:{left: 2},
 					flex: 1
 				},
