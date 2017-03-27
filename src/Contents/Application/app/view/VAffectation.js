@@ -162,6 +162,7 @@ App.view.define('VAffectation',{
 			{
 				fieldLabel: "Pièce(s) jointe(s)",
 				labelAlign: "top",	
+				border: false,
 				xtype: "uploadfilemanager",
 				flex: 1,
 				width: "100%"
