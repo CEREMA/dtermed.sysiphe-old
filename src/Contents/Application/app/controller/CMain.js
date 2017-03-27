@@ -85,8 +85,7 @@ App.controller.define('CMain', {
 						App.get(me,'combo#cboDpt').setValue(r.data[0].Kuni);
 						App.get(me,'combo#cboSrv').getStore().load();
 						App.get(me,'combo#cboSrv').setValue(r.data[0].Ksub);
-						App.DB.get('bpclight://etablissements{Kets}?Kuni='+r.data[0].Kuni,function(r) {
-							console.log(r);
+						App.DB.get('bpclight://unites{Kets}?Kuni='+r.data[0].Kuni,function(r) {
 							App.get(me,'combo#cboEts').getStore().load();
 							App.get(me,'combo#cboEts').setValue(r.data[0].Kets);
 						});
