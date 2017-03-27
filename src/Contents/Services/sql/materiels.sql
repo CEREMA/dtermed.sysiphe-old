@@ -15,6 +15,7 @@ SELECT DISTINCT
 	marques.MARQUE,
 	marques.IDMARQUE,
 	fournisseurs.FOURNISSEUR,
+	fournisseurs.IDFOURNISSEUR,
 	affectations.IDSYSIPHE,
 	affectations.IDUTILISATEUR,
 	affectations.DATEENTREE,
