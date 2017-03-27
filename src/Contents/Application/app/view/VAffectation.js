@@ -186,6 +186,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					store: App.store.create('sysiphe://familles{IDFAMILLE,FAMILLE+}'),
+					flex: 1,
 					itemId: "cboFamille",
 					editable: false,
 					displayField: "FAMILLE",
@@ -196,16 +197,20 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					store: App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}'),
+					flex: 1,
 					itemId: "cboMarque",
 					editable: false,
 					displayField: "MARQUE",
 					valueField: "IDMARQUE",				
 					fieldLabel: "Marque",
+					margin:{left:2},
 					labelAlign: "top"
 				},
 				{
 					xtype: "combo",
 					store: App.store.create('sysiphe://modeles{IDMODELE,MODELE+}'),
+					flex: 1,
+					margin:{left:2},
 					itemId: "cboModele",
 					displayField: "MODELE",
 					valueField: "IDMODELE",				
