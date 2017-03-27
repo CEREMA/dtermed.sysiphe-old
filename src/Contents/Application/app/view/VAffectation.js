@@ -276,8 +276,8 @@ App.view.define('VAffectation',{
 					itemId: "cboCommande",
 					labelAlign: "top",	
 					displayField: "COMMANDE",
-					valueField: "IDCOMMANDE",
-					store:App.store.create('sysiphe://commandes{IDCOMMANDE,COMMANDE+}',{autoLoad:false}),
+					valueField: "COMMANDE",
+					store:App.store.create('sysiphe://commandes{COMMANDE,COMMANDE+}',{autoLoad:false}),
 					margin:{left: 2},
 					flex: 1
 				},
