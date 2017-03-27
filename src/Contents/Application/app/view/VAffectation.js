@@ -275,13 +275,18 @@ App.view.define('VAffectation',{
 					fieldLabel: "Bon de commande",
 					itemId: "cboCommande",
 					labelAlign: "top",	
-					store:App.store.create('sysiphe://commandes{IDCOMMANDE,COMMANDE+}',{autoLoad:true}),
+					displayField: "COMMANDE",
+					valueField: "IDCOMMANDE",
+					store:App.store.create('sysiphe://commandes{IDCOMMANDE,COMMANDE+}',{autoLoad:false}),
 					margin:{left: 2},
 					flex: 1
 				},
 				{
 					xtype: "combo",
 					fieldLabel: "Garantie",
+					store:App.store.create('sysiphe://garanties{IDGARANTIE,GARANTIE+}',{autoLoad:true}),
+					displayField: "GARANTIE",
+					valueField: "IDGARANTIE",					
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
