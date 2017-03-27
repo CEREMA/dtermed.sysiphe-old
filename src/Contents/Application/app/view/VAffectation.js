@@ -266,13 +266,16 @@ App.view.define('VAffectation',{
 					store:App.store.create('sysiphe://fournisseurs{IDFOURNISSEUR,FOURNISSEUR+}',{autoLoad:true}),
 					displayField: "FOURNISSEUR",
 					valueField: "IDFOURNISSEUR",
+					itemId: "cboFournisseur",
 					labelAlign: "top",					
 					flex: 1
 				},
 				{
 					xtype: "combo",
 					fieldLabel: "Bon de commande",
+					itemId: "cboCommande",
 					labelAlign: "top",	
+					store:App.store.create('sysiphe://commandes{IDCOMMANDE,COMMANDE+}',{autoLoad:true}),
 					margin:{left: 2},
 					flex: 1
 				},
