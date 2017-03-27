@@ -44,8 +44,8 @@ App.controller.define('CMain', {
 	VAffectation_show: function(me) {
 		console.log(me._data);
 		if (me._data) {
-			App.get(me,'combo#cboIN').setValue(me._data.DATEENTREE);
-			App.get(me,'combo#cboOUT').setValue(me._data.DATESORTIE);
+			App.get(me,'datefield#cboIN').setValue(me._data.DATEENTREE);
+			App.get(me,'datefield#cboOUT').setValue(me._data.DATESORTIE);
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");	
