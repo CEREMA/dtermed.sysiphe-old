@@ -155,10 +155,16 @@ App.view.define('VAffectation',{
 			{
 				layout:"hbox",
 				width: "100%",
+				border: false,
 				items: [
-					
+				{
+					xtype: "combo",
+					store: App.store.create('sysiphe://familles'),
+					displayField: "FAMILLE",
+					valueField: "IDFAMILLE"
+				}
 				]
-			}
+			},
 			{
 				fieldLabel: "Commentaires / Observations",
 				labelAlign: "top",	
