@@ -142,7 +142,24 @@ App.view.define('VAffectation',{
 				displayField: "NOMUTILISATEUR",
 				valueField: "IDUTILISATEUR",
 				hidden: true
-			}				
+			},
+			{
+				layout: "hbox",
+				width: "100%",
+				border: false,
+				items: [
+				{
+					xtype: "datefield",
+					fieldLabel: "Du",
+					labelAlign: "top"				
+				},
+				{
+					xtype: "datefield",
+					fieldLabel: "Au",
+					labelAlign: "top"					
+				}
+				]
+			}
 			]
 		},
 		{
