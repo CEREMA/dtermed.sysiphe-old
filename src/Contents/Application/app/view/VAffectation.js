@@ -195,7 +195,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					store: App.store.create('sysiphe://marques'),
-					itemId: "cboMarques",
+					itemId: "cboMarque",
 					displayField: "MARQUE",
 					valueField: "IDMARQUE",				
 					fieldLabel: "Marque",
@@ -204,7 +204,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "combo",
 					store: App.store.create('sysiphe://modeles'),
-					itemId: "cboModeles",
+					itemId: "cboModele",
 					displayField: "MODELE",
 					valueField: "IDMODELE",				
 					fieldLabel: "Modèle",
