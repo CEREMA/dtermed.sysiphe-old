@@ -153,6 +153,13 @@ App.view.define('VAffectation',{
 			flex: 1,
 			items: [
 			{
+				layout:"hbox",
+				width: "100%",
+				items: [
+					
+				]
+			}
+			{
 				fieldLabel: "Commentaires / Observations",
 				labelAlign: "top",	
 				border:false,
