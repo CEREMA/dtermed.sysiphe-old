@@ -149,9 +149,23 @@ App.view.define('VAffectation',{
 			region: "center",
 			split: true,
 			title: "Fiche matériel",
+			layout: "vbox",
 			flex: 1,
 			items: [
-				
+			{
+				fieldLabel: "Commentaires",
+				labelAlign: "top",	
+				xtype: "htmleditor",
+				flex: 1,
+				width: 100%
+			},
+			{
+				fieldLabel: "Pièce(s) jointe(s)",
+				labelAlign: "top",	
+				xtype: "uploadfilemanager",
+				flex: 1,
+				width: 100%
+			}
 			]
 		}
 		];
