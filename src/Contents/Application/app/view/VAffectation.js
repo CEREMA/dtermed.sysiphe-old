@@ -13,7 +13,7 @@ App.view.define('VAffectation',{
         
 		this.bbar = [
             '->', {
-                text: '<b>Quitter</b>',
+                text: '<b>Enregistrer</b>',
 				itemId: "Exit",
 				handler: function(me) {
 					me.up('window').close();
