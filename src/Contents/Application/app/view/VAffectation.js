@@ -23,15 +23,17 @@ App.view.define('VAffectation',{
 							// Affectations
 							var Post={};
 							// On charge l'ancienne affectation
-							App.DB.get('sysiphe://affectations?IDAFFECTATION=',function(r) {
-								
+							App.DB.get('sysiphe://affectations?IDAFFECTATION='+App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),function(r) {
+								if (r.data.length>0) {
+									console.log(r.data);
+								}
 							});
-							if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
+							/*if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
 								alert('sysiphe');
 								
 							} else {
 								alert('bpclight');
-							};
+							};*/
 							App.get('mainform grid').getStore().load();
 							me.setDisabled(false);	
 							me.up('window').close();
