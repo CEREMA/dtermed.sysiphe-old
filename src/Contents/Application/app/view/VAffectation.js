@@ -32,6 +32,7 @@ App.view.define('VAffectation',{
 								if (r.data.length>0) {
 									console.log(r.data);
 									r.data=r.data[0];
+									var Post=r.data;
 									var isUpdate=false;
 									if (r.data.IDUTILISATEUR!=App.get(me.up('window'),'combo#cboAgent')) isUpdate=true;
 									if (r.data.IDSYSIPHE!=App.get(me.up('window'),'combo#cboAgentS')) isUpdate=true;
@@ -43,7 +44,7 @@ App.view.define('VAffectation',{
 											DATESORTIE: new Date()
 										},function(r) {
 											// Et on recrée l'enregistrement avec le nouvel utilisateur
-											var Post=r.data;
+											
 											if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) 
 												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS');
 											else
