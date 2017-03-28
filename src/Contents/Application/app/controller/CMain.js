@@ -21,6 +21,9 @@ App.controller.define('CMain', {
 			"mainform grid": {
 				itemdblclick: "grid_select"
 			},
+			"mainform button#new_materiel": {
+				click: "new_materiel_click"	
+			},
 			"VAffectation": {
 				show: "VAffectation_show"	
 			},
@@ -46,6 +49,9 @@ App.controller.define('CMain', {
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	new_materiel_click: function(me) {
+		App.view.create('VAffectation',{modal:true}).show().center();	
 	},
 	cboFamille_select: function(me) {
 		var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?idfamille='+App.get(me.up('window'),'combo#cboFamille').getValue()+'&idmarque='+App.get(me.up('window'),'combo#cboMarque').getValue());

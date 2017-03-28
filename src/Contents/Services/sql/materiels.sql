@@ -14,6 +14,7 @@ SELECT DISTINCT
 	DATEFACTURE,
 	REFORME,
 	DATEREFORME,
+	SENSIBLE,
 	modeles.modele,
 	familles.FAMILLE,
 	familles.IDFAMILLE,
