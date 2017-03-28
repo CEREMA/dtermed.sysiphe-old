@@ -41,6 +41,15 @@ App.view.define('VAffectation',{
 											IDSTATUT:0,
 											IDAFFECTATION: App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),
 											DATESORTIE: new Date()
+										},function(r) {
+											// Et on recrée l'enregistrement avec le nouvel utilisateur
+											var Post=r.data;
+											if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) 
+												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS');
+											else
+												Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent');
+											console.log(r);
+											console.log(post);
 										})
 									}
 								}
