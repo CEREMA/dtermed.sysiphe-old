@@ -12,7 +12,9 @@ App.view.define('VShowDoc', {
         this.bbar = [
             '->', {
                 text: 'Quitter',
-				itemId: "Exit"
+				handler: function(me) {
+					me.up('window').close();
+				}
             }
         ];
 		
