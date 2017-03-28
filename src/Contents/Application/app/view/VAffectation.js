@@ -20,9 +20,10 @@ App.view.define('VAffectation',{
 					// update materiels
 					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 						console.log(r);
+						App.get('mainform grid').getStore().load();
 						me.setDisabled(false);	
+						me.up('window').close();
 					});
-					//me.up('window').close();
 				}
             }
         ];
