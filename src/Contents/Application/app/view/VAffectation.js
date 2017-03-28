@@ -46,9 +46,9 @@ App.view.define('VAffectation',{
 											// Et on recrée l'enregistrement avec le nouvel utilisateur
 											
 											if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) 
-												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS');
+												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS').getValue();
 											else
-												Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent');
+												Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent').getValue();
 											delete Post.DATESORTIE;
 											Post.DATEENTREE=new Date();
 											delete Post.IDAFFECTATION;
