@@ -322,7 +322,7 @@ App.view.define('VAffectation',{
 				padding: 5,
 				border: false,
 				xtype: "radiogroup",
-				fieldLabel: "<small>Matériel sensible</small>",
+				fieldLabel: "Matériel sensible",
 				itemId: "r1",
 				defaultType: 'radiofield',
 				items: [
