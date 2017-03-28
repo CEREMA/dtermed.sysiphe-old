@@ -35,6 +35,11 @@ App.view.define('VAffectation',{
 			layout: "vbox",
 			items: [
 			{
+				xtype: "textfield",
+				hidden: true,
+				bindTo: "IDMATERIEL"
+			},
+			{
 				layout: "hbox",
 				width: "100%",
 				padding: 5,
