@@ -331,6 +331,19 @@ App.view.define('VAffectation',{
 				]
 			},
 			{
+				layout: "hbox",
+				width: "100%",
+				padding: 5,
+				border: false,
+				items: [
+        			{boxLabel: 'Réforme', name: 'reforme',xtype: "checkboxfield",flex: 1},
+					{
+						xtype: "datefield",
+						
+					}
+				]
+			},				
+			{
 				fieldLabel: "Commentaires / Observations",
 				labelAlign: "top",	
 				border:false,
