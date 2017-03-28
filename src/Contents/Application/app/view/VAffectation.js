@@ -329,7 +329,7 @@ App.view.define('VAffectation',{
         		{boxLabel: 'Oui', name: 'rc', inputValue: '1'},
         		{boxLabel: 'Non', name: 'rc', inputValue: '2', checked: true,margin:{left: 10}},
 				{xtype: "panel",flex: 1,border: false},
-				{boxLabel: 'Réforme', name: 'reforme',xtype: "checkboxfield",bindTo: "SENSIBLE"},
+				{boxLabel: 'Réforme', name: 'reforme',xtype: "checkboxfield"},
 				{
 					xtype: "datefield",
 					margin: {left: 10}
