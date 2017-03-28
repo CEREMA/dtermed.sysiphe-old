@@ -20,7 +20,10 @@ App.view.define('VAffectation',{
 					// update materiels
 					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
-							console.log(r);
+							// Affectations
+							var Post={};
+							if (App.get(me,'radiogroup#r0').items.items[1].getValue()) alert('bpclight'); else alert('sysiphe');
+							
 							App.get('mainform grid').getStore().load();
 							me.setDisabled(false);	
 							me.up('window').close();
