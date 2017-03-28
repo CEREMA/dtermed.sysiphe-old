@@ -41,7 +41,8 @@ App.view.define('VMain', {
 					tbar: [
 					{
 						text: "Nouveau matériel",
-						iconCls: "new_materiel"
+						iconCls: "new_materiel",
+						itemId: "new_materiel"
 					},
 					'->',
 					{
