@@ -49,7 +49,7 @@ App.view.define('VAffectation',{
 											else
 												Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent');
 											console.log(r);
-											console.log(post);
+											console.log(Post);
 										})
 									}
 								}
