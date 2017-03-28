@@ -16,10 +16,12 @@ App.view.define('VAffectation',{
                 text: '<b>Enregistrer</b>',
 				itemId: "Exit",
 				handler: function(me) {
-					me.setDisabled(false);
+					me.setDisabled(true);
 					// update materiels
-					
-					me.up('window').close();
+					App.DB.post('sysiphe://materiels',me.up('window'),function() {
+						me.setDisabled(false);	
+					});
+					//me.up('window').close();
 				}
             }
         ];
