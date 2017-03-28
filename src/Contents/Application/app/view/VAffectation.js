@@ -357,6 +357,7 @@ App.view.define('VAffectation',{
 				labelAlign: "top",	
 				border: false,
 				xtype: "uploadfilemanager",
+				itemId: "up",
 				flex: 1,
 				width: "100%"
 			}
