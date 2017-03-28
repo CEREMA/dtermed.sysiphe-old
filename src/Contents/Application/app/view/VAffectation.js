@@ -315,7 +315,21 @@ App.view.define('VAffectation',{
 					flex: 1
 				}					
 				]
-			},				
+			},
+			{
+				layout: "hbox",
+				width: "100%",
+				padding: 5,
+				border: false,
+				xtype: "radiogroup",
+				fieldLabel: "Matériel sensible",
+				itemId: "r1",
+				defaultType: 'radiofield',
+				items: [
+        		{boxLabel: 'Oui', name: 'rb', inputValue: '1', checked: true},
+        		{boxLabel: 'Non', name: 'rb', inputValue: '2',margin:{left: 10}}
+				]
+			},
 			{
 				fieldLabel: "Commentaires / Observations",
 				labelAlign: "top",	
