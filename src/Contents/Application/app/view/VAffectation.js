@@ -18,7 +18,8 @@ App.view.define('VAffectation',{
 				handler: function(me) {
 					me.setDisabled(true);
 					// update materiels
-					App.DB.post('sysiphe://materiels',me.up('window'),function() {
+					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
+						console.log(r);
 						me.setDisabled(false);	
 					});
 					//me.up('window').close();
