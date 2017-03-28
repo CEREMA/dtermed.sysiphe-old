@@ -327,7 +327,7 @@ App.view.define('VAffectation',{
 				defaultType: 'radiofield',
 				items: [
         		{boxLabel: 'Oui', name: 'rb', inputValue: '1'},
-        		{boxLabel: 'Non', name: 'rb', inputValue: '2',, checked: true,margin:{left: 10}}
+        		{boxLabel: 'Non', name: 'rb', inputValue: '2', checked: true,margin:{left: 10}}
 				]
 			},
 			{
