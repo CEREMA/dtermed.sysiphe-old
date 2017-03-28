@@ -327,7 +327,12 @@ App.view.define('VAffectation',{
 				defaultType: 'radiofield',
 				items: [
         		{boxLabel: 'Oui', name: 'rc', inputValue: '1'},
-        		{boxLabel: 'Non', name: 'rc', inputValue: '2', checked: true,margin:{left: 10}}
+        		{boxLabel: 'Non', name: 'rc', inputValue: '2', checked: true,margin:{left: 10}},
+				{boxLabel: 'Réforme', name: 'reforme',xtype: "checkboxfield",flex: 1},
+				{
+					xtype: "datefield",
+
+				}					
 				]
 			},
 			{
@@ -336,11 +341,7 @@ App.view.define('VAffectation',{
 				padding: 5,
 				border: false,
 				items: [
-        			{boxLabel: 'Réforme', name: 'reforme',xtype: "checkboxfield",flex: 1},
-					{
-						xtype: "datefield",
-						
-					}
+
 				]
 			},				
 			{
