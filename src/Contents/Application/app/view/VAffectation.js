@@ -22,7 +22,7 @@ App.view.define('VAffectation',{
 						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
 							// Affectations
 							var Post={};
-							if (App.get(me,'radiogroup#r0').items.items[1].getValue()) alert('bpclight'); else alert('sysiphe');
+							if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) alert('bpclight'); else alert('sysiphe');
 							
 							App.get('mainform grid').getStore().load();
 							me.setDisabled(false);	
