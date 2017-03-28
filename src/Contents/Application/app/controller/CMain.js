@@ -28,7 +28,7 @@ App.controller.define('CMain', {
 			"VAffectation": {
 				show: "VAffectation_show"	
 			},
-			"VAffectation uploafilemanager": {
+			"VAffectation uploafilemanager#up": {
 				itemdblclick: "up_onclick"
 			},
 			"VAffectation combo#cboEts": {
