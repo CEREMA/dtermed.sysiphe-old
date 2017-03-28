@@ -322,6 +322,7 @@ App.view.define('VAffectation',{
 				border:false,
 				padding: 2,
 				xtype: "htmleditor",
+				itemId: "NOTESMATERIEL",
 				bindTo: "NOTESMATERIEL",
 				flex: 1,
 				width: "100%"
