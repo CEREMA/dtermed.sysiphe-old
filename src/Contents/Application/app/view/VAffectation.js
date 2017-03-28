@@ -296,6 +296,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "textfield",
 					fieldLabel: "Bon de commande",
+					bindTo: "NOCOMMANDE",
 					itemId: "Commande",
 					labelAlign: "top",	
 					margin:{left: 2},
