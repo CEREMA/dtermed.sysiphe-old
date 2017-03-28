@@ -22,8 +22,16 @@ App.view.define('VAffectation',{
 						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
 							// Affectations
 							var Post={};
-							if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) alert('bpclight'); else alert('sysiphe');
-							
+							// On charge l'ancienne affectation
+							App.DB.get('sysiphe://affectations?IDAFFECTATION=',function(r) {
+								
+							});
+							if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
+								alert('sysiphe');
+								
+							} else {
+								alert('bpclight');
+							};
 							App.get('mainform grid').getStore().load();
 							me.setDisabled(false);	
 							me.up('window').close();
@@ -47,6 +55,12 @@ App.view.define('VAffectation',{
 				itemId: "IDMATERIEL",
 				bindTo: "IDMATERIEL"
 			},
+			{
+				xtype: "textfield",
+				hidden: true,
+				itemId: "IDAFFECTATION",
+				bindTo: "IDAFFECTATION"
+			},				
 			{
 				layout: "hbox",
 				width: "100%",
