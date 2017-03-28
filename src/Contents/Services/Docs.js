@@ -8,7 +8,7 @@ Docs = {
 			} else {
 				Docs.using('db').query('sysiphe','insert into docs VALUES ("'+list[ndx].docId+'","-1","-1","-1","-1")',function() {
                     App.upload.toBase64(list[ndx].docId,function(err,blob) {
-                        Docs.using('db').post('goprro','docs',{
+                        Docs.using('db').post('sysiphe','docs',{
                             docId: list[ndx].docId,
                             _blob: blob,
                             filename: list[ndx].filename,
