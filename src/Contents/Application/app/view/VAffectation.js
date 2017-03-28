@@ -319,7 +319,7 @@ App.view.define('VAffectation',{
 			{
 				layout: "hbox",
 				width: "100%",
-				padding: 5,
+				padding: 2,
 				border: false,
 				xtype: "radiogroup",
 				fieldLabel: "Matériel sensible",
