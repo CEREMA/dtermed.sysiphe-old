@@ -39,7 +39,7 @@ App.view.define('VAffectation',{
 									if (isUpdate) {
 										// On update l'ancien enregistrement en mettant IDSTATUT=0 et en complétant la date de sortie
 										App.DB.post('sysiphe://affectations',{
-											IDSTATUT:0,
+											IDSTATUT: '0',
 											IDAFFECTATION: App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),
 											DATESORTIE: new Date()
 										},function(r) {
