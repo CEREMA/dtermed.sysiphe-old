@@ -2,7 +2,8 @@ App.controller.define('CMain', {
 
 	views: [
 		"VMain",
-		"VAffectation"
+		"VAffectation",
+		"VShowDoc"
 	],
 	
 	models: [
@@ -27,6 +28,9 @@ App.controller.define('CMain', {
 			"VAffectation": {
 				show: "VAffectation_show"	
 			},
+			"VAffectation uploafilemanager": {
+				itemdblclick: "up_onclick"
+			},
 			"VAffectation combo#cboEts": {
 				select: "ets_select"
 			},
@@ -49,6 +53,13 @@ App.controller.define('CMain', {
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	up_onclick: function(p, record) {
+		App.view.create('VShowDoc', {
+			modal: true,
+			title: record.data.filename,
+			pid: record.data.docId
+		}).show().center();			
 	},
 	new_materiel_click: function(me) {
 		App.view.create('VAffectation',{modal:true}).show().center();	
