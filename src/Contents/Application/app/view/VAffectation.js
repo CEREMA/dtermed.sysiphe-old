@@ -49,8 +49,13 @@ App.view.define('VAffectation',{
 												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS');
 											else
 												Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent');
-											console.log(r);
-											console.log(Post);
+											delete Post.DATESORTIE;
+											Post.DATEENTREE=new Date();
+											delete Post.IDAFFECTATION;
+											App.DB.post('sysiphe://affectations',Post,function(r) {
+												console.log(r);
+												exit();	
+											});
 										})
 									}
 								}
