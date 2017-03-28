@@ -336,15 +336,6 @@ App.view.define('VAffectation',{
 
 				}					
 				]
-			},
-			{
-				layout: "hbox",
-				width: "100%",
-				padding: 5,
-				border: false,
-				items: [
-
-				]
 			},				
 			{
 				fieldLabel: "Commentaires / Observations",
