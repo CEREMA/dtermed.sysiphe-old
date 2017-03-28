@@ -71,7 +71,7 @@ App.controller.define('CMain', {
 		store.load();
 	},
 	VAffectation_show: function(me) {
-		console.log(me._data);
+		//console.log(me._data);
 		if (me._data) {
 			App.get(me,'datefield#cboIN').setValue(me._data.DATEENTREE);
 			App.get(me,'datefield#cboOUT').setValue(me._data.DATESORTIE);
