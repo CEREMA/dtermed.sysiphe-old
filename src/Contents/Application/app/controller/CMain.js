@@ -91,6 +91,7 @@ App.controller.define('CMain', {
 			App.get(me,'textfield#NOFACTURE').setValue(me._data.NOFACTURE);
 			App.get(me,'textfield#DATEFACTURE').setValue(me._data.DATEFACTURE);		
 			App.get(me,'textfield#IDMATERIEL').setValue(me._data.IDMATERIEL);	
+			App.get(me,'textfield#IDAFFECTATION').setValue(me._data.IDAFFECTATION);	
 			App.get(me,'htmleditor#NOTESMATERIEL').setValue(me._data.NOTESMATERIEL);
 			App.get(me,'datefield#DATEREFORME').setValue(me._data.DATEREFORME);
 			if (me._data._BLOB) App.get(me,'uploadfilemanager#up').setFiles(JSON.parse(me._data._BLOB));
