@@ -269,7 +269,8 @@ App.view.define('VAffectation',{
 					margin:{left:2},
 					itemId: "cboModele",
 					displayField: "MODELE",
-					valueField: "IDMODELE",				
+					valueField: "IDMODELE",	
+					bindTo: "IDMODELE",
 					fieldLabel: "Modèle",
 					labelAlign: "top"
 				}					
@@ -287,6 +288,7 @@ App.view.define('VAffectation',{
 					store:App.store.create('sysiphe://fournisseurs{IDFOURNISSEUR,FOURNISSEUR+}',{autoLoad:true}),
 					displayField: "FOURNISSEUR",
 					valueField: "IDFOURNISSEUR",
+					bindTo: "IDFOURNISSEUR",
 					itemId: "cboFournisseur",
 					labelAlign: "top",					
 					flex: 1
@@ -305,7 +307,8 @@ App.view.define('VAffectation',{
 					itemId: "cboGarantie",
 					store:App.store.create('sysiphe://garanties{IDGARANTIE,GARANTIE+}',{autoLoad:true}),
 					displayField: "GARANTIE",
-					valueField: "IDGARANTIE",					
+					valueField: "IDGARANTIE",	
+					bindTo: "IDGARANTIE",
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
