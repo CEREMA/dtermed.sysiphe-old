@@ -37,7 +37,7 @@ App.view.define('VAffectation',{
 									if (r.data.IDSYSIPHE!=App.get(me.up('window'),'combo#cboAgentS')) isUpdate=true;
 									if (isUpdate) {
 										// On update l'ancien enregistrement en mettant IDSTATUT=0 et en complétant la date de sortie
-										APP.DB.post('sysiphe://affectations',{
+										App.DB.post('sysiphe://affectations',{
 											IDSTATUT:0,
 											IDAFFECTATION: App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),
 											DATESORTIE: new Date()
