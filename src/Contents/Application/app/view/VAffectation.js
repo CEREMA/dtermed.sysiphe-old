@@ -16,6 +16,9 @@ App.view.define('VAffectation',{
                 text: '<b>Enregistrer</b>',
 				itemId: "Exit",
 				handler: function(me) {
+					me.setDisabled(false);
+					// update materiels
+					
 					me.up('window').close();
 				}
             }
@@ -186,6 +189,7 @@ App.view.define('VAffectation',{
 				{
 					xtype: "textfield",
 					fieldLabel: "N° Inventaire",
+					bindTo: "NOINVT",
 					itemId: "NOINVT",
 					labelAlign: "top",					
 					flex: 1
@@ -194,6 +198,7 @@ App.view.define('VAffectation',{
 					xtype: "textfield",
 					fieldLabel: "N° Série",
 					itemId: "NOSERIE",
+					bindTo: "SN",
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
@@ -202,6 +207,7 @@ App.view.define('VAffectation',{
 					xtype: "textfield",
 					fieldLabel: "Facture",
 					itemId: "NOFACTURE",
+					bindTo: "NOFACTURE",
 					labelAlign: "top",	
 					margin:{left: 2},
 					flex: 1
@@ -210,6 +216,7 @@ App.view.define('VAffectation',{
 					xtype: "datefield",
 					fieldLabel: "Date facture",
 					itemId: "DATEFACTURE",
+					bindTo: "DATEFACTURE",
 					labelAlign: "top",					
 					margin:{left: 2},
 					flex: 1
