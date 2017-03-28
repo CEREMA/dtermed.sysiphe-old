@@ -17,6 +17,11 @@ App.view.define('VAffectation',{
 				itemId: "Exit",
 				handler: function(me) {
 					me.setDisabled(true);
+					function exit() {
+						App.get('mainform grid').getStore().load();
+						me.setDisabled(false);	
+						me.up('window').close();	
+					};
 					// update materiels
 					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
@@ -26,6 +31,18 @@ App.view.define('VAffectation',{
 							App.DB.get('sysiphe://affectations?IDAFFECTATION='+App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),function(r) {
 								if (r.data.length>0) {
 									console.log(r.data);
+									r.data=r.data[0];
+									var isUpdate=false;
+									if (r.data.IDUTILISATEUR!=App.get(me.up('window'),'combo#cboAgent')) isUpdate=true;
+									if (r.data.IDSYSIPHE!=App.get(me.up('window'),'combo#cboAgentS')) isUpdate=true;
+									if (isUpdate) {
+										// On update l'ancien enregistrement en mettant IDSTATUT=0 et en complétant la date de sortie
+										APP.DB.post('sysiphe://affectations',{
+											IDSTATUT:0,
+											IDAFFECTATION: App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),
+											DATESORTIE: new Date()
+										})
+									}
 								}
 							});
 							/*if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
@@ -34,9 +51,7 @@ App.view.define('VAffectation',{
 							} else {
 								alert('bpclight');
 							};*/
-							App.get('mainform grid').getStore().load();
-							me.setDisabled(false);	
-							me.up('window').close();
+							/**/
 						});
 					});
 				}
