@@ -81,7 +81,7 @@ App.controller.define('CMain', {
 			App.get(me,'textfield#DATEFACTURE').setValue(me._data.DATEFACTURE);		
 			App.get(me,'textfield#IDMATERIEL').setValue(me._data.IDMATERIEL);	
 			App.get(me,'htmleditor#NOTESMATERIEL').setValue(me._data.NOTESMATERIEL);
-			if (me._data.SENSIBLE) App.get(me,'radiogroup#r1').setValue(1);
+			if (me._data.SENSIBLE) App.get(me,'radiogroup#r1').setValue({rc:1});
 			alert(me._data.SENSIBLE);
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
