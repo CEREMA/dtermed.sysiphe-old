@@ -38,6 +38,7 @@ App.view.define('VAffectation',{
 			{
 				xtype: "textfield",
 				hidden: false,
+				itemId: "IDMATERIEL",
 				bindTo: "IDMATERIEL"
 			},
 			{
