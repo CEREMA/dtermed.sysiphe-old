@@ -331,7 +331,8 @@ App.view.define('VAffectation',{
 				{xtype: "panel",flex: 1,border: false},
 				{boxLabel: 'Réforme', name: 'reforme',xtype: "checkboxfield"},
 				{
-					xtype: "datefield"
+					xtype: "datefield",
+					margin: {left: 10}
 
 				}					
 				]
