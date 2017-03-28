@@ -17,7 +17,7 @@ App.view.define('VAffectation',{
 				itemId: "Exit",
 				handler: function(me) {
 					me.setDisabled(true);
-					function exit() {
+					function _exit() {
 						App.get('mainform grid').getStore().load();
 						me.setDisabled(false);	
 						me.up('window').close();	
@@ -55,7 +55,7 @@ App.view.define('VAffectation',{
 											console.log(Post);
 											App.DB.post('sysiphe://affectations',Post,function(r) {
 												console.log(r);
-												exit();	
+												_exit();	
 											});
 										})
 									}
