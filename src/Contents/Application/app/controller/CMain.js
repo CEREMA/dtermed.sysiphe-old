@@ -93,6 +93,7 @@ App.controller.define('CMain', {
 			App.get(me,'textfield#IDMATERIEL').setValue(me._data.IDMATERIEL);	
 			App.get(me,'htmleditor#NOTESMATERIEL').setValue(me._data.NOTESMATERIEL);
 			App.get(me,'datefield#DATEREFORME').setValue(me._data.DATEREFORME);
+			if (me._data._BLOB) App.get(me,'uploadfilemanager#up').setFiles(JSON.parse(me._data._BLOB));
 			if (me._data.SENSIBLE) App.get(me,'radiogroup#r1').setValue({rc:1});
 			if (me._data.REFORME) App.get(me,'checkbox').setValue(me._data.REFORME);
 			if (me._data.IDUTILISATEUR==0) {
