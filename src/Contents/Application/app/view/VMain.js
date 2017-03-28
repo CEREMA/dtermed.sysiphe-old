@@ -40,10 +40,8 @@ App.view.define('VMain', {
         			}],					
 					tbar: [
 					{
-						text: "Replier",
-						handler: function(me) {
-							me.up('grid').features[0].collapseAll();
-						}
+						text: "Nouveau matériel",
+						iconCls: "new_materiel"
 					},
 					'->',
 					{
