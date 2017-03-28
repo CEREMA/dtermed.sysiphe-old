@@ -52,6 +52,7 @@ App.view.define('VAffectation',{
 											delete Post.DATESORTIE;
 											Post.DATEENTREE=new Date();
 											delete Post.IDAFFECTATION;
+											console.log(Post);
 											App.DB.post('sysiphe://affectations',Post,function(r) {
 												console.log(r);
 												exit();	
