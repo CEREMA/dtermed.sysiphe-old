@@ -23,6 +23,11 @@ App.view.define('VMain', {
 			xtype: "FilterBox", 
 			itemId: "FilterPanel",
 			fields: [
+				{
+					name: "N° Inventaire",
+					field: "materiels.NOINVT",
+					type: "text"
+				}
 			]
 		},
 		{
