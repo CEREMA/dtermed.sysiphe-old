@@ -237,6 +237,7 @@ App.view.define('VAffectation',{
 				title: "Historique",
 				store: App.store.create({fields:[],data:[]}),
 				flex: 1,
+				margin: {top: 10},
 				columns:[],
 				width: "100%"
 			}
