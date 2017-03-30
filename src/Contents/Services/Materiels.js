@@ -40,6 +40,7 @@ Materiels = {
 			'bpclight_etablissements.libets Etablissement'
 		];	
 		var where=[];
+		console.log(o.quest);
 		if (!o.quest) o.quest="[]";
 
         o=JSON.parse(o.quest);
