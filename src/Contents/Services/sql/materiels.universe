@@ -1,0 +1,17 @@
+sysiphe
+SELECT DISTINCT
+	$_OBJECTS
+FROM 
+	materiels
+    LEFT JOIN affectations on affectations.IDMATERIEL=materiels.IDMATERIEL
+    LEFT JOIN fournisseurs on fournisseurs.IDFOURNISSEUR=materiels.IDFOURNISSEUR
+    LEFT JOIN modeles on modeles.IDMODELE=materiels.IDMODELE
+	LEFT JOIN marques on marques.IDMARQUE=modeles.IDMARQUE    
+	LEFT JOIN familles on familles.IDFAMILLE=modeles.IDFAMILLE    
+    LEFT JOIN bpclight_agents on bpclight_agents.kage=affectations.IDUTILISATEUR
+    LEFT JOIN utilisateurs on utilisateurs.IDUTILISATEUR=affectations.IDSYSIPHE
+	LEFT JOIN bpclight_unites on bpclight_unites.kuni=bpclight_agents.kuni
+	LEFT JOIN bpclight_subdis on bpclight_subdis.ksub=bpclight_agents.ksub
+	LEFT JOIN bpclight_etablissements on bpclight_etablissements.kets=bpclight_unites.kets
+	LEFT JOIN unites on unites.IDUNITE=utilisateurs.IDUNITE
+$_WHERE
