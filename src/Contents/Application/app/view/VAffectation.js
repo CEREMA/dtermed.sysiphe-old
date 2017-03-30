@@ -44,7 +44,6 @@ App.view.define('VAffectation',{
 											DATESORTIE: new Date()
 										},function(r) {
 											// Et on recrée l'enregistrement avec le nouvel utilisateur
-											
 											if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) 
 												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS').getValue();
 											else
@@ -59,7 +58,7 @@ App.view.define('VAffectation',{
 											});
 										})
 									}
-								}
+								} else _exit();
 							});
 							/*if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
 								alert('sysiphe');
