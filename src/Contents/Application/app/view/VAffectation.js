@@ -90,7 +90,7 @@ App.view.define('VAffectation',{
 			},
 			{
 				xtype: "textfield",
-				hidden: false,
+				hidden: true,
 				itemId: "IDAFFECTATION",
 				bindTo: "IDAFFECTATION"
 			},				
