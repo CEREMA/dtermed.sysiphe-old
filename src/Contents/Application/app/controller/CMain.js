@@ -213,12 +213,12 @@ App.controller.define('CMain', {
 	},
 	filter_onclick: function()
 	{
-		var store=App.store.create("App.materiels.getAll");
-		App.get('mainform grid').bindStore(store);
-		store.load();
-		if (App.get('FilterBox#FilterPanel').isVisible())
-		App.get('FilterBox#FilterPanel').hide();
-		else
+		if (App.get('FilterBox#FilterPanel').isVisible()) {
+			var store=App.store.create("App.materiels.getAll");
+			App.get('mainform grid').bindStore(store);
+			store.load();
+			App.get('FilterBox#FilterPanel').hide();
+		} else
 		App.get('FilterBox#FilterPanel').show();
 	},
 	onLoad: function()
