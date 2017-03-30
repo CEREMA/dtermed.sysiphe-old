@@ -22,6 +22,7 @@ App.view.define('VMain', {
 			region: "north", 
 			xtype: "FilterBox", 
 			itemId: "FilterPanel",
+			store: App.store.create('App.Materiels.getAll'),
 			fields: [
 				{
 					name: "N° Inventaire",
