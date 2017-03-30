@@ -69,18 +69,10 @@ App.view.define('VAffectation',{
 										Post.IDMATERIEL=MID;
 										Post.IDSTATUT=1;
 										Post.DATEENTREE=new Date();
-										alert(MID);
 										App.DB.post('sysiphe://affectations',Post,_exit)
 									};
 								}
 							});
-							/*if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
-								alert('sysiphe');
-								
-							} else {
-								alert('bpclight');
-							};*/
-							/**/
 						});
 					});
 				}
