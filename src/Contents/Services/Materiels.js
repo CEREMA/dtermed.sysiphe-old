@@ -2,8 +2,66 @@
 Materiels = {
 	getAll: function(o,cb) {
 		var db=Materiels.using('db');
-		console.log(db.sql("materiels"));
-		db.model('sysiphe',db.sql("materiels"),function(e,r) {
+		var objs=[
+			'materiels.IDMATERIEL',
+			'_BLOB',
+			'affectations.IDAFFECTATION',
+			'NOINVT',
+			'SN NOSERIE',
+			'NOTESMATERIEL',
+			'DATELIVRAISON',
+			'CARACT1',
+			'CARACT2',
+			'CARACT3',
+			'CARACT4',
+			'IDGARANTIE',
+			'NOCOMMANDE',
+			'NOFACTURE',
+			'DATEFACTURE',
+			'REFORME',
+			'DATEREFORME',
+			'SENSIBLE',
+			'modeles.modele',
+			'familles.FAMILLE',
+			'familles.IDFAMILLE',
+			'modeles.MODELE',
+			'modeles.IDMODELE',
+			'marques.MARQUE',
+			'marques.IDMARQUE',
+			'fournisseurs.FOURNISSEUR',
+			'fournisseurs.IDFOURNISSEUR',
+			'affectations.IDSYSIPHE',
+			'affectations.IDUTILISATEUR',
+			'affectations.DATEENTREE',
+			'affectations.DATESORTIE',
+			'IFNULL(COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),"A ATTRIBUER") Affectation',
+			'IFNULL(COALESCE(bpclight_unites.libunic,unites.UNITE),"A ATTRIBUER") Unite',
+			'IFNULL(bpclight_subdis.libsubc,"-") Service',
+			'bpclight_etablissements.libets Etablissement'
+		];	
+		var where=[];
+		if (!o.quest) o.quest="[]";
+
+        o=JSON.parse(o.quest);
+		
+		for (var i=0;i<o.length;i++)
+		{
+			var str="";
+			if (i!=0) {
+				str=' '+o[i].operator+' ';
+			};
+			str+=o[i].name;
+			str+=o[i].value;				
+	
+			where.push(str);
+		};
+
+		if (where.length==0) where.push("-1");
+		
+		var sql=db.get('sysiphe',objs,where);
+		console.log(sql);
+		
+		db.model('sysiphe',sql,function(e,r) {
 			console.log(r);
 			cb(e,r);	
 		});
