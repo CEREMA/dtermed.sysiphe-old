@@ -24,6 +24,7 @@ App.view.define('VAffectation',{
 					};
 					// update materiels
 					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
+						var MID=r.insertId;
 						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
 							// Affectations
 							var Post={};
@@ -32,6 +33,7 @@ App.view.define('VAffectation',{
 								if (r.data.length>0) {
 									console.log(r.data);
 									r.data=r.data[0];
+									MID=r.data.IDMATERIEL;
 									var Post=r.data;
 									var isUpdate=false;
 									if (r.data.IDUTILISATEUR!=App.get(me.up('window'),'combo#cboAgent')) isUpdate=true;
@@ -58,7 +60,18 @@ App.view.define('VAffectation',{
 											});
 										})
 									}
-								} else _exit();
+								} else {
+									var Post={};
+									if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS').getValue();
+									else Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent').getValue();
+									if ((!Post.IDSYSIPHE) && (!Post.IDUTILISATEUR))
+									_exit(); else {
+										Post.IDMATERIEL=MID;
+										Post.IDSTATUT=1;
+										Post.DATEENTREE=new Date();
+										App.DB.post('sysiphe://affectations',Post,_exit)
+									};
+								}
 							});
 							/*if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
 								alert('sysiphe');
