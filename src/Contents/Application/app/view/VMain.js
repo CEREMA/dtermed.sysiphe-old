@@ -33,6 +33,11 @@ App.view.define('VMain', {
 					name: "N° Série",
 					field: "materiels.SN",
 					type: "text"
+				},
+				{
+					name: "Archive",
+					field: "affectations.IDSTATUT",
+					type: "text"
 				}				
 			]
 		},
