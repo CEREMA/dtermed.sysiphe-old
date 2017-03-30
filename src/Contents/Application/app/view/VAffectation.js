@@ -69,6 +69,7 @@ App.view.define('VAffectation',{
 										Post.IDMATERIEL=MID;
 										Post.IDSTATUT=1;
 										Post.DATEENTREE=new Date();
+										alert(MID);
 										App.DB.post('sysiphe://affectations',Post,_exit)
 									};
 								}
