@@ -37,7 +37,7 @@ App.view.define('VMain', {
 				{
 					name: "Archive",
 					field: "affectations.IDSTATUT",
-					type: "text"
+					type: "boolean"
 				}				
 			]
 		},
