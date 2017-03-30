@@ -34,7 +34,7 @@ Materiels = {
 			'affectations.IDUTILISATEUR',
 			'affectations.DATEENTREE',
 			'affectations.DATESORTIE',
-			'IFNULL(COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),"A ATTRIBUER") Affectation',
+			'IFNULL(COALESCE(concat(bpclight_agents.nom," ",bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),"A ATTRIBUER") Affectation',
 			'IFNULL(COALESCE(bpclight_unites.libunic,unites.UNITE),"A ATTRIBUER") Unite',
 			'IFNULL(bpclight_subdis.libsubc,"-") Service',
 			'bpclight_etablissements.libets Etablissement'
