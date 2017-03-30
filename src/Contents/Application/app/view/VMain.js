@@ -38,6 +38,11 @@ App.view.define('VMain', {
 					name: "Actif",
 					field: "affectations.IDSTATUT",
 					type: "boolean"
+				},
+				{
+					name: "Affectations",
+					field: "affectations.Affectation",
+					type: "text"
 				}				
 			]
 		},
