@@ -231,6 +231,14 @@ App.view.define('VAffectation',{
 					}
 				}
 				]
+			},
+			{
+				xtype: "grid",
+				title: "Historique",
+				store: App.store.create({fields:[],data:[]}),
+				flex: 1,
+				columns:[],
+				width: "100%"
 			}
 			]
 		},
