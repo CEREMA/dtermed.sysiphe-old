@@ -58,7 +58,7 @@ Materiels = {
 
 		if (where.length==0) where.push("-1");
 		
-		var sql=db.get('sysiphe',objs,where);
+		var sql=db.get('materiels',objs,where);
 		console.log(sql);
 		
 		db.model('sysiphe',sql,function(e,r) {
