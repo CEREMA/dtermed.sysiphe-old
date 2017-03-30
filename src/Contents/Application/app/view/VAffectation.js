@@ -18,7 +18,6 @@ App.view.define('VAffectation',{
 				handler: function(me) {
 					me.setDisabled(true);
 					function _exit() {
-						return;
 						App.get('mainform grid').getStore().load();
 						me.setDisabled(false);	
 						me.up('window').close();	
