@@ -33,7 +33,6 @@ App.view.define('VAffectation',{
 								if (r.data.length>0) {
 									console.log(r.data);
 									r.data=r.data[0];
-									MID=r.data.IDMATERIEL;
 									var Post=r.data;
 									var isUpdate=false;
 									if (r.data.IDUTILISATEUR!=App.get(me.up('window'),'combo#cboAgent')) isUpdate=true;
@@ -66,6 +65,7 @@ App.view.define('VAffectation',{
 									else Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent').getValue();
 									if ((!Post.IDSYSIPHE) && (!Post.IDUTILISATEUR))
 									_exit(); else {
+										var MID=App.get(me.up('window'),'textfield#IDMATERIEL').getValue();
 										Post.IDMATERIEL=MID;
 										Post.IDSTATUT=1;
 										Post.DATEENTREE=new Date();
