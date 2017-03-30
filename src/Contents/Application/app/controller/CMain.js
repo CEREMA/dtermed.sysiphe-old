@@ -221,9 +221,7 @@ App.controller.define('CMain', {
 	},
 	onLoad: function()
 	{
-		App.get('mainform grid').getStore().on('load',function(r) {
-			console.log(r);
-		})
+		App.get('FilterBox#FilterPanel').store=App.get('mainform grid').getStore();
 		
 	}
 	
