@@ -28,7 +28,12 @@ App.view.define('VMain', {
 					name: "N° Inventaire",
 					field: "materiels.NOINVT",
 					type: "text"
-				}
+				},
+				{
+					name: "N° Série",
+					field: "materiels.NOSERIE",
+					type: "text"
+				}				
 			]
 		},
 		{
