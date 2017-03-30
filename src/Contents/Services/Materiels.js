@@ -57,7 +57,7 @@ Materiels = {
 			where.push(str);
 		};
 
-		if (where.length==0) where.push("-1");
+		if (where.length==0) where.push("affectations.IDSTATUT=1");
 		
 		var sql=db.get('materiels',objs,where);
 		console.log(sql);
