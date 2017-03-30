@@ -41,7 +41,7 @@ App.view.define('VMain', {
 				},
 				{
 					name: "Affectations",
-					field: "IFNULL(COALESCE(concat(bpclight_agents.nom," ",bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),'A ATTRIBUER')",
+					field: "IFNULL(COALESCE(concat(bpclight_agents.nom,' ',bpclight_agents.prenom),utilisateurs.NOMUTILISATEUR),'A ATTRIBUER')",
 					type: "text"
 				}				
 			]
