@@ -31,7 +31,7 @@ App.view.define('VMain', {
 				},
 				{
 					name: "N° Série",
-					field: "materiels.NOSERIE",
+					field: "materiels.SN",
 					type: "text"
 				}				
 			]
