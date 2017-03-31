@@ -104,7 +104,15 @@ App.view.define('VAffectation',{
 					App.get(me.up('window'),'combo#cboAgent').setDisabled(false);
 					App.get(me.up('window'),'combo#cboUnite').setDisabled(false);
 					App.get(me.up('window'),'combo#cboAgentS').setDisabled(false);
-					App.get(me.up('window'),'combo#cboSERV').setDisabled(false);					
+					App.get(me.up('window'),'combo#cboSERV').setDisabled(false);
+
+					App.get(me.up('window'),'combo#cboEts').setValue(null);
+					App.get(me.up('window'),'combo#cboDpt').setValue(null);
+					App.get(me.up('window'),'combo#cboSrv').setValue(null);
+					App.get(me.up('window'),'combo#cboAgent').setValue(null);
+					App.get(me.up('window'),'combo#cboUnite').setValue(null);
+					App.get(me.up('window'),'combo#cboAgentS').setValue(null);
+					App.get(me.up('window'),'combo#cboSERV').setValue(null);					
 				}
 			}
 			],
