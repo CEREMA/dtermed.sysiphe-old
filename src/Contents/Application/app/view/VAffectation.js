@@ -257,7 +257,8 @@ App.view.define('VAffectation',{
 					flex: 1
 				},{
 					header: "Date sortie",
-					dataIndex: "DATESORTIE"
+					dataIndex: "DATESORTIE",
+					renderer: Ext.util.Format.dateRenderer('m/d/Y')
 				}],
 				width: "100%"
 			}
