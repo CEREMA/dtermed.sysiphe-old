@@ -97,6 +97,7 @@ App.view.define('VAffectation',{
 			{
 				text: "Modifier",
 				handler: function(me) {
+					App.get(me.up('window'),'radiogroup').setDisabled(false);
 					App.get(me.up('window'),'combo#cboEts').setDisabled(false);
 					App.get(me.up('window'),'combo#cboDpt').setDisabled(false);
 					App.get(me.up('window'),'combo#cboSrv').setDisabled(false);
