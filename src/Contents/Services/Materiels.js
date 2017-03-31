@@ -1,5 +1,10 @@
 
 Materiels = {
+	getArchive: function(o,cb) {
+		var db=Materiels.using('db');
+		var sql=db.sql('materiels',{idmateriel:o.idmateriel});
+		db.model('sysiphe',sql,cb);
+	},
 	getAll: function(o,cb) {
 		var db=Materiels.using('db');
 		var objs=[
