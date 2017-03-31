@@ -71,8 +71,12 @@ App.controller.define('CMain', {
 		store.load();
 	},
 	VAffectation_show: function(me) {
-		//console.log(me._data);
+
 		if (me._data) {
+			var store_archive=App.store.create('App.Materiels.getArchive');
+			store_archive.getProxy().extraParams.idmateriel=me._data.IDMATERIEL;
+			App.get(me,'grid').bindStore(store_archive);
+			store_archive.load();
 			App.get(me,'datefield#cboIN').setValue(me._data.DATEENTREE);
 			App.get(me,'datefield#cboOUT').setValue(me._data.DATESORTIE);
 			App.get(me,'combo#cboFamille').getStore().load();
@@ -142,8 +146,7 @@ App.controller.define('CMain', {
 							App.get(me,'combo#cboEts').getStore().load();
 							App.get(me,'combo#cboEts').setValue(r.data[0].Kets);
 						});
-					});
-					//					
+					});				
 				});
 				App.get(me,'combo#cboAgent').setValue(me._data.IDUTILISATEUR);
 			}
