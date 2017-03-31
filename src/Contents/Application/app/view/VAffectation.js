@@ -253,7 +253,11 @@ App.view.define('VAffectation',{
 				margin: {top: 10},
 				columns:[{
 					header: "Affectation",
-					dataIndex: "Affectation"
+					dataIndex: "Affectation",
+					flex: 1
+				},{
+					header: "Date sortie",
+					dataIndex: "DATESORTIE"
 				}],
 				width: "100%"
 			}
