@@ -51,3 +51,5 @@ WHERE
 	affectations.IDSTATUT=0
 	AND
 	materiels.IDMATERIEL={idmateriel}
+ORDER BY
+	DATESORTIE desc

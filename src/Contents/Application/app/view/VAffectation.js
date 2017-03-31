@@ -92,6 +92,15 @@ App.view.define('VAffectation',{
 			width: 350,
 			title: "Agents",
 			layout: "vbox",
+			tbar: [
+			'->',
+			{
+				text: "Modifier",
+				handler: function(me) {
+					
+				}
+			}
+			],
 			items: [
 			{
 				xtype: "textfield",
