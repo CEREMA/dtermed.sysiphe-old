@@ -97,7 +97,13 @@ App.view.define('VAffectation',{
 			{
 				text: "Modifier",
 				handler: function(me) {
-					
+					App.get(me.up('window'),'combo#cboEts').setDisabled(false);
+					App.get(me.up('window'),'combo#cboDpt').setDisabled(false);
+					App.get(me.up('window'),'combo#cboSrv').setDisabled(false);
+					App.get(me.up('window'),'combo#cboAgent').setDisabled(false);
+					App.get(me.up('window'),'combo#cboUnite').setDisabled(false);
+					App.get(me.up('window'),'combo#cboAgentS').setDisabled(false);
+					App.get(me.up('window'),'combo#cboSERV').setDisabled(false);					
 				}
 			}
 			],
