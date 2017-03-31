@@ -214,7 +214,7 @@ App.controller.define('CMain', {
 	filter_onclick: function()
 	{
 		if (App.get('FilterBox#FilterPanel').isVisible()) {
-			var store=App.store.create("App.materiels.getAll");
+			var store=App.store.create('App.Materiels.getAll',{autoLoad: true,groupField: 'Unite'});
 			App.get('mainform grid').bindStore(store);
 			store.load();
 			App.get('FilterBox#FilterPanel').hide();
