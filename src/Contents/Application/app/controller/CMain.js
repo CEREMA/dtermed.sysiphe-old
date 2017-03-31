@@ -103,6 +103,14 @@ App.controller.define('CMain', {
 			if (me._data.REFORME) App.get(me,'checkbox').setValue(me._data.REFORME);
 			if (me._data.IDUTILISATEUR==0) {
 				App.get(me,'radiogroup').setDisabled(true);
+
+				App.get(me,'combo#cboEts').setDisabled(true);
+				App.get(me,'combo#cboDpt').setDisabled(true);
+				App.get(me,'combo#cboSrv').setDisabled(true);
+				App.get(me,'combo#cboAgent').setDisabled(true);
+				App.get(me,'combo#cboUnite').setDisabled(true);
+				App.get(me,'combo#cboAgentS').setDisabled(true);				
+				
 				App.get(me,'radiogroup#r0').items.items[0].boxLabelEl.update("BPCLight");
 				App.get(me,'radiogroup#r0').items.items[1].boxLabelEl.update("<b>Sysiphe</b>");	
 				App.get(me,'radiogroup#r0').items.items[1].setValue(true);
