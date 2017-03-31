@@ -218,6 +218,7 @@ App.controller.define('CMain', {
 			App.get('mainform grid').bindStore(store);
 			store.load();
 			App.get('FilterBox#FilterPanel').hide();
+			return;
 		} else
 		App.get('FilterBox#FilterPanel').show();
 	},
