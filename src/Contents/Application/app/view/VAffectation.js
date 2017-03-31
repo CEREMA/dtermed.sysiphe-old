@@ -91,6 +91,7 @@ App.view.define('VAffectation',{
 			split: true,
 			width: 350,
 			title: "Agents",
+			itemId: "Agents",
 			layout: "vbox",
 			tbar: [
 			'->',
