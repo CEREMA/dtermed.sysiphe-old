@@ -64,7 +64,9 @@ App.controller.define('CMain', {
 		App.get('VAffectation combo#cboSERV').bindStore(store);
 		store.load();	
 		store.on('load',function(data) {
-			console.log(data);	
+			if (data.data.items.length==1) {
+				App.get('VAffectation combo#cboSERV').setValue(data.data.items[0].data.IDSERVICE);	
+			}	
 		})
 	},
 	up_onclick: function(p, record) {
