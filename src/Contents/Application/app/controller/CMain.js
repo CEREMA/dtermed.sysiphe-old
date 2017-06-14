@@ -57,8 +57,7 @@ App.controller.define('CMain', {
 		App.init('VMain',this.onLoad);
 		
 	},
-	cboUnite_select: function(me,record) {
-		App.get('VAffectation combo#cboUnite').setValue('');	
+	cboUnite_select: function(me,record) {	
 		App.get('VAffectation combo#cboSERV').setValue('');
 		App.get('VAffectation combo#cboAgentS').setValue('');
 		var store=App.store.create('sysiphe://services{IDSERVICE,SERVICE+}?archive=0&idunite='+me.getValue());
