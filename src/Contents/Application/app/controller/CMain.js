@@ -48,11 +48,22 @@ App.controller.define('CMain', {
 			},
 			"VAffectation combo#cboMarque": {
 				select: "cboFamille_select"	
+			},
+			"VAffectation combo#cboUnite": {
+				select: "cboUnite_select"
 			}
 		});
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	cboUnite_select: function(me,record) {
+		App.get('VAffectation combo#cboUnite').setValue('');	
+		App.get('VAffectation combo#cboSERV').setValue('');
+		App.get('VAffectation combo#cboAgentS').setValue('');
+		var store=App.store.create('sysiphe://services{IDSERVICE,SERVICE+}?archive=0&idunite='+me.getValue());
+		App.get('VAffectation combo#cboSERV').bindStore(store);
+		store.load();	
 	},
 	up_onclick: function(p, record) {
 		App.view.create('VShowDoc', {
