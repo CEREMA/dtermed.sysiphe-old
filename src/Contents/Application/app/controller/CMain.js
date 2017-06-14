@@ -51,11 +51,20 @@ App.controller.define('CMain', {
 			},
 			"VAffectation combo#cboUnite": {
 				select: "cboUnite_select"
+			},
+			"VAffectation combo#cboServ": {
+				select: "cboServ_select"
 			}
 		});
 		
 		App.init('VMain',this.onLoad);
 		
+	},
+	cboServ_select: function(me,record) {
+		App.get('VAffectation combo#cboAgentS').setValue('');	
+		var store=App.store.create("sysiphe://utilisateurs{IDUTILISATEUR,NOMUTILISATEUR+}?IDSERVICE="+me.getValue());
+		App.get('VAffectation combo#cboAgentS').bindStore(store);
+		store.load();		
 	},
 	cboUnite_select: function(me,record) {	
 		App.get('VAffectation combo#cboSERV').setValue('');
@@ -65,7 +74,11 @@ App.controller.define('CMain', {
 		store.load();	
 		store.on('load',function(data) {
 			if (data.data.items.length==1) {
-				App.get('VAffectation combo#cboSERV').setValue(data.data.items[0].data.IDSERVICE);	
+				App.get('VAffectation combo#cboSERV').setValue(data.data.items[0].data.IDSERVICE);
+				App.get('VAffectation combo#cboAgentS').setValue('');	
+				var store=App.store.create("sysiphe://utilisateurs{IDUTILISATEUR,NOMUTILISATEUR+}?IDSERVICE="+me.getValue());
+				App.get('VAffectation combo#cboAgentS').bindStore(store);
+				store.load();
 			}	
 		})
 	},
