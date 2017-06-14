@@ -395,6 +395,7 @@ App.view.define('VAffectation',{
 					valueField: "IDFOURNISSEUR",
 					bindTo: "IDFOURNISSEUR",
 					itemId: "cboFournisseur",
+					editable: false,
 					labelAlign: "top",					
 					flex: 1
 				},
@@ -411,6 +412,7 @@ App.view.define('VAffectation',{
 					xtype: "combo",
 					fieldLabel: "Garantie",
 					itemId: "cboGarantie",
+					editable: false,
 					store:App.store.create('sysiphe://garanties{IDGARANTIE,GARANTIE+}',{autoLoad:true}),
 					displayField: "GARANTIE",
 					valueField: "IDGARANTIE",	
