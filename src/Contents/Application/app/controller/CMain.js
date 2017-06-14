@@ -63,6 +63,9 @@ App.controller.define('CMain', {
 		var store=App.store.create('sysiphe://services{IDSERVICE,SERVICE+}?archive=0&idunite='+me.getValue());
 		App.get('VAffectation combo#cboSERV').bindStore(store);
 		store.load();	
+		store.on('load',function(data) {
+			console.log(data);	
+		})
 	},
 	up_onclick: function(p, record) {
 		App.view.create('VShowDoc', {
