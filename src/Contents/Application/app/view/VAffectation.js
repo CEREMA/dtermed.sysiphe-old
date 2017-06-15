@@ -319,8 +319,8 @@ App.view.define('VAffectation',{
 					bindTo: "SN",
 					labelAlign: "top",	
 					store: App.store.create('sysiphe://materiels{SN-}'),
-					valueField: "SN",
-					displayField: "SN",
+					valueField: "NOINVT",
+					displayField: "NOINVT",
 					margin:{left: 2},
 					flex: 1
 				},
