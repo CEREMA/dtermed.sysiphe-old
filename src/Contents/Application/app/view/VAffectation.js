@@ -302,11 +302,14 @@ App.view.define('VAffectation',{
 				padding: 2,
 				items: [
 				{
-					xtype: "textfield",
+					xtype: "combo",
 					fieldLabel: "N° Inventaire",
 					bindTo: "NOINVT",
 					itemId: "NOINVT",
-					labelAlign: "top",					
+					labelAlign: "top",
+					store: App.store.create('sysiphe://materiels{NOINVT}'),
+					valueField: "NOINVT",
+					displayField: "NOINVT",
 					flex: 1
 				},
 				{
