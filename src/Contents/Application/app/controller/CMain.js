@@ -118,9 +118,9 @@ App.controller.define('CMain', {
 			App.get(me,'combo#cboGarantie').getStore().load();
 			App.get(me,'combo#cboGarantie').setValue(me._data.IDGARANTIE);
 			App.get(me,'textfield#Commande').setValue(me._data.NOCOMMANDE);
-			App.get(me,'textfield#NOINVT').setValue(me._data.NOINVT);
-			App.get(me,'textfield#NOSERIE').setValue(me._data.NOSERIE);
-			App.get(me,'textfield#NOFACTURE').setValue(me._data.NOFACTURE);
+			App.get(me,'combo#NOINVT').setValue(me._data.NOINVT);
+			App.get(me,'combo#NOSERIE').setValue(me._data.NOSERIE);
+			App.get(me,'combo#NOFACTURE').setValue(me._data.NOFACTURE);
 			App.get(me,'textfield#DATEFACTURE').setValue(me._data.DATEFACTURE);		
 			App.get(me,'textfield#IDMATERIEL').setValue(me._data.IDMATERIEL);	
 			App.get(me,'textfield#IDAFFECTATION').setValue(me._data.IDAFFECTATION);	
