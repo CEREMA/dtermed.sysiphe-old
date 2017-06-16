@@ -5,7 +5,7 @@ Materiels = {
 		var sql=db.sql('materiels',{idmateriel:o.idmateriel});
 		db.model('sysiphe',sql,cb);
 	},
-	getMarque: function(o,cb) {
+	getMarques: function(o,cb) {
 		var sql="SELECT * FROM marques WHERE ARCHIVE=0 AND IDMARQUE in (SELECT IDMARQUE FROM modeles WHERE IDFAMILLE="+o.idFamille+")";
 		Materiels.using('db').model('sysiphe',sql,cb);
 	},
