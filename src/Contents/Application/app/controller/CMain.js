@@ -47,7 +47,7 @@ App.controller.define('CMain', {
 				select: "cboFamille_select"	
 			},
 			"VAffectation combo#cboMarque": {
-				select: "cboFamille_select"	
+				select: "cboMarque_select"	
 			},
 			"VAffectation combo#cboUnite": {
 				select: "cboUnite_select"
@@ -97,13 +97,12 @@ App.controller.define('CMain', {
 		store.getProxy().extraParams.idFamille=me.getValue();
 		App.get(me.up('window'),'combo#cboMarque').bindStore(store);
 		store.load();
-		/*store.on('load',function() {
-			
-		});
+	},
+	cboMarque_select: function(me) {
 		var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?idfamille='+App.get(me.up('window'),'combo#cboFamille').getValue()+'&idmarque='+App.get(me.up('window'),'combo#cboMarque').getValue());
 		App.get(me.up('window'),'combo#cboModele').setValue('');
 		App.get(me.up('window'),'combo#cboModele').bindStore(store);
-		store.load();*/
+		store.load();		
 	},
 	VAffectation_show: function(me) {
 
