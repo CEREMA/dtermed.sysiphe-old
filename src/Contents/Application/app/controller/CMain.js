@@ -93,10 +93,16 @@ App.controller.define('CMain', {
 		App.view.create('VAffectation',{modal:true}).show().center();	
 	},
 	cboFamille_select: function(me) {
+		var store=App.store.create('App.Materiels.getMarques');
+		store.getProxy().extraParams.idFamille=me.getValue();
+		App.get(me.up('window'),'combo#cboMarque').bindStore(store);
+		/*store.on('load',function() {
+			
+		});
 		var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?idfamille='+App.get(me.up('window'),'combo#cboFamille').getValue()+'&idmarque='+App.get(me.up('window'),'combo#cboMarque').getValue());
 		App.get(me.up('window'),'combo#cboModele').setValue('');
 		App.get(me.up('window'),'combo#cboModele').bindStore(store);
-		store.load();
+		store.load();*/
 	},
 	VAffectation_show: function(me) {
 
