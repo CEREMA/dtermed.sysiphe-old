@@ -6,7 +6,7 @@
     "platform": "desktop",
     "uid": "SJ6zsWlhx",
     "version": "0.0.1",
-    "build": 5,
+    "build": 6,
     "targets": [
         "webapp"
     ],
