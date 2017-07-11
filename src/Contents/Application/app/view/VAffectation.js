@@ -16,13 +16,15 @@ App.view.define('VAffectation',{
                 text: '<b>Enregistrer</b>',
 				itemId: "Exit",
 				handler: function(me) {
-					me.setDisabled(true);
+					//me.setDisabled(true);
 					function _exit() {
 						App.get('mainform grid').getStore().load();
 						me.setDisabled(false);	
 						me.up('window').close();	
 					};
 					// update materiels
+					console.log(me.up('window'),App.getAll('combo'));
+					return;
 					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 						var MID=r.insertId;
 						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
