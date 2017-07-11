@@ -24,9 +24,11 @@ App.view.define('VEdition',{
 			xtype: "grid",
 			title: "Fournisseurs",
 			columns: [{
-				text: "IDFOURNISSEUR"
-			},{
-				text: "FOURNISSEUR"	
+				text: "Fournisseur",
+				dataIndex: "FOURNISSEUR",
+				editor: {
+					allowBlank:false
+				}
 			}],
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		}
