@@ -62,10 +62,11 @@ App.controller.define('CMain', {
 		
 	},
 	cboMarque_keys: function(me,key) {
-		var charCode = key.getCharCode();
-		if (charcode==13) {
+		console.log(key);
+		//var charCode = key.getCharCode();
+		/*if (charcode==13) {
 			alert(me.getValue());	
-		};
+		};*/
 	},
 	cboServ_select: function(me,record) {
 		App.get('VAffectation combo#cboAgentS').setValue('');	
