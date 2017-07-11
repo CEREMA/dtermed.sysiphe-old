@@ -62,6 +62,9 @@ App.controller.define('CMain', {
 		
 	},
 	cboMarque_keys: function(me,key) {
+		App.get(me.up('window'),'combo#cboModele').setValue('');
+		var store=App.store.create({fields:[],data:[]});
+		App.get(me.up('window'),'combo#cboModele').bindStore(store);
 		if (key.keyCode==56) {
 			var value=me.getValue().split('!')[0];
 			App.DB.post('sysiphe://marques',{MARQUE:value},function(e,r) {
