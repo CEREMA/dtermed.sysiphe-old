@@ -228,7 +228,7 @@ App.view.define('VAffectation',{
 			title: "Fiche matériel",
 			layout: "vbox",
 			flex: 1,
-			hbar: [
+			tbar: [
 			{
 				text: "Edition",
 				itemId: "edit",
