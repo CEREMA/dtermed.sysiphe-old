@@ -14,76 +14,7 @@ App.view.define('VAffectation',{
 		this.bbar = [
             '->', {
                 text: '<b>Enregistrer</b>',
-				itemId: "Exit",
-				handler: function(me) {
-					//me.setDisabled(true);
-					function _exit() {
-						App.get('mainform grid').getStore().load();
-						me.setDisabled(false);	
-						me.up('window').close();	
-					};
-					// update materiels
-					console.log(App.get(me.up('window'),'combo#cboMarque'));
-					return;
-					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
-						var MID=r.insertId;
-						App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
-							// Affectations
-							var Post={};
-							// On charge l'ancienne affectation
-							App.DB.get('sysiphe://affectations?IDAFFECTATION='+App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),function(r) {
-								if (r.data.length>0) {
-									console.log(r.data);
-									r.data=r.data[0];
-									var Post=r.data;
-									var isUpdate=false;
-									if (r.data.IDUTILISATEUR!=App.get(me.up('window'),'combo#cboAgent')) isUpdate=true;
-									if (r.data.IDSYSIPHE!=App.get(me.up('window'),'combo#cboAgentS')) isUpdate=true;
-									if (isUpdate) {
-										// On update l'ancien enregistrement en mettant IDSTATUT=0 et en complétant la date de sortie
-										App.DB.post('sysiphe://affectations',{
-											IDSTATUT: '0',
-											IDAFFECTATION: App.get(me.up('window'),'textfield#IDAFFECTATION').getValue(),
-											DATESORTIE: new Date()
-										},function(r) {
-											// Et on recrée l'enregistrement avec le nouvel utilisateur
-											
-											if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) {
-												delete Post.IDUTILISATEUR;
-												Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS').getValue();
-											} else {
-												delete Post.IDSYSIPHE;
-												Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent').getValue();
-											};
-											delete Post.DATESORTIE;
-											Post.DATEENTREE=new Date();
-											delete Post.IDAFFECTATION;
-											console.log('----');
-											console.log(Post);
-											console.log('----');
-											App.DB.post('sysiphe://affectations',Post,function(r) {
-												console.log(r);
-												_exit();	
-											});
-										})
-									}
-								} else {
-									var Post={};
-									if (App.get(me.up('window'),'radiogroup#r0').items.items[1].getValue()) Post.IDSYSIPHE=App.get(me.up('window'),'combo#cboAgentS').getValue();
-									else Post.IDUTILISATEUR=App.get(me.up('window'),'combo#cboAgent').getValue();
-									if ((!Post.IDSYSIPHE) && (!Post.IDUTILISATEUR))
-									_exit(); else {
-										var MID=App.get(me.up('window'),'textfield#IDMATERIEL').getValue();
-										Post.IDMATERIEL=MID;
-										Post.IDSTATUT=1;
-										Post.DATEENTREE=new Date();
-										App.DB.post('sysiphe://affectations',Post,_exit)
-									};
-								}
-							});
-						});
-					});
-				}
+				itemId: "Exit"
             }
         ];
 		
