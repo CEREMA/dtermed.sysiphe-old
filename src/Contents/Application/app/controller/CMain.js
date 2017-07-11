@@ -53,27 +53,6 @@ App.controller.define('CMain', {
 			, "VAffectation button#Exit": {
 				click: "recordAffectation"
 			}
-			, "VAffectation combo#cboFournisseur": {
-				itemcontextmenu: function (list, ecord, item, index, e, eOpts) {
-					alert('z');
-					e.stopEvent();
-					var x=Ext.create('Ext.menu.Menu',{
-					items: [
-					{
-						itemId: 'ctx-edit',
-						text: "Edition"
-					}				
-					]
-					});
-					x.on('click',function(z,p) {
-						if (p.itemId=="ctx-edit") {
-							App.view.create('VEdit',{modal: true}).show().center();
-						}
-					});
-					x.showAt(e.getXY());
-					return false;
-				}
-			}
 		});
 		App.init('VMain', this.onLoad);
 	}
