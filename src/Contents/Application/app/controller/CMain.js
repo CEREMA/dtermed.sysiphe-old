@@ -57,6 +57,11 @@ App.controller.define('CMain', {
 			},
 			"VAffectation button#Exit": {
 				click: "recordAffectation"
+			},
+			"VAffectation combo#cboFournisseur": {
+				itemdblclick: function() {
+					alert('x');
+				}
 			}
 		});
 		
