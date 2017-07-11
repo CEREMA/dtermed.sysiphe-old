@@ -3,11 +3,6 @@ App.view.define('VEdition',{
     alias: 'widget.VEdition',
     initComponent: function() {
 		
-		var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
-        	clicksToMoveEditor: 1,
-        	autoCancel: false
-    	});
-		
         this.width = 500;
         this.height = 700;
 
@@ -17,7 +12,10 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.plugins = [rowEditing];
+		this.plugins = [Ext.create('Ext.grid.plugin.RowEditing', {
+        	clicksToMoveEditor: 1,
+        	autoCancel: false
+    	})];
 		
 		this.items = [
 		{
