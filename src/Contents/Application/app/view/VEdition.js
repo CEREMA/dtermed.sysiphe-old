@@ -12,6 +12,8 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
+		this.selModel = 'cellmodel';
+		
 		this.plugins = [{
         	ptype: 'cellediting',
         	clicksToEdit: 1
