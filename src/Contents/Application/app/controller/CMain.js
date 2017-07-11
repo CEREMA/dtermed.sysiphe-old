@@ -57,7 +57,7 @@ App.controller.define('CMain', {
 				select: "cboServ_select"
 			},
 			"VAffectation combo#cboModele": {
-				select: "cboServ_select"
+				select: "cboModele_select"
 			},
 			"VAffectation button#Exit": {
 				click: "recordAffectation"
@@ -136,6 +136,23 @@ App.controller.define('CMain', {
 			});
 		});		
 	},
+	cboModele_select: function(me,key) {
+		if (key.keyCode==56) {
+			var value=me.getValue().split('!')[0];
+			App.DB.post('sysiphe://modeles',{
+				MODELE:value,
+				IDFAMILLE: App.get(me.up('window'),'combo#cboFamille').getValue(''),
+				IDMARQUE: App.get(me.up('window'),'combo#cboMarque').getValue('') 
+			},function(e,r) {
+				if (e.insertId) {
+					var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}',{autoLoad:true});
+					me.bindStore(store);
+					store.load();
+					me.setValue(e.insertId);
+				} else me.setRawValue(value);
+			});
+		}
+	};
 	cboMarque_keys: function(me,key) {
 		App.get(me.up('window'),'combo#cboModele').setValue('');
 		var store=App.store.create({fields:[],data:[]});
