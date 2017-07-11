@@ -138,7 +138,12 @@ App.controller.define('CMain', {
 	},
 	cboModele_keys: function(me,key) {
 		if (key.keyCode==56) {
-			var value=me.getValue().split('!')[0];
+			try {
+				var value=me.getValue().split('!')[0];
+			} catch(e) {
+				me.setValue('');
+				return;
+			};
 			App.DB.post('sysiphe://modeles',{
 				MODELE:value,
 				IDFAMILLE: App.get(me.up('window'),'combo#cboFamille').getValue(''),
@@ -158,7 +163,12 @@ App.controller.define('CMain', {
 		var store=App.store.create({fields:[],data:[]});
 		App.get(me.up('window'),'combo#cboModele').bindStore(store);
 		if (key.keyCode==56) {
-			var value=me.getValue().split('!')[0];
+			try {
+				var value=me.getValue().split('!')[0];
+			} catch(e) {
+				me.setValue('');
+				return;
+			};
 			App.DB.post('sysiphe://marques',{MARQUE:value},function(e,r) {
 				if (e.insertId) {
 					var store=App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}',{autoLoad:true});
