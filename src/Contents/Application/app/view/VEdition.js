@@ -12,7 +12,7 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.plugins = [Ext.create('Ext.grid.plugin.RowEditing', {
+		this.plugins = [Ext.create('Ext.grid.plugin.ColEditing', {
         	clicksToMoveEditor: 1,
         	autoCancel: false
     	})];
