@@ -23,7 +23,7 @@ App.view.define('VAffectation',{
 						me.up('window').close();	
 					};
 					// update materiels
-					console.log(App.get(me.up('window'),'combo#cboModele'));
+					console.log(App.get(me.up('window'),'combo#cboMarques'));
 					return;
 					App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 						var MID=r.insertId;
