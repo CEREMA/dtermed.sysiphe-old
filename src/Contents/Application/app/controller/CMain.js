@@ -57,7 +57,7 @@ App.controller.define('CMain', {
 				select: "cboServ_select"
 			},
 			"VAffectation combo#cboModele": {
-				keydown: "cboModele_select"
+				keydown: "cboModele_keys"
 			},
 			"VAffectation button#Exit": {
 				click: "recordAffectation"
@@ -136,7 +136,7 @@ App.controller.define('CMain', {
 			});
 		});		
 	},
-	cboModele_select: function(me,key) {
+	cboModele_keys: function(me,key) {
 		if (key.keyCode==56) {
 			var value=me.getValue().split('!')[0];
 			App.DB.post('sysiphe://modeles',{
@@ -145,7 +145,7 @@ App.controller.define('CMain', {
 				IDMARQUE: App.get(me.up('window'),'combo#cboMarque').getValue('') 
 			},function(e,r) {
 				if (e.insertId) {
-					var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}',{autoLoad:true});
+					var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?IDMARQUE='+App.get(me.up('window'),'combo#cboMarque').getValue('')+'&IDFAMILLE='+App.get(me.up('window'),'combo#cboFamille').getValue(''),{autoLoad:true});
 					me.bindStore(store);
 					store.load();
 					me.setValue(e.insertId);
