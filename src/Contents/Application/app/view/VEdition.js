@@ -16,8 +16,9 @@ App.view.define('VEdition',{
 		this.items=[
 		{
 			xtype: "grid",
-			columns: [],
-			store: App.store.create({fields:[],data:[]})
+			title: "Fournisseurs",
+			columns: ["ID_Fournisseur","Nom_Fournisseur"],
+			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		}
 		];
 		
