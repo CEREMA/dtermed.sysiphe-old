@@ -5,15 +5,20 @@ App.view.define('VEdition',{
 		
         this.width = 500;
         this.height = 700;
+		alert(this.tabledef);
 
         this.layout = {
-            type: 'border'
+            type: 'fit'
         };
 		
 		this.title="Edition";
 		
 		this.items=[
-			
+		{
+			xtype: "grid",
+			columns: [],
+			store: App.store.create({fields:[],data:[]})
+		}
 		];
 		
 		this.callParent();
