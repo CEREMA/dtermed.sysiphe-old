@@ -5,7 +5,6 @@ App.view.define('VEdition',{
 		
         this.width = 500;
         this.height = 700;
-		alert(this.tabledef);
 
         this.layout = {
             type: 'accordion'
@@ -17,7 +16,11 @@ App.view.define('VEdition',{
 		{
 			xtype: "grid",
 			title: "Fournisseurs",
-			columns: ["ID_Fournisseur","Nom_Fournisseur"],
+			columns: [{
+				text: "ID_Fournisseur"
+			},{
+				text: "Nom_Fournisseur"	
+			}],
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		}
 		];
