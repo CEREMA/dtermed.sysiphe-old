@@ -47,20 +47,13 @@ App.controller.define('CMain', {
 				select: "cboFamille_select"	
 			},
 			"VAffectation combo#cboMarque": {
-				select: "cboMarque_select",
-				keydown: "cboMarque_keys"
+				select: "cboMarque_select"
 			},
 			"VAffectation combo#cboUnite": {
 				select: "cboUnite_select"
 			},
 			"VAffectation combo#cboServ": {
 				select: "cboServ_select"
-			},
-			"VAffectation combo#cboModele": {
-				keydown: "cboModele_keys"
-			},
-			"VAffectation combo#cboFournisseur": {
-				keydown: "cboFournisseur_keys"
 			},
 			"VAffectation button#Exit": {
 				click: "recordAffectation"
@@ -147,67 +140,6 @@ App.controller.define('CMain', {
 				});
 			});
 		});		
-	},
-	cboModele_keys: function(me,key) {
-		if (key.keyCode==56) {
-			try {
-				var value=me.getValue().split('!')[0];
-			} catch(e) {
-				me.setValue('');
-				return;
-			};
-			App.DB.post('sysiphe://modeles',{
-				MODELE:value,
-				IDFAMILLE: App.get(me.up('window'),'combo#cboFamille').getValue(''),
-				IDMARQUE: App.get(me.up('window'),'combo#cboMarque').getValue('') 
-			},function(e,r) {
-				if (e.insertId) {
-					var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?IDMARQUE='+App.get(me.up('window'),'combo#cboMarque').getValue('')+'&IDFAMILLE='+App.get(me.up('window'),'combo#cboFamille').getValue(''),{autoLoad:true});
-					me.bindStore(store);
-					store.load();
-					me.setValue(e.insertId);
-				} else me.setRawValue(value);
-			});
-		}
-	},	
-	cboMarque_keys: function(me,key) {
-		App.get(me.up('window'),'combo#cboModele').setValue('');
-		var store=App.store.create({fields:[],data:[]});
-		App.get(me.up('window'),'combo#cboModele').bindStore(store);
-		if (key.keyCode==56) {
-			try {
-				var value=me.getValue().split('!')[0];
-			} catch(e) {
-				me.setValue('');
-				return;
-			};
-			App.DB.post('sysiphe://marques',{MARQUE:value},function(e,r) {
-				if (e.insertId) {
-					var store=App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}',{autoLoad:true});
-					me.bindStore(store);
-					store.load();
-					me.setValue(e.insertId);
-				} else me.setRawValue(value);
-			});
-		};
-	},
-	cboFournisseur_keys: function(me,key) {
-		if (key.keyCode==56) {
-			try {
-				var value=me.getValue().split('!')[0];
-			} catch(e) {
-				me.setValue('');
-				return;
-			};
-			App.DB.post('sysiphe://fournisseurs',{FOURNISSEUR:value},function(e,r) {
-				if (e.insertId) {
-					var store=App.store.create('sysiphe://fournisseurs{IDFOURNISSEUR,FOURNISSEUR+}',{autoLoad:true});
-					me.bindStore(store);
-					store.load();
-					me.setValue(e.insertId);
-				} else me.setRawValue(value);
-			});
-		};
 	},
 	cboServ_select: function(me,record) {
 		App.get('VAffectation combo#cboAgentS').setValue('');	
