@@ -55,24 +55,22 @@ App.controller.define('CMain', {
 			}
 			, "VAffectation combo#cboFournisseur": {
 				itemcontextmenu: function (list, ecord, item, index, e, eOpts) {
-					var position = e.getXY()
-						, menu = Ext.create('FilesEditor.view.FilesEditorContextMenu', {
-							id: 'myMenu'
-							, items: [{
-								text: 'Some Menu Item'
-								, handler: function () {
-									// do your stuff
-								}
-            }]
-							, listeners: {
-								mouseleave: function () {
-									menu.close();
-								}
-							}
-						});
 					e.stopEvent();
-					menu.refView = view;
-					menu.showAt(position);
+					var x=Ext.create('Ext.menu.Menu',{
+					items: [
+					{
+						itemId: 'ctx-edit',
+						text: "Edition"
+					}				
+					]
+					});
+					x.on('click',function(z,p) {
+						if (p.itemId=="ctx-edit") {
+							App.view.create('VEdit',{modal: true}).show().center();
+						}
+					});
+					x.showAt(e.getXY());
+					return false;
 				}
 			}
 		});
