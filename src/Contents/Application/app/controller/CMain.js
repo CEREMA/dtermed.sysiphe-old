@@ -57,7 +57,7 @@ App.controller.define('CMain', {
 				select: "cboServ_select"
 			},
 			"VAffectation combo#cboModele": {
-				select: "cboModele_select"
+				keydown: "cboModele_select"
 			},
 			"VAffectation button#Exit": {
 				click: "recordAffectation"
@@ -152,7 +152,7 @@ App.controller.define('CMain', {
 				} else me.setRawValue(value);
 			});
 		}
-	},
+	},	
 	cboMarque_keys: function(me,key) {
 		App.get(me.up('window'),'combo#cboModele').setValue('');
 		var store=App.store.create({fields:[],data:[]});
