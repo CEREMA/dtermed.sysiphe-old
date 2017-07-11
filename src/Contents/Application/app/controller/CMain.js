@@ -55,6 +55,7 @@ App.controller.define('CMain', {
 			}
 			, "VAffectation combo#cboFournisseur": {
 				itemcontextmenu: function (list, ecord, item, index, e, eOpts) {
+					alert('z');
 					e.stopEvent();
 					var x=Ext.create('Ext.menu.Menu',{
 					items: [
