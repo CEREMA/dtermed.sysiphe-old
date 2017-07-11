@@ -13,7 +13,7 @@ App.view.define('VEdition',{
 		this.title = "Edition";
 		
 		this.plugins = [{
-        	ptype: 'rowediting',
+        	ptype: 'cellediting',
         	clicksToEdit: 1
     	}];
 		
