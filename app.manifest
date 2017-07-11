@@ -5,8 +5,8 @@
     "description": "Gestion du parc informatique",
     "platform": "desktop",
     "uid": "SJ6zsWlhx",
-    "version": "0.0.1",
-    "build": 9,
+    "version": "0.1.1",
+    "build": 10,
     "targets": [
         "webapp"
     ],
