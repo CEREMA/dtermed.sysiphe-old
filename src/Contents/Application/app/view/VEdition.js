@@ -12,7 +12,7 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.plugins: [{
+		this.plugins = [{
         	ptype: 'colediting',
         	clicksToEdit: 1
     	}];
