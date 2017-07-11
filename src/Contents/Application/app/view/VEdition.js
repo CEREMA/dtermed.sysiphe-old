@@ -8,7 +8,7 @@ App.view.define('VEdition',{
 		alert(this.tabledef);
 
         this.layout = {
-            type: 'fit'
+            type: 'accordion'
         };
 		
 		this.title="Edition";
