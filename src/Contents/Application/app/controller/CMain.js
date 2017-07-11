@@ -62,6 +62,7 @@ App.controller.define('CMain', {
 		
 	},
 	cboMarque_keys: function(me,key) {
+		alert(key.keyCode);
 		if (key.keyCode==13) {
 			App.DB.post('sysiphe://marques',{MARQUE:me.getValue()},function(e,r) {
 				if (e.insertId) {
