@@ -3,6 +3,7 @@ App.controller.define('CMain', {
 		"VMain"
 		, "VAffectation"
 		, "VShowDoc"
+		, "VEdition"
 	]
 	, models: [
 	]
