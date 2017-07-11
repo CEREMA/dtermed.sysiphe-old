@@ -54,6 +54,26 @@ App.controller.define('CMain', {
 			, "VAffectation button#Exit": {
 				click: "recordAffectation"
 			}
+			, "VEdition grid": {
+				itemcontextmenu: function (view, rec, node, index, e) {
+					e.stopEvent();
+					var x = Ext.create('Ext.menu.Menu', {
+						items: [
+							{
+								itemId: 'ctx-grid-delete'
+								, text: "Supprimer"
+				}
+			]
+					});
+					x.on('click', function (z, p) {
+						if (p.itemId == "ctx-grid-delete") {
+							alert('z');
+						}
+					});
+					x.showAt(e.getXY());
+					return false;
+				}
+			}
 		});
 		App.init('VMain', this.onLoad);
 	}
