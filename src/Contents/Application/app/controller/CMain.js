@@ -152,7 +152,7 @@ App.controller.define('CMain', {
 				} else me.setRawValue(value);
 			});
 		}
-	};
+	},
 	cboMarque_keys: function(me,key) {
 		App.get(me.up('window'),'combo#cboModele').setValue('');
 		var store=App.store.create({fields:[],data:[]});
