@@ -12,10 +12,10 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.plugins = [Ext.create('Ext.grid.plugin.ColEditing', {
-        	clicksToMoveEditor: 1,
-        	autoCancel: false
-    	})];
+		this.plugins: [{
+        	ptype: 'colediting',
+        	clicksToEdit: 1
+    	}];
 		
 		this.items = [
 		{
