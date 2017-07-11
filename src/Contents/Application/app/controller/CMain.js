@@ -47,7 +47,8 @@ App.controller.define('CMain', {
 				select: "cboFamille_select"	
 			},
 			"VAffectation combo#cboMarque": {
-				select: "cboMarque_select"	
+				select: "cboMarque_select",
+				keyup: "cboMarque_keys"
 			},
 			"VAffectation combo#cboUnite": {
 				select: "cboUnite_select"
@@ -58,6 +59,9 @@ App.controller.define('CMain', {
 		});
 		
 		App.init('VMain',this.onLoad);
+		
+	},
+	cboMarque_keys: function(me,key) {
 		
 	},
 	cboServ_select: function(me,record) {
