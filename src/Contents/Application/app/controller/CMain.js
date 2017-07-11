@@ -71,13 +71,23 @@ App.controller.define('CMain', {
 		
 	},
 	recordAffectation: function(me) {
-		me.setDisabled(true);
+		//me.setDisabled(true);
 		function _exit() {
 			App.get('mainform grid').getStore().load();
 			me.setDisabled(false);	
 			me.up('window').close();	
 		};
 		// update materiels
+		var cboMarque=App.get(me.up('window'),'combo#cboMarque');
+		var cboModele=App.get(me.up('window'),'combo#cboModele');
+		var cboFournisseur=App.get(me.up('window'),'combo#cboFournisseur');
+		if (cboFournisseur.getRawValue()==cboFournisseur.getValue()) {
+			// Nouvel enregistrement
+			App.DB.post('sysiphe://fournisseurs',{FOURNISSEUR:cboFournisseur.getValue()},function(e,r) {
+				if (e.insertId) cboFournisseur.setValue(e.insertId) else cboFournisseur.setValue('');
+			});
+		};
+		//return;
 		App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 			var MID=r.insertId;
 			App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
