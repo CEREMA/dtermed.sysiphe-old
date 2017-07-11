@@ -48,7 +48,7 @@ App.controller.define('CMain', {
 			},
 			"VAffectation combo#cboMarque": {
 				select: "cboMarque_select",
-				keyup: "cboMarque_keys"
+				keydown: "cboMarque_keys"
 			},
 			"VAffectation combo#cboUnite": {
 				select: "cboUnite_select"
