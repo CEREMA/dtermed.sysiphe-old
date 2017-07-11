@@ -71,15 +71,13 @@ App.controller.define('CMain', {
 		
 	},
 	recordAffectation: function(me) {
-		//me.setDisabled(true);
+		me.setDisabled(true);
 		function _exit() {
 			App.get('mainform grid').getStore().load();
 			me.setDisabled(false);	
 			me.up('window').close();	
 		};
 		// update materiels
-		console.log(App.get(me.up('window'),'combo#cboMarque'));
-		return;
 		App.DB.post('sysiphe://materiels',me.up('window'),function(r) {
 			var MID=r.insertId;
 			App.Docs.upload(App.get('uploadfilemanager#up').getFiles(),0,function() {
