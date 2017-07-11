@@ -17,7 +17,7 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.plugins = [rowEditing];
+		//this.plugins = [rowEditing];
 		
 		this.items = [
 		{
