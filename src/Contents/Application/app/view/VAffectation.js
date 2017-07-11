@@ -2,6 +2,7 @@ App.view.define('VAffectation',{
     extend: "Ext.window.Window",
     alias: 'widget.VAffectation',
     initComponent: function() {
+		
         this.width = 1024;
         this.height = 660;
 
