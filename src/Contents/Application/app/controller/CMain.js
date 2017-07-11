@@ -59,6 +59,9 @@ App.controller.define('CMain', {
 			"VAffectation combo#cboModele": {
 				keydown: "cboModele_keys"
 			},
+			"VAffectation combo#cboFournisseur": {
+				keydown: "cboFournisseur_keys"
+			},
 			"VAffectation button#Exit": {
 				click: "recordAffectation"
 			}
@@ -172,6 +175,24 @@ App.controller.define('CMain', {
 			App.DB.post('sysiphe://marques',{MARQUE:value},function(e,r) {
 				if (e.insertId) {
 					var store=App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}',{autoLoad:true});
+					me.bindStore(store);
+					store.load();
+					me.setValue(e.insertId);
+				} else me.setRawValue(value);
+			});
+		};
+	},
+	cboFournisseur_keys: function(me,key) {
+		if (key.keyCode==56) {
+			try {
+				var value=me.getValue().split('!')[0];
+			} catch(e) {
+				me.setValue('');
+				return;
+			};
+			App.DB.post('sysiphe://fournisseurs',{FOURNISSEUR:value},function(e,r) {
+				if (e.insertId) {
+					var store=App.store.create('sysiphe://fournisseurs{IDFOURNISSEUR,FOURNISSEUR+}',{autoLoad:true});
 					me.bindStore(store);
 					store.load();
 					me.setValue(e.insertId);
