@@ -12,17 +12,15 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.selModel = 'cellmodel';
-		
-		this.plugins = [{
-        	ptype: 'cellediting',
-        	clicksToEdit: 1
-    	}];
-		
 		this.items = [
 		{
 			xtype: "grid",
 			title: "Fournisseurs",
+			selModel: 'cellmodel',
+			plugins: [{
+        		ptype: 'cellediting',
+        		clicksToEdit: 1
+    		}],
 			columns: [{
 				text: "Fournisseur",
 				dataIndex: "FOURNISSEUR",
