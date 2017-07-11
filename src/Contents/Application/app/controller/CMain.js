@@ -54,6 +54,12 @@ App.controller.define('CMain', {
 				click: "recordAffectation"
 			}
 			, "VAffectation combo#cboFournisseur": {
+				el: {
+             		click: function() {
+                  		alert('I clicked');
+              		},
+              		scope: this
+             	},
 				itemcontextmenu: function (list, ecord, item, index, e, eOpts) {
 					alert('z');
 					e.stopEvent();
