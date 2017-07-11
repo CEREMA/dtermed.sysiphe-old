@@ -30,6 +30,24 @@ App.view.define('VEdition',{
 				flex: 1
 			}],
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
+		},
+		{
+			xtype: "grid",
+			title: "Marques",
+			selModel: 'cellmodel',
+			plugins: [{
+        		ptype: 'cellediting',
+        		clicksToEdit: 1
+    		}],
+			columns: [{
+				text: "Marque",
+				dataIndex: "MARQUE",
+				editor: {
+					allowBlank:false	
+				},
+				flex: 1
+			}],
+			store: App.store.create("sysiphe://marques",{autoLoad:true})
 		}
 		];
 		
