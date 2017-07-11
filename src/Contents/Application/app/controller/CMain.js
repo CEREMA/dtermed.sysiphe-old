@@ -62,15 +62,15 @@ App.controller.define('CMain', {
 		
 	},
 	cboMarque_keys: function(me,key) {
-		alert(key.keyCode);
-		if (key.keyCode==13) {
-			App.DB.post('sysiphe://marques',{MARQUE:me.getValue()},function(e,r) {
+		if (key.keyCode==56) {
+			var value=me.getValue().split('!')[0];
+			App.DB.post('sysiphe://marques',{MARQUE:value},function(e,r) {
 				if (e.insertId) {
 					var store=App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}',{autoLoad:true});
 					me.bindStore(store);
 					store.load();
 					me.setValue(e.insertId);
-				} else me.setRawValue(getValue());
+				} else me.setRawValue(value);
 			});
 		};
 	},
