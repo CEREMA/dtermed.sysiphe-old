@@ -28,7 +28,8 @@ App.view.define('VEdition',{
 				dataIndex: "FOURNISSEUR",
 				editor: {
 					allowBlank:false	
-				}
+				},
+				flex: 1
 			}],
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		}
