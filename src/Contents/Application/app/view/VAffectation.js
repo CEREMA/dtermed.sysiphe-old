@@ -347,6 +347,11 @@ App.view.define('VAffectation',{
 					flex: 1
 				},
 				{
+					xtype:"button",
+					width: 12,
+					value: "+"
+				},
+				{
 					xtype: "textfield",
 					fieldLabel: "Bon de commande",
 					bindTo: "NOCOMMANDE",
