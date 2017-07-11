@@ -231,7 +231,10 @@ App.view.define('VAffectation',{
 			hbar: [
 			{
 				text: "Edition",
-				itemId: "edit"
+				itemId: "edit",
+				handler: function(me) {
+					App.view.create('VEdition',{modal: true}).show().center();
+				}
 			}
 			],
 			items: [
