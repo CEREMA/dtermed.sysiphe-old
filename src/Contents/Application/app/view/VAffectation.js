@@ -372,6 +372,7 @@ App.view.define('VAffectation',{
 					flex: 1,
 					itemId: "cboMarque",
 					editable: true,
+					forceSelection: false,
 					enableKeyEvents: true,
 					displayField: "MARQUE",
 					valueField: "IDMARQUE",				
