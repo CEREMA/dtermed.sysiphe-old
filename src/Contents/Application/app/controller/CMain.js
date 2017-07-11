@@ -48,10 +48,7 @@ App.controller.define('CMain', {
 			},
 			"VAffectation combo#cboMarque": {
 				select: "cboMarque_select",
-				keydown: "cboMarque_keys",
-				beforequery: function(queryPlan){
-        			queryPlan.query = false;
-    			}
+				keydown: "cboMarque_keys"
 			},
 			"VAffectation combo#cboUnite": {
 				select: "cboUnite_select"
@@ -67,8 +64,12 @@ App.controller.define('CMain', {
 	cboMarque_keys: function(me,key) {
 		if (key.keyCode==13) {
 			App.DB.post('sysiphe://marques',{MARQUE:me.getValue()},function(e,r) {
-				console.log(e);
-				console.log(r)
+				if (e.insertId) {
+					var store=App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}',{autoLoad:true});
+					me.bindStore(store);
+					store.load();
+					me.setValue(e.insertId);
+				} else me.setRawValue(getValue());
 			});
 		};
 	},
