@@ -84,7 +84,7 @@ App.controller.define('CMain', {
 		if (cboFournisseur.getRawValue()==cboFournisseur.getValue()) {
 			// Nouvel enregistrement
 			App.DB.post('sysiphe://fournisseurs',{FOURNISSEUR:cboFournisseur.getValue()},function(e,r) {
-				if (e.insertId) cboFournisseur.setValue(e.insertId) else cboFournisseur.setValue('');
+				if (e.insertId) cboFournisseur.setValue(e.insertId); else cboFournisseur.setValue('');
 			});
 		};
 		//return;
