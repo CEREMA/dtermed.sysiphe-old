@@ -50,7 +50,7 @@ App.controller.define('CMain', {
 				select: "cboMarque_select",
 				keydown: "cboMarque_keys",
 				beforequery: function(queryPlan){
-        			queryPlan.query = true;
+        			queryPlan.query = false;
     			}
 			},
 			"VAffectation combo#cboUnite": {
