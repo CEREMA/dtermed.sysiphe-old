@@ -3,6 +3,11 @@ App.view.define('VEdition',{
     alias: 'widget.VEdition',
     initComponent: function() {
 		
+		var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
+        	clicksToMoveEditor: 1,
+        	autoCancel: false
+    	});
+		
         this.width = 500;
         this.height = 700;
 
@@ -10,9 +15,11 @@ App.view.define('VEdition',{
             type: 'accordion'
         };
 		
-		this.title="Edition";
+		this.title = "Edition";
 		
-		this.items=[
+		this.plugins = [rowEditing];
+		
+		this.items = [
 		{
 			xtype: "grid",
 			title: "Fournisseurs",
