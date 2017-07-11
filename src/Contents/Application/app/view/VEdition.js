@@ -3,8 +3,8 @@ App.view.define('VEdition',{
     alias: 'widget.VEdition',
     initComponent: function() {
 		
-        this.width = 1024;
-        this.height = 660;
+        this.width = 500;
+        this.height = 700;
 
         this.layout = {
             type: 'border'
