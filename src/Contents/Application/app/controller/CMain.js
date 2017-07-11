@@ -81,6 +81,8 @@ App.controller.define('CMain', {
 		var cboMarque=App.get(me.up('window'),'combo#cboMarque');
 		var cboModele=App.get(me.up('window'),'combo#cboModele');
 		var cboFournisseur=App.get(me.up('window'),'combo#cboFournisseur');
+		alert(cboFournisseur.getRawValue());
+		alert(cboFournisseur.getValue());
 		if (cboFournisseur.getRawValue()==cboFournisseur.getValue()) {
 			// Nouvel enregistrement
 			App.DB.post('sysiphe://fournisseurs',{FOURNISSEUR:cboFournisseur.getValue()},function(e,r) {
