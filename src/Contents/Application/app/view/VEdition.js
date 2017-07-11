@@ -17,7 +17,7 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		//this.plugins = [rowEditing];
+		this.plugins = [rowEditing];
 		
 		this.items = [
 		{
@@ -27,7 +27,7 @@ App.view.define('VEdition',{
 				text: "Fournisseur",
 				dataIndex: "FOURNISSEUR",
 				editor: {
-					allowBlank:false
+					allowBlank:false	
 				}
 			}],
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
