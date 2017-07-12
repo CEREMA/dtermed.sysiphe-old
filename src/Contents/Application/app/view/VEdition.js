@@ -29,6 +29,7 @@ App.view.define('VEdition',{
 							e[r.data[i].COLUMN_NAME]='';
 						};
 						me.up('grid').getStore().insert(0, e);
+						me.up('grid').startEditing(0, 0);
 					});
 				}
 			}	
