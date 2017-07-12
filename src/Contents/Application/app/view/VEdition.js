@@ -19,7 +19,7 @@ App.view.define('VEdition',{
 			selModel: 'cellmodel',
 			tb: "fournisseurs",
 			border: false,
-			tbar:[
+			bbar:[
 			{
 				text: "Ajouter",
 				handler: function(me) {
@@ -55,7 +55,7 @@ App.view.define('VEdition',{
 			selModel: 'cellmodel',
 			tb: "marques",
 			border: false,
-			tbar:[
+			bbar:[
 			{
 				text: "Ajouter",
 				handler: function(me) {
@@ -91,7 +91,7 @@ App.view.define('VEdition',{
 			selModel: 'cellmodel',
 			tb: "modeles",
 			border: false,
-			tbar: [
+			bbar: [
 			{
 				text: "Ajouter",
 				handler: function(me) {
@@ -106,6 +106,7 @@ App.view.define('VEdition',{
 					});
 				}
 			},
+			tbar: [
 			{
 					xtype: "combo",
 					itemId: "cboF",
