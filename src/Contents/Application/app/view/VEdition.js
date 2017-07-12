@@ -105,7 +105,7 @@ App.view.define('VEdition',{
 						rowEditing.startEdit (0, 0);
 					});
 				}
-			},
+			}],
 			tbar: [
 			{
 					xtype: "combo",
