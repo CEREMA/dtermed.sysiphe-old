@@ -38,6 +38,7 @@ App.view.define('VEdition',{
 			items: [
 			{
 				xtype: "grid",
+				width: "100%",
 				selModel: 'cellmodel',
 				plugins: [{
 					ptype: 'cellediting',
@@ -57,6 +58,7 @@ App.view.define('VEdition',{
 			{
 				xtype: "grid",
 				selModel: 'cellmodel',
+				width: "100%",
 				plugins: [{
 					ptype: 'cellediting',
 					clicksToEdit: 1
