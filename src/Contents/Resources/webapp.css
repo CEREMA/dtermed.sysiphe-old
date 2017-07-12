@@ -47,3 +47,23 @@
 	width: 16px;
 	height: 16px;		
 }
+
+.ico_plus
+{
+	background-image:url(webapp/plus.png);
+	background-repeat:no-repeat;
+	background-position:center center;	
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;		
+}
+
+.ico_minus
+{
+	background-image:url(webapp/minus.png);
+	background-repeat:no-repeat;
+	background-position:center center;	
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;		
+}
