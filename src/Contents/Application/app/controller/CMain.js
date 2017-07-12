@@ -63,10 +63,24 @@ App.controller.define('CMain', {
 	, onEdit: function(me) {
 		var Updated=[];
 		var records = me.grid.getStore().getRange();
-		for (var i=0;i<records.length;i++) {
-			if (records[i].dirty) Updated.push(records[i]);	
-		};
-		console.log(Updated);
+		App.DB.get('sysiphe://@'+me.grid.tb,function(r) {
+			var key="";
+			for (var i=0;i<r.data.length;i++) {
+				if (r.data[i].COLUMN_KEY=="PRI") key=r.data[i].COLUMN_NAME;
+			};	
+			for(var i =0; i < records.length; i++){
+				var rec = records[i];
+				if(rec.dirty == true){
+					if (rec.data[key]==0) delete rec.data[key];
+					console.log(rec.data);
+					App.DB.post('sysiphe://'+me.grid.tb,rec.data,function(e,r) {
+						console.log(r);
+						me.grid.getStore().load();
+						App.get('VAffectation combo#fournisseur').getStore().load();
+					});
+				}
+			}			
+		});
 	}
 	, recordAffectation: function (me) {
 		//me.setDisabled(true);
