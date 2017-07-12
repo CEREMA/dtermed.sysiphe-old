@@ -56,30 +56,31 @@ App.view.define('VEdition',{
 			title: "Modèles",
 			selModel: 'cellmodel',
 			tb: "modeles",
+			tbar: [
+			{
+					xtype: "combo",
+					store: App.store.create('sysiphe://familles',{autoLoad:true}),
+					displayField: "FAMILLE",
+					valueField: "IDFAMILLE",
+					fieldLabel: "Famille",
+					labelAlign: "top",
+					padding: 5
+			},
+			{
+					xtype: "combo",
+					store: App.store.create('sysiphe://marques',{autoLoad:true}),
+					displayField: "MARQUE",
+					valueField: "IDMARQUE",
+					fieldLabel: "Marque",
+					labelAlign: "top",
+					padding: 5
+			}
+			],
 			plugins: [{
         		ptype: 'cellediting',
         		clicksToEdit: 1
     		}],
-			columns: [{
-				text: "Famille",
-				dataIndex: "IDFAMILLE",
-				editor: {
-					xtype: "combo",
-					store: App.store.create('sysiphe://familles',{autoLoad:true}),
-					displayField: "FAMILLE",
-					valueField: "IDFAMILLE"
-				}
-			},
-			{
-				text: "Marque",
-				dataIndex: "IDMARQUE",
-				editor: {
-					xtype: "combo",
-					store: App.store.create('sysiphe://marques',{autoLoad:true}),
-					displayField: "MARQUE",
-					valueField: "IDMARQUE"
-				}
-			},
+			columns: [
 			{
 				text: "Modèle",
 				dataIndex: "MODELE",
