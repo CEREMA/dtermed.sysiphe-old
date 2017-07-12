@@ -76,7 +76,7 @@ App.controller.define('CMain', {
 					App.DB.post('sysiphe://'+me.grid.tb,rec.data,function(e,r) {
 						console.log(r);
 						me.grid.getStore().load();
-						App.get('VAffectation combo#fournisseur').getStore().load();
+						App.get('VAffectation combo#cboFournisseur').getStore().load();
 					});
 				}
 			}			
