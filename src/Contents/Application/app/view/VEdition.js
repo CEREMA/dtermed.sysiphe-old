@@ -148,7 +148,7 @@ App.view.define('VEdition',{
 				},
 				flex: 1
 			}],
-			store: App.store.create("sysiphe://modeles",{autoLoad:false})
+			store: App.store.create("sysiphe://modeles{IDMODELE,MODELE+}",{autoLoad:false})
 		}
 		];
 		
