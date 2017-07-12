@@ -74,7 +74,14 @@ App.controller.define('CMain', {
 							alert('z');
 						};
 						if (p.itemId == "ctx-grid-add") {
-							console.log(view);
+							var rowEditing=view.grid.plugins[0];
+							App.DB.get('sysiphe://@fournisseurs',function(r) {
+								var e={};
+								for (var i=0;i<r.data.length;i++) {
+									e[r.data[i].COLUMN_NAME]='';
+								};
+								view.grid.getStore().insert(0, e);
+							});
 						}
 					});
 					x.showAt(e.getXY());
