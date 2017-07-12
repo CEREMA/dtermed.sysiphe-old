@@ -12,8 +12,6 @@ App.view.define('VEdition',{
 		
 		this.title = "Edition";
 		
-		this.border = false;
-		
 		this.items = [
 		{
 			xtype: "grid",
