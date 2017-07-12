@@ -60,6 +60,7 @@ App.view.define('VEdition',{
 			tbar: [
 			{
 					xtype: "combo",
+					itemId: "cboF",
 					store: App.store.create('sysiphe://familles',{autoLoad:true}),
 					displayField: "FAMILLE",
 					valueField: "IDFAMILLE",
@@ -70,13 +71,14 @@ App.view.define('VEdition',{
 					listeners: {
 						select: function(me) {
 							var famille=me.getValue();
-							var marque=me.up('tbar').items[1].getValue();
+							var marque=App.get("combo#cbo").getValue();
 							alert(marque);
 						}
 					}
 			},
 			{
 					xtype: "combo",
+					itemId: "cboM",
 					store: App.store.create('sysiphe://marques',{autoLoad:true}),
 					displayField: "MARQUE",
 					valueField: "IDMARQUE",
