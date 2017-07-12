@@ -62,7 +62,7 @@ App.controller.define('CMain', {
 	}
 	, onEdit: function(me) {
 		console.log(me);
-		var records = me.getStore().getRange();
+		var records = me.grid.getStore().getRange();
 		console.log(records);
 	}
 	, recordAffectation: function (me) {
