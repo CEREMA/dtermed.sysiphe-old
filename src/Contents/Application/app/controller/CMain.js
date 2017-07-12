@@ -61,9 +61,12 @@ App.controller.define('CMain', {
 		App.init('VMain', this.onLoad);
 	}
 	, onEdit: function(me) {
-		console.log(me);
+		var Updated=[];
 		var records = me.grid.getStore().getRange();
-		console.log(records);
+		for (var i=0;i<records.length;i++) {
+			if (records[i].dirty) Updated.push(records[i]);	
+		};
+		console.log(Updated);
 	}
 	, recordAffectation: function (me) {
 		//me.setDisabled(true);
