@@ -72,6 +72,9 @@ App.controller.define('CMain', {
 					x.on('click', function (z, p) {
 						if (p.itemId == "ctx-grid-delete") {
 							alert('z');
+						};
+						if (p.itemId == "ctx-grid-add") {
+							console.log(view);
 						}
 					});
 					x.showAt(e.getXY());
