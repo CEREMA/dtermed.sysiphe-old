@@ -34,9 +34,28 @@ App.view.define('VEdition',{
 		},
 		{
 			xtype: "grid",
+			title: "Marques",
+			selModel: 'cellmodel',
+			tb: "marques",
+			plugins: [{
+        		ptype: 'cellediting',
+        		clicksToEdit: 1
+    		}],
+			columns: [{
+				text: "Marque",
+				dataIndex: "MARQUE",
+				editor: {
+					allowBlank:false	
+				},
+				flex: 1
+			}],
+			store: App.store.create("sysiphe://marques",{autoLoad:true})
+		},			
+		{
+			xtype: "grid",
 			title: "Modèles",
 			selModel: 'cellmodel',
-			tb: "fournisseurs",
+			tb: "modeles",
 			plugins: [{
         		ptype: 'cellediting',
         		clicksToEdit: 1
@@ -52,6 +71,16 @@ App.view.define('VEdition',{
 				}
 			},
 			{
+				text: "Marque",
+				dataIndex: "IDMARQUE",
+				editor: {
+					xtype: "combo",
+					store: App.store.create('sysiphe://marques',{autoLoad:true}),
+					displayField: "MARQUE",
+					valueField: "IDMARQUE"
+				}
+			},
+			{
 				text: "Modèle",
 				dataIndex: "MODELE",
 				editor: {
@@ -60,25 +89,6 @@ App.view.define('VEdition',{
 				flex: 1
 			}],
 			store: App.store.create("sysiphe://modeles",{autoLoad:true})
-		},
-		{
-			xtype: "grid",
-			title: "Fournisseurs",
-			selModel: 'cellmodel',
-			tb: "fournisseurs",
-			plugins: [{
-        		ptype: 'cellediting',
-        		clicksToEdit: 1
-    		}],
-			columns: [{
-				text: "Fournisseur",
-				dataIndex: "FOURNISSEUR",
-				editor: {
-					allowBlank:false	
-				},
-				flex: 1
-			}],
-			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		}
 		];
 		
