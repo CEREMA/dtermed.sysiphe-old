@@ -18,6 +18,7 @@ App.view.define('VEdition',{
 			title: "Fournisseurs",
 			selModel: 'cellmodel',
 			tb: "fournisseurs",
+			border: false,
 			tbar:[
 			{
 				text: "Ajouter",
@@ -53,6 +54,22 @@ App.view.define('VEdition',{
 			title: "Marques",
 			selModel: 'cellmodel',
 			tb: "marques",
+			tbar:[
+			{
+				text: "Ajouter",
+				handler: function(me) {
+					var rowEditing=me.up('grid').plugins[0];
+					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
+						var e={};
+						for (var i=0;i<r.data.length;i++) {
+							e[r.data[i].COLUMN_NAME]='';
+						};
+						me.up('grid').getStore().insert(0, e);
+						rowEditing.startEdit (0, 0);
+					});
+				}
+			}	
+			],			
 			plugins: [{
         		ptype: 'cellediting',
         		clicksToEdit: 1
