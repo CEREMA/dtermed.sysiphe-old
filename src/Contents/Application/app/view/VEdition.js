@@ -83,7 +83,7 @@ App.view.define('VEdition',{
 				},
 				flex: 1
 			}],
-			store: App.store.create("sysiphe://marques",{autoLoad:true})
+			store: App.store.create("sysiphe://marques{IDMARQUE,MARQUE+}",{autoLoad:true})
 		},			
 		{
 			xtype: "grid",
