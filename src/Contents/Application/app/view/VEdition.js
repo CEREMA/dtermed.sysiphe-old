@@ -72,7 +72,9 @@ App.view.define('VEdition',{
 						select: function(me) {
 							var famille=me.getValue();
 							var marque=App.get("VEdition combo#cboM").getValue();
-							alert(marque);
+							var store=App.store.create('sysiphe://modeles?IDFAMILLE='+famille+'&IDMARQUE='+marque);
+							me.up('grid').bindStore(store);
+							store.load();
 						}
 					}
 			},
@@ -88,7 +90,8 @@ App.view.define('VEdition',{
 					padding: 5,
 					listeners: {
 						select: function(me) {
-							
+							var famille=App.get("VEdition combo#cboF").getValue();
+							var marque=me.getValue();	
 						}
 					}
 			}
