@@ -47,7 +47,7 @@ App.view.define('VEdition',{
 							if (r.data[i].COLUMN_KEY=="PRI") key=r.data[i].COLUMN_NAME;
 						};
 						var value=selection.data[key];
-						App.DB.del('sysiphe://'+me.up('grid').tb,{key:value},function(r) {
+						App.DB.del('sysiphe://'+me.up('grid').tb+'?'+key+'='+value,function(r) {
 							console.log(r);
 						});
 					});
