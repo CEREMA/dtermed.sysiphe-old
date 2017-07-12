@@ -65,6 +65,7 @@ App.view.define('VEdition',{
 					valueField: "IDFAMILLE",
 					fieldLabel: "Famille",
 					labelAlign: "top",
+					editable: false,
 					padding: 5
 			},
 			{
@@ -74,6 +75,7 @@ App.view.define('VEdition',{
 					valueField: "IDMARQUE",
 					fieldLabel: "Marque",
 					labelAlign: "top",
+					editable: false,
 					padding: 5
 			}
 			],
