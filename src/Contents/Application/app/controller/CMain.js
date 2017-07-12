@@ -75,6 +75,7 @@ App.controller.define('CMain', {
 						};
 						if (p.itemId == "ctx-grid-add") {
 							var rowEditing=view.grid.plugins[0];
+							alert(view.grid.tb);
 							App.DB.get('sysiphe://@'+view.grid.tb,function(r) {
 								var e={};
 								for (var i=0;i<r.data.length;i++) {
