@@ -72,7 +72,10 @@ App.controller.define('CMain', {
 				var rec = records[i];
 				if(rec.dirty == true){
 					if (rec.data[key]==0) delete rec.data[key];
-					console.log(rec.data);
+					if (me.grid.tb=="modeles") {
+						rec.data.IDFAMILLE=App.get(me.grid.up('window'),'combo#cboF').getValue();
+						rec.data.IDMARQUE=App.get(me.grid.up('window'),'combo#cboM').getValue();
+					};
 					App.DB.post('sysiphe://'+me.grid.tb,rec.data,function(e,r) {
 						console.log(r);
 						me.grid.getStore().load();
