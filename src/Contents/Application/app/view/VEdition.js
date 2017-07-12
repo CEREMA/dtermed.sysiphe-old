@@ -33,22 +33,46 @@ App.view.define('VEdition',{
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		},
 		{
-			xtype: "grid",
-			title: "Marques",
-			selModel: 'cellmodel',
-			plugins: [{
-        		ptype: 'cellediting',
-        		clicksToEdit: 1
-    		}],
-			columns: [{
-				text: "Marque",
-				dataIndex: "MARQUE",
-				editor: {
-					allowBlank:false	
-				},
-				flex: 1
-			}],
-			store: App.store.create("sysiphe://marques",{autoLoad:true})
+			title: "Modèles/Marques",
+			layout: "vbox",
+			items: [
+			{
+				xtype: "grid",
+				selModel: 'cellmodel',
+				plugins: [{
+					ptype: 'cellediting',
+					clicksToEdit: 1
+				}],
+				columns: [{
+					text: "Marque",
+					dataIndex: "MARQUE",
+					editor: {
+						allowBlank:false	
+					},
+					flex: 1
+				}],
+				flex: 1,
+				store: App.store.create("sysiphe://marques",{autoLoad:true})				
+			},
+			{
+				xtype: "grid",
+				selModel: 'cellmodel',
+				plugins: [{
+					ptype: 'cellediting',
+					clicksToEdit: 1
+				}],
+				columns: [{
+					text: "Modèle",
+					dataIndex: "MODELE",
+					editor: {
+						allowBlank:false	
+					},
+					flex: 1
+				}],
+				flex: 1,
+				store: App.store.create("sysiphe://modeles",{autoLoad:false})				
+			}
+			]
 		}
 		];
 		
