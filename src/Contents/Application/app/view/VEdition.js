@@ -93,6 +93,20 @@ App.view.define('VEdition',{
 			border: false,
 			tbar: [
 			{
+				text: "Ajouter",
+				handler: function(me) {
+					var rowEditing=me.up('grid').plugins[0];
+					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
+						var e={};
+						for (var i=0;i<r.data.length;i++) {
+							e[r.data[i].COLUMN_NAME]='';
+						};
+						me.up('grid').getStore().insert(0, e);
+						rowEditing.startEdit (0, 0);
+					});
+				}
+			},
+			{
 					xtype: "combo",
 					itemId: "cboF",
 					store: App.store.create('sysiphe://familles{IDFAMILLE,FAMILLE+}',{autoLoad:true}),
