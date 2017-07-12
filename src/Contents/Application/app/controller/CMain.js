@@ -65,7 +65,7 @@ App.controller.define('CMain', {
 		console.log(me);
 		var records = me.getStore().getRange();
 		console.log(records);
-	},
+	}
 	, onContext: function (view, rec, node, index, e) {
 					e.stopEvent();
 					var x = Ext.create('Ext.menu.Menu', {
