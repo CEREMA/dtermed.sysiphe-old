@@ -66,7 +66,14 @@ App.view.define('VEdition',{
 					fieldLabel: "Famille",
 					labelAlign: "top",
 					editable: false,
-					padding: 5
+					padding: 5,
+					listeners: {
+						select: function(me) {
+							var famille=me.getValue();
+							var marque=me.up('tbar').items[1].getValue();
+							alert(marque);
+						}
+					}
 			},
 			{
 					xtype: "combo",
@@ -76,7 +83,12 @@ App.view.define('VEdition',{
 					fieldLabel: "Marque",
 					labelAlign: "top",
 					editable: false,
-					padding: 5
+					padding: 5,
+					listeners: {
+						select: function(me) {
+							
+						}
+					}
 			}
 			],
 			plugins: [{
@@ -92,7 +104,7 @@ App.view.define('VEdition',{
 				},
 				flex: 1
 			}],
-			store: App.store.create("sysiphe://modeles",{autoLoad:true})
+			store: App.store.create("sysiphe://modeles",{autoLoad:false})
 		}
 		];
 		
