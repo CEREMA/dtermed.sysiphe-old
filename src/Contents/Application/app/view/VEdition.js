@@ -41,6 +41,14 @@ App.view.define('VEdition',{
 				iconCls: "ico_minus",
 				handler: function(me) {	
 					var selection = me.up('grid').getSelectionModel().getSelection()[0];
+					App.DB.get('sysiphe://@'+me.grid.tb,function(r) {
+						var key="";
+						for (var i=0;i<r.data.length;i++) {
+							if (r.data[i].COLUMN_KEY=="PRI") key=r.data[i].COLUMN_NAME;
+						};
+						var id=selection.data[key];
+						alert(key+'='+id);
+					});
 					console.log(selection);
 				}
 			}
