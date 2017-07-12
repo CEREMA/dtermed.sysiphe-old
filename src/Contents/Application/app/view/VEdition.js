@@ -22,6 +22,7 @@ App.view.define('VEdition',{
 			bbar:[
 			{
 				text: "Ajouter",
+				iconCls: "ico_plus",
 				handler: function(me) {
 					var rowEditing=me.up('grid').plugins[0];
 					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
@@ -58,6 +59,7 @@ App.view.define('VEdition',{
 			bbar:[
 			{
 				text: "Ajouter",
+				iconCls: "ico_plus",
 				handler: function(me) {
 					var rowEditing=me.up('grid').plugins[0];
 					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
@@ -94,6 +96,7 @@ App.view.define('VEdition',{
 			bbar: [
 			{
 				text: "Ajouter",
+				iconCls: "ico_plus",
 				handler: function(me) {
 					var rowEditing=me.up('grid').plugins[0];
 					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
