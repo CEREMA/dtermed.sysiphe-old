@@ -54,6 +54,7 @@ App.view.define('VEdition',{
 			title: "Marques",
 			selModel: 'cellmodel',
 			tb: "marques",
+			border: false,
 			tbar:[
 			{
 				text: "Ajouter",
