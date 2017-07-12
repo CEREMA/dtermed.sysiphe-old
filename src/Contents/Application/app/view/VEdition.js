@@ -17,6 +17,7 @@ App.view.define('VEdition',{
 			xtype: "grid",
 			title: "Fournisseurs",
 			selModel: 'cellmodel',
+			tb: "fournisseurs",
 			plugins: [{
         		ptype: 'cellediting',
         		clicksToEdit: 1
