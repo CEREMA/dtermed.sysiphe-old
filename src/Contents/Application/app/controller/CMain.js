@@ -55,7 +55,18 @@ App.controller.define('CMain', {
 				click: "recordAffectation"
 			}
 			, "VEdition grid": {
-				itemcontextmenu: function (view, rec, node, index, e) {
+				itemcontextmenu: "onContext",
+				edit: "onEdit"
+			}
+		});
+		App.init('VMain', this.onLoad);
+	}
+	, onEdit: function(me) {
+		console.log(me);
+		var records = me.getStore().getRange();
+		console.log(records);
+	},
+	, onContext: function (view, rec, node, index, e) {
 					e.stopEvent();
 					var x = Ext.create('Ext.menu.Menu', {
 						items: [
@@ -86,10 +97,6 @@ App.controller.define('CMain', {
 					});
 					x.showAt(e.getXY());
 					return false;
-				}
-			}
-		});
-		App.init('VMain', this.onLoad);
 	}
 	, recordAffectation: function (me) {
 		//me.setDisabled(true);
