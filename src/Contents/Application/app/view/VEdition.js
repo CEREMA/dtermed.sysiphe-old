@@ -61,7 +61,7 @@ App.view.define('VEdition',{
 			{
 					xtype: "combo",
 					itemId: "cboF",
-					store: App.store.create('sysiphe://familles',{autoLoad:true}),
+					store: App.store.create('sysiphe://familles{IDFAMILLE,FAMILLE+}',{autoLoad:true}),
 					displayField: "FAMILLE",
 					valueField: "IDFAMILLE",
 					fieldLabel: "Famille",
@@ -73,7 +73,7 @@ App.view.define('VEdition',{
 							var famille=me.getValue();
 							var marque=App.get("VEdition combo#cboM").getValue();
 							if (!marque) return;
-							var store=App.store.create('sysiphe://modeles?IDFAMILLE='+famille+'&IDMARQUE='+marque);
+							var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?IDFAMILLE='+famille+'&IDMARQUE='+marque);
 							me.up('grid').bindStore(store);
 							store.load();
 						}
@@ -82,7 +82,7 @@ App.view.define('VEdition',{
 			{
 					xtype: "combo",
 					itemId: "cboM",
-					store: App.store.create('sysiphe://marques',{autoLoad:true}),
+					store: App.store.create('sysiphe://marques{IDMARQUE,MARQUE+}',{autoLoad:true}),
 					displayField: "MARQUE",
 					valueField: "IDMARQUE",
 					fieldLabel: "Marque",
@@ -94,7 +94,7 @@ App.view.define('VEdition',{
 							var famille=App.get("VEdition combo#cboF").getValue();
 							var marque=me.getValue();
 							if (!famille) return;
-							var store=App.store.create('sysiphe://modeles?IDFAMILLE='+famille+'&IDMARQUE='+marque);
+							var store=App.store.create('sysiphe://modeles{IDMODELE,MODELE+}?IDFAMILLE='+famille+'&IDMARQUE='+marque);
 							me.up('grid').bindStore(store);
 							store.load();
 						}
