@@ -59,11 +59,15 @@ App.controller.define('CMain', {
 					e.stopEvent();
 					var x = Ext.create('Ext.menu.Menu', {
 						items: [
-							{
+						{
+								itemId: 'ctx-grid-add'
+								, text: "Ajouter"
+						},
+						{
 								itemId: 'ctx-grid-delete'
 								, text: "Supprimer"
-				}
-			]
+						}
+						]
 					});
 					x.on('click', function (z, p) {
 						if (p.itemId == "ctx-grid-delete") {
