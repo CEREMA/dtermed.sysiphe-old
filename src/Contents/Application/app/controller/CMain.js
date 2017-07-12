@@ -77,6 +77,8 @@ App.controller.define('CMain', {
 						console.log(r);
 						me.grid.getStore().load();
 						App.get('VAffectation combo#cboFournisseur').getStore().load();
+						App.get('VAffectation combo#cboModele').getStore().load();
+						App.get(me.up('window'),'combo#cboM').getStore().load();
 					});
 				}
 			}			
