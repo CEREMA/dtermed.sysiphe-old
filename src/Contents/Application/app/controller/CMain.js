@@ -75,7 +75,7 @@ App.controller.define('CMain', {
 						};
 						if (p.itemId == "ctx-grid-add") {
 							var rowEditing=view.grid.plugins[0];
-							App.DB.get('sysiphe://@fournisseurs',function(r) {
+							App.DB.get('sysiphe://@'+view.grid.tb,function(r) {
 								var e={};
 								for (var i=0;i<r.data.length;i++) {
 									e[r.data[i].COLUMN_NAME]='';
