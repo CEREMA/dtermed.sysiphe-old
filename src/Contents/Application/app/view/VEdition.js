@@ -34,7 +34,16 @@ App.view.define('VEdition',{
 						rowEditing.startEdit (0, 0);
 					});
 				}
-			}	
+			},
+			'->',
+			{
+				text: "Supprimer",
+				iconCls: "ico_minus",
+				handler: function(me) {	
+					var selection = me.up('grid').getSelectionModel().getSelection()[0];
+					console.log(selection);
+				}
+			}
 			],
 			plugins: [{
         		ptype: 'cellediting',
