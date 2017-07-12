@@ -56,6 +56,7 @@ App.view.define('VEdition',{
 			title: "Modèles",
 			selModel: 'cellmodel',
 			tb: "modeles",
+			border: false,
 			tbar: [
 			{
 					xtype: "combo",
