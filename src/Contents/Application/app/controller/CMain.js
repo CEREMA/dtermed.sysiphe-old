@@ -55,7 +55,6 @@ App.controller.define('CMain', {
 				click: "recordAffectation"
 			}
 			, "VEdition grid": {
-				itemcontextmenu: "onContext",
 				edit: "onEdit"
 			}
 		});
@@ -63,40 +62,8 @@ App.controller.define('CMain', {
 	}
 	, onEdit: function(me) {
 		console.log(me);
-		var records = me.up('grid').getStore().getRange();
+		var records = me.getStore().getRange();
 		console.log(records);
-	}
-	, onContext: function (view, rec, node, index, e) {
-					e.stopEvent();
-					var x = Ext.create('Ext.menu.Menu', {
-						items: [
-						{
-								itemId: 'ctx-grid-add'
-								, text: "Ajouter"
-						},
-						{
-								itemId: 'ctx-grid-delete'
-								, text: "Supprimer"
-						}
-						]
-					});
-					x.on('click', function (z, p) {
-						if (p.itemId == "ctx-grid-delete") {
-							alert('z');
-						};
-						if (p.itemId == "ctx-grid-add") {
-							var rowEditing=view.grid.plugins[0];
-							App.DB.get('sysiphe://@'+view.grid.tb,function(r) {
-								var e={};
-								for (var i=0;i<r.data.length;i++) {
-									e[r.data[i].COLUMN_NAME]='';
-								};
-								view.grid.getStore().insert(0, e);
-							});
-						}
-					});
-					x.showAt(e.getXY());
-					return false;
 	}
 	, recordAffectation: function (me) {
 		//me.setDisabled(true);
