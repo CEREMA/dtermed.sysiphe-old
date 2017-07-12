@@ -33,48 +33,52 @@ App.view.define('VEdition',{
 			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		},
 		{
-			title: "Modèles/Marques",
-			layout: "vbox",
-			items: [
-			{
-				xtype: "grid",
-				width: "100%",
-				selModel: 'cellmodel',
-				plugins: [{
-					ptype: 'cellediting',
-					clicksToEdit: 1
-				}],
-				columns: [{
-					text: "Marque",
-					dataIndex: "MARQUE",
-					editor: {
-						allowBlank:false	
-					},
-					flex: 1
-				}],
-				flex: 1,
-				store: App.store.create("sysiphe://marques",{autoLoad:true})				
+			xtype: "grid",
+			title: "Modèles",
+			selModel: 'cellmodel',
+			tb: "fournisseurs",
+			plugins: [{
+        		ptype: 'cellediting',
+        		clicksToEdit: 1
+    		}],
+			columns: [{
+				text: "Famille",
+				dataIndex: "IDFAMILLE",
+				editor: {
+					xtype: "combo",
+					store: App.store.create('sysiphe://familles',{autoLoad:true}),
+					displayField: "FAMILLE",
+					valueField: "IDFAMILLE"
+				}
 			},
 			{
-				xtype: "grid",
-				selModel: 'cellmodel',
-				width: "100%",
-				plugins: [{
-					ptype: 'cellediting',
-					clicksToEdit: 1
-				}],
-				columns: [{
-					text: "Modèle",
-					dataIndex: "MODELE",
-					editor: {
-						allowBlank:false	
-					},
-					flex: 1
-				}],
-				flex: 1,
-				store: App.store.create("sysiphe://modeles",{autoLoad:false})				
-			}
-			]
+				text: "Modèle",
+				dataIndex: "MODELE",
+				editor: {
+					allowBlank:false	
+				},
+				flex: 1
+			}],
+			store: App.store.create("sysiphe://modeles",{autoLoad:true})
+		},
+		{
+			xtype: "grid",
+			title: "Fournisseurs",
+			selModel: 'cellmodel',
+			tb: "fournisseurs",
+			plugins: [{
+        		ptype: 'cellediting',
+        		clicksToEdit: 1
+    		}],
+			columns: [{
+				text: "Fournisseur",
+				dataIndex: "FOURNISSEUR",
+				editor: {
+					allowBlank:false	
+				},
+				flex: 1
+			}],
+			store: App.store.create("sysiphe://fournisseurs",{autoLoad:true})
 		}
 		];
 		
