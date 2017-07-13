@@ -96,6 +96,31 @@ App.view.define('VEdition',{
 						me.up('grid').getStore().insert(0, e);
 						rowEditing.startEdit (0, 0);
 					});
+				},
+			'->',
+			{
+				text: "Supprimer",
+				iconCls: "ico_minus",
+				handler: function(me) {	
+					var selection = me.up('grid').getSelectionModel().getSelection()[0];
+					
+					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
+						var key="";
+						for (var i=0;i<r.data.length;i++) {
+							if (r.data[i].COLUMN_KEY=="PRI") key=r.data[i].COLUMN_NAME;
+						};
+						var value=selection.data[key];
+						
+						App.DB.del('sysiphe://'+me.up('grid').tb,[value],function(r) {
+							me.up('grid').getStore().load();
+							App.get('VAffectation combo#cboFournisseur').getStore().load();
+							App.get('VAffectation combo#cboModele').getStore().load();
+							App.get('VAffectation combo#cboMarque').getStore().load();
+							App.get(me.up('grid').up('window'),'combo#cboM').getStore().load();
+							App.get(me.up('grid').up('window'),'combo#cboF').getStore().load();
+						});
+					});
+					console.log(selection);
 				}
 			}	
 			],			
@@ -133,6 +158,31 @@ App.view.define('VEdition',{
 						me.up('grid').getStore().insert(0, e);
 						rowEditing.startEdit (0, 0);
 					});
+				},
+			'->',
+			{
+				text: "Supprimer",
+				iconCls: "ico_minus",
+				handler: function(me) {	
+					var selection = me.up('grid').getSelectionModel().getSelection()[0];
+					
+					App.DB.get('sysiphe://@'+me.up('grid').tb,function(r) {
+						var key="";
+						for (var i=0;i<r.data.length;i++) {
+							if (r.data[i].COLUMN_KEY=="PRI") key=r.data[i].COLUMN_NAME;
+						};
+						var value=selection.data[key];
+						
+						App.DB.del('sysiphe://'+me.up('grid').tb,[value],function(r) {
+							me.up('grid').getStore().load();
+							App.get('VAffectation combo#cboFournisseur').getStore().load();
+							App.get('VAffectation combo#cboModele').getStore().load();
+							App.get('VAffectation combo#cboMarque').getStore().load();
+							App.get(me.up('grid').up('window'),'combo#cboM').getStore().load();
+							App.get(me.up('grid').up('window'),'combo#cboF').getStore().load();
+						});
+					});
+					console.log(selection);
 				}
 			}],
 			tbar: [
