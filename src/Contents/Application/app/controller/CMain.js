@@ -209,6 +209,8 @@ App.controller.define('CMain', {
 		var store = App.store.create('App.Materiels.getMarques');
 		store.getProxy().extraParams.idFamille = me.getValue();
 		App.get(me.up('window'), 'combo#cboMarque').bindStore(store);
+		App.get(me.up('window'), 'combo#cboMarque').setValue('');
+		App.get(me.up('window'), 'combo#cboModele').setValue('');
 		store.load();
 	}
 	, cboMarque_select: function (me) {
