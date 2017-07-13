@@ -50,6 +50,7 @@ App.view.define('VEdition',{
 						var value=selection.data[key];
 						
 						App.DB.del('sysiphe://'+me.up('grid').tb,[value],function(r) {
+							me.up('grid').getStore().load();
 							App.get('VAffectation combo#cboFournisseur').getStore().load();
 							App.get('VAffectation combo#cboModele').getStore().load();
 							App.get('VAffectation combo#cboMarque').getStore().load();
