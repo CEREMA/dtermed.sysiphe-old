@@ -53,8 +53,8 @@ App.view.define('VEdition',{
 							App.get('VAffectation combo#cboFournisseur').getStore().load();
 							App.get('VAffectation combo#cboModele').getStore().load();
 							App.get('VAffectation combo#cboMarque').getStore().load();
-							App.get(me.grid.up('window'),'combo#cboM').getStore().load();
-							App.get(me.grid.up('window'),'combo#cboF').getStore().load();
+							App.get(me.up('grid').up('window'),'combo#cboM').getStore().load();
+							App.get(me.up('grid').up('window'),'combo#cboF').getStore().load();
 						});
 					});
 					console.log(selection);
