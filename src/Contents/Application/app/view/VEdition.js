@@ -96,7 +96,8 @@ App.view.define('VEdition',{
 						me.up('grid').getStore().insert(0, e);
 						rowEditing.startEdit (0, 0);
 					});
-				},
+				}
+			},
 			'->',
 			{
 				text: "Supprimer",
