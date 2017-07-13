@@ -48,9 +48,13 @@ App.view.define('VEdition',{
 							if (r.data[i].COLUMN_KEY=="PRI") key=r.data[i].COLUMN_NAME;
 						};
 						var value=selection.data[key];
-						alert('sysiphe://'+me.up('grid').tb);
+						
 						App.DB.del('sysiphe://'+me.up('grid').tb,[value],function(r) {
-							console.log(r);
+							App.get('VAffectation combo#cboFournisseur').getStore().load();
+							App.get('VAffectation combo#cboModele').getStore().load();
+							App.get('VAffectation combo#cboMarque').getStore().load();
+							App.get(me.grid.up('window'),'combo#cboM').getStore().load();
+							App.get(me.grid.up('window'),'combo#cboF').getStore().load();
 						});
 					});
 					console.log(selection);
